@@ -73,7 +73,6 @@ public class SearchBaloon : MonoBehaviour
                         nameItem = i.name,
                         countItem = System.Convert.ToInt32(btn.GetChild(2).GetComponent<Text>().text)
                     });
-                    Debug.Log(System.Convert.ToInt32(btn.GetChild(2).GetComponent<Text>().text));
                 }
             }
             btn.GetChild(3).gameObject.SetActive(true);

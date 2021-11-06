@@ -12,6 +12,8 @@ TagManager:
   - Money
   - LootList
   - Panel
+  - PanelShield
+  - PanelAttack
   layers:
   - Default
   - TransparentFX

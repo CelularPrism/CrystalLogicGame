@@ -24,9 +24,6 @@ public class FightUIManager : MonoBehaviour
     [SerializeField] private Text healthTextEnemy;
     [SerializeField] private Text damageTextEnemy;
 
-    [SerializeField] private ParticleSystem particleSystemPlayer;
-    [SerializeField] private ParticleSystem particleSystemEnemy;
-
     [SerializeField] private SearchBaloon searchBaloon;
 
     public Card card;
@@ -36,7 +33,7 @@ public class FightUIManager : MonoBehaviour
 
     private void Start()
     {
-        fight = new Fight();
+        fight = transform.GetComponent<Fight>();
 
         for (int i = 0; i < panelShield.childCount; i++)
         {
@@ -81,14 +78,6 @@ public class FightUIManager : MonoBehaviour
             if (i == phase - 1)
                 panelInfo.GetChild(i).GetComponent<Text>().color = activePhaseColor;
         }
-
-        /*if (phase < 4)
-        {
-            btn.GetChild(0).GetComponent<Text>().text = "CONTINUE";
-        } else
-        {
-            btn.GetChild(0).GetComponent<Text>().text = "DONE";
-        }*/
 
     }
 
@@ -172,14 +161,13 @@ public class FightUIManager : MonoBehaviour
                 panelShield.GetChild(i).GetChild(1).gameObject.SetActive(true);
             }
 
-            fight.playerParticle = particleSystemPlayer;
-            fight.enemyParticle = particleSystemEnemy;
+            fight.controller = controller;
+            fight.card = card;
 
-            int healthEnemy = fight.Battle(controller, card);
+            fight.healthEnemy = card.Health;
+
+            fight.None();
             musicManager.PlayBattleMusic();
-            fight.pointsPlayer = new List<int> { 0, 0, 0 };
-            if (healthEnemy <= 0)
-                Win();
         }        
     }
 

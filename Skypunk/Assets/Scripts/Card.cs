@@ -7,6 +7,7 @@ public class Card : MonoBehaviour
 {
     public DataCard dataCard;
     public int Health;
+    public int Iron = 0;
     public int Damage;
 
     private Text header;
@@ -25,6 +26,8 @@ public class Card : MonoBehaviour
     {
         if (dataCard.card == DataCard.classCard.Enemy)
         {
+            Iron = 0;
+
             Health = Random.Range(dataCard.minHealth, dataCard.maxHealth);
             textHealth.text = Health.ToString();
 
