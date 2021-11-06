@@ -58,15 +58,15 @@ public class Movement : MonoBehaviour
                 oldCollider = null;
             }
 
-        } else if (Physics.CheckSphere(transform.position, radius, layerMask) && Input.GetMouseButtonUp(0) && Mathf.Abs(transform.position.x - oldPos.x) < 300f) 
+        } else if (Physics.CheckSphere(transform.position, radius, layerMask) && Input.GetMouseButtonUp(0) && Mathf.Abs(transform.position.x - oldPos.x) < 300f && Mathf.Abs(transform.position.x - oldPos.x) > 0f) 
         {
             collider = GetCollider();
 
             oldPosCam.y = oldPosCam.y + collider.transform.position.y - oldPos.y;
             oldPos = collider.transform.position;
 
-            clipAudio.clip = collider.gameObject.GetComponent<AudioSource>().clip;
-            clipAudio.Play();
+            //clipAudio.clip = collider.gameObject.GetComponent<AudioSource>().clip;
+            //clipAudio.Play();
 
             scene.UseCard(collider.gameObject);
         }

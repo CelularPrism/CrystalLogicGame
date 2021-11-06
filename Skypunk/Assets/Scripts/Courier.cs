@@ -26,6 +26,9 @@ public class Courier : MonoBehaviour
     public void DeckBtn()
     {
         panelLoot.OpenPanelLoot();
+
+        panelLoot.dropBtn.GetChild(0).gameObject.SetActive(false);
+        panelLoot.dropBtn.GetChild(1).gameObject.SetActive(true);
     }
 
     public void ClosePanel(GameObject gameObject)

@@ -1,9 +1,9 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
-using OneClickLocalization.Core;
+using static MusicSettingsStatic;
+
 [Serializable]
 public class UIOption : MonoBehaviour
 {
@@ -19,30 +19,21 @@ public class UIOption : MonoBehaviour
 
     [SerializeField] private MultiLanguage localization;
 
+    void Start()
+    {
+        SoundSlider.value = MusicSettingsStatic.soundVol + 80;
+        MusicSlider.value = MusicSettingsStatic.musicVol + 80;
+        FXSlider.value = MusicSettingsStatic.SFXVol + 80;
+    }
+
     void Update()
     {
         SoundTxt.text = SoundSlider.value.ToString() + "%";
         FXTxt.text = FXSlider.value.ToString() + "%";
         MusicTxt.text = MusicSlider.value.ToString() + "%";
 
-        audio.SetFloat("soundVol", SoundSlider.value - 80);
-        audio.SetFloat("musicVol", MusicSlider.value - 80);
-        audio.SetFloat("sfxVol", FXSlider.value - 80);
-    }
-
-    public void EuLang()
-    {
-        /*localization.defaultLanguage = SystemLanguage.English;
-        localization.SetDefaultLanguage(SystemLanguage.English);*/
-        //localization.forcedLanguage = SystemLanguage.English;
-    }
-
-    public void RuLang()
-    {
-        /*localization.defaultLanguage = SystemLanguage.Russian;
-        localization.SetDefaultLanguage(SystemLanguage.Russian);*/
-        //localization.Ru();
-        //localization.forcedLanguage = SystemLanguage.Russian;
-
+        MusicSettingsStatic.soundVol = SoundSlider.value - 80;
+        MusicSettingsStatic.musicVol = MusicSlider.value - 80;
+        MusicSettingsStatic.SFXVol = FXSlider.value - 80;
     }
 }

@@ -18,18 +18,55 @@ Searching,ПОИСК,SEARCHING
 SearchHold,УДЕРЖИВАЙ,HOLD
 SearchHeader,ЗАБРОШЕННАЯ СТАНЦИЯ,ABANDONED STATION
 ,,
+CourCourier,КУРЬЕР,COURIER
+CourSend,ОТПРАВИТЬ,SEND
+CourCargoHold,ТРЮМ,CARGO HOLD
+ShipHold,ТРЮМ,CARGO HOLD
+ShipDrop,ВЫБРОСИТЬ,DROP
+,,
+PanelAcceptHeader,БОЕВОЙ РЕЖИМ (воздух),BATTLE MODE (air)
+PanelAcceptText,ГОТОВО,DONE
+PanelInfoPhase1,- Выберите точку для удара,- Choose a point to strike
+PanelInfoPhase2,- Выберите элемент для обороны,- Сhoose a part to protect
+PanelInfoPhase3,- Выберите второй элемент для обороны,- Сhoose the second part to protect
+PanelInfoPhase4,- Подтвердите выбор,- Click DONE
+PanelInputInfo1,Кабина,Cabin
+PanelInputInfo2,Корпус,Hull
+PanelInputInfo3,Двигатель,Engine
+PanelInputInfo4,Топливные баки,Fuel tanks
+,,
+BaseHeader,БАЗА,BASE
+BaseInfo,Жизни и щиты восполнены. Ресурсы переданы на хранение,Durability and shields are replenished. Resources have been sent to deposit
+BaseBtn,ГОТОВО,ОК
+,,
+PanelWarningHeader,Желаете отправить предметы на базу?,Do you want to send items to the base?
+PanelWarningYes,ДА,YES
+PanelWarningNo,НЕТ,NO
+CourierDeckSend,ОТПРАВИТЬ,SEND
+,,
+,,
 LtChemicals,ХИМИКАТЫ,CHEMICALS
 LtCloth,ТКАНЬ,CLOTH
 LtGas,ГАЗ,GAS
 LtMetal,МЕТАЛ,METAL
 LtPetroleum,НЕФТЬ,PETROLEUM
 LtSupplies,ПРИПАСЫ,SUPPLIES
+LtBook,КНИГА,BOOK
+LtBoots,БОТИНКИ,BOOTS
+LtClockGear,ЧАСЫ,CLOCK
+LtGear,ШЕСТЕРЕНКА,GEAR-WHEEL
+LtHarmonica,ГАРМОШКА,HARMONIC
+LtKnife,НОЖ,KNIFE
+LtMicroscope,МИКРОСКОП,MICROSCOPE
+LtMug,КРУЖКА,MUG
+LtPowder,ПОРОШОК,POWDER
+LtRadiator,РАДИАТОР,RADIATOR
+LtSkull,ЧЕРЕП,SKULL
+LtSpring,ПРУЖИНА,SPRING
+LtWheel,КОЛЕСО,WHEEL
 ,,
-CourCourier,КУРЬЕР,COURIER
-CourSend,ОТПРАВИТЬ,SEND
-CourCargoHold,ТРЮМ,CARGO HOLD
-ShipHold,ТРЮМ,CARGO HOLD
-ShipDrop,ВЫБРОСИТЬ,DROP
+BaloonHeader,Награда!,Reward!
+BaloonBtn,Далее,Go ahead
 ,,
 ,,
 DeathLuck1,МЁРТВАЯ УДАЧА,DEAD LUCK

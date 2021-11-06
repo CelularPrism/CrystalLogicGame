@@ -3,29 +3,69 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Assets.SimpleLocalization;
+using static PlayerStatic;
 
 public class MultiLanguage : MonoBehaviour
 {
+    [SerializeField] private Color activeColor;
+    [SerializeField] private Color nonActiveColor;
+
+    [SerializeField] private GameObject ruBtn;
+    [SerializeField] private GameObject enBtn;
+
     public Text[] textToTranslate;
     public DataLoot[] DataLootToTranslate;
     public DataIvent[] DataIventToTranslate;
     private void Start()
     {
-        //LocalizationManager.Read();
-
-        switch (Application.systemLanguage)
+        if (PlayerStatic.lang == "")
         {
-            case SystemLanguage.English:
+            switch (Application.systemLanguage)
+            {
+                case SystemLanguage.English:
+                    PlayerStatic.lang = "English";
+                    break;
+
+                case SystemLanguage.Russian:
+                    PlayerStatic.lang = "Russian";
+                    break;
+            }
+        }
+
+        switch (PlayerStatic.lang)
+        {
+            case "English":
                 Language("English");
+                enBtn.GetComponent<Image>().color = activeColor;
+                ruBtn.GetComponent<Image>().color = nonActiveColor;
                 break;
-            case SystemLanguage.Russian:
+            case "Russian":
                 Language("Russian");
+                enBtn.GetComponent<Image>().color = nonActiveColor;
+                ruBtn.GetComponent<Image>().color = activeColor;
                 break;
         }
     }
 
     public void Language(string language)
     {
+
+        switch (language)
+        {
+            case "English":
+                PlayerStatic.lang = "English";
+                enBtn.GetComponent<Image>().color = activeColor;
+                ruBtn.GetComponent<Image>().color = nonActiveColor;
+                break;
+
+            case "Russian":
+                PlayerStatic.lang = "Russian";
+                enBtn.GetComponent<Image>().color = nonActiveColor;
+                ruBtn.GetComponent<Image>().color = activeColor;
+                break;
+
+        }
+
         LocalizationManager.Language = language;
 
         // Panel-PanelOption
@@ -59,6 +99,33 @@ public class MultiLanguage : MonoBehaviour
         textToTranslate[17].text = LocalizationManager.Localize("ShipHold");
         textToTranslate[18].text = LocalizationManager.Localize("ShipDrop");
 
+        // FightField
+        textToTranslate[19].text = LocalizationManager.Localize("PanelAcceptHeader");
+        textToTranslate[20].text = LocalizationManager.Localize("PanelAcceptText");
+        textToTranslate[21].text = LocalizationManager.Localize("PanelInfoPhase1");
+        textToTranslate[22].text = LocalizationManager.Localize("PanelInfoPhase2");
+        textToTranslate[23].text = LocalizationManager.Localize("PanelInfoPhase3");
+        textToTranslate[24].text = LocalizationManager.Localize("PanelInfoPhase4");
+        textToTranslate[25].text = LocalizationManager.Localize("PanelInputInfo1");
+        textToTranslate[26].text = LocalizationManager.Localize("PanelInputInfo2");
+        textToTranslate[27].text = LocalizationManager.Localize("PanelInputInfo3");
+        textToTranslate[28].text = LocalizationManager.Localize("PanelInputInfo4");
+
+        // Base
+        textToTranslate[29].text = LocalizationManager.Localize("BaseHeader");
+        textToTranslate[30].text = LocalizationManager.Localize("BaseInfo");
+        textToTranslate[31].text = LocalizationManager.Localize("BaseBtn");
+
+        // Search Baloon
+        textToTranslate[32].text = LocalizationManager.Localize("BaloonHeader");
+        textToTranslate[33].text = LocalizationManager.Localize("BaloonBtn");
+
+        // Courier message
+        textToTranslate[34].text = LocalizationManager.Localize("PanelWarningHeader");
+        textToTranslate[35].text = LocalizationManager.Localize("PanelWarningYes");
+        textToTranslate[36].text = LocalizationManager.Localize("PanelWarningNo");
+        textToTranslate[37].text = LocalizationManager.Localize("CourierDeckSend");
+
         // Loot
         DataLootToTranslate[0].Name = LocalizationManager.Localize("LtChemicals");
         DataLootToTranslate[1].Name = LocalizationManager.Localize("LtCloth");
@@ -66,6 +133,19 @@ public class MultiLanguage : MonoBehaviour
         DataLootToTranslate[3].Name = LocalizationManager.Localize("LtMetal");
         DataLootToTranslate[4].Name = LocalizationManager.Localize("LtPetroleum");
         DataLootToTranslate[5].Name = LocalizationManager.Localize("LtSupplies");
+        DataLootToTranslate[6].Name = LocalizationManager.Localize("LtBook");
+        DataLootToTranslate[7].Name = LocalizationManager.Localize("LtBoots");
+        DataLootToTranslate[8].Name = LocalizationManager.Localize("LtClockGear");
+        DataLootToTranslate[9].Name = LocalizationManager.Localize("LtGear");
+        DataLootToTranslate[10].Name = LocalizationManager.Localize("LtHarmonica");
+        DataLootToTranslate[11].Name = LocalizationManager.Localize("LtKnife");
+        DataLootToTranslate[12].Name = LocalizationManager.Localize("LtMicroscope");
+        DataLootToTranslate[13].Name = LocalizationManager.Localize("LtMug");
+        DataLootToTranslate[14].Name = LocalizationManager.Localize("LtPowder");
+        DataLootToTranslate[15].Name = LocalizationManager.Localize("LtRadiator");
+        DataLootToTranslate[16].Name = LocalizationManager.Localize("LtSkull");
+        DataLootToTranslate[17].Name = LocalizationManager.Localize("LtSpring");
+        DataLootToTranslate[18].Name = LocalizationManager.Localize("LtWheel");
 
         // Events
         DataIventToTranslate[0].TextHeader = LocalizationManager.Localize("DeathLuck1");
@@ -151,6 +231,5 @@ public class MultiLanguage : MonoBehaviour
         DataIventToTranslate[11].VarB = LocalizationManager.Localize("CarelessWanderers4");
         DataIventToTranslate[11].TextA = LocalizationManager.Localize("CarelessWanderers5");
         DataIventToTranslate[11].TextB = LocalizationManager.Localize("CarelessWanderers6");
-
     }
 }

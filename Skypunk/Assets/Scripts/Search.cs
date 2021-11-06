@@ -15,7 +15,7 @@ public class Search : MonoBehaviour
     private bool search = false;
 
     [SerializeField] private List<Sprite> dictImg = new List<Sprite>(4);
-    [SerializeField] private List<DataLoot> listLoot;
+    //[SerializeField] private List<DataLoot> listLoot;
     [SerializeField] private Transform lootPanel;
     [SerializeField] private Transform imgPanel;
     [SerializeField] private SceneController controller;
@@ -103,7 +103,9 @@ public class Search : MonoBehaviour
         {
             Transform panel = lootPanel.GetChild(i);
             if (i < countLoot) {
-                DataLoot dataLoot = listLoot[Random.Range(0, listLoot.Count - 1)];
+                DataLoot[] listLoot = Resources.LoadAll<DataLoot>("ScriptableObjects/Loot");
+                DataLoot dataLoot = listLoot[Random.Range(0, listLoot.Length)];
+
                 int kolvo = Random.Range(1, 3);
 
                 panel.GetChild(0).GetComponent<Image>().sprite = dataLoot.img;

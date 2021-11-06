@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Enemy 3
   m_EditorClassIdentifier: 
   card: 0
+  minHealth: 1
+  maxHealth: 3
   minDamage: 1
   maxDamage: 5
   IventText: 

@@ -25,17 +25,25 @@ public class PanelLoot : MonoBehaviour
     public void SelectItem(Transform parent)
     {
         int maxCount = 6;
+        string Name = "";
+        int Count = 0;
 
         if (isDelete)
             maxCount = parent.parent.childCount;
 
         if (!parent.GetChild(3).gameObject.activeSelf && listLoot.Count < maxCount && controller.lootList.Count > 0)
         {
-            string Name = parent.GetChild(0).GetComponent<Text>().text;
-            int Count = Convert.ToInt32(parent.GetChild(1).GetComponent<Text>().text);
-
-            parent.GetChild(3).gameObject.SetActive(true);
-            listLoot.Add(new Item() { index = parent.GetSiblingIndex(), nameItem = Name, countItem = Count });
+            foreach (var i in controller.lootList)
+            {
+                DataLoot dataLoot = Resources.Load<DataLoot>("ScriptableObjects/Loot/" + i.Key);
+                if (dataLoot.Name == parent.GetChild(0).GetComponent<Text>().text)
+                {
+                    Name = dataLoot.name;
+                    Count = Convert.ToInt32(parent.GetChild(1).GetComponent<Text>().text); 
+                    parent.GetChild(3).gameObject.SetActive(true);
+                    listLoot.Add(new Item() { index = parent.GetSiblingIndex(), nameItem = Name, countItem = Count });
+                }
+            }            
         }
     }
 

@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f78a0b84f77d8b9428b25cecdfb2b97f, type: 3}
   m_Name: Courier
   m_EditorClassIdentifier: 
-  card: 3
+  card: 4
+  minHealth: 0
+  maxHealth: 0
   minDamage: 0
   maxDamage: 0
   IventText: 
