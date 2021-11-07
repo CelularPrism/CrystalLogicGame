@@ -195,6 +195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dataCard: {fileID: 11400000, guid: 5581f18ce119ac247a00cd5eb680a1d6, type: 2}
   Health: 0
+  Iron: 0
   Damage: 0
   textHealth: {fileID: 0}
   textDamage: {fileID: 0}

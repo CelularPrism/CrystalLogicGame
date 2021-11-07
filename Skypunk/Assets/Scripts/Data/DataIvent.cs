@@ -10,11 +10,13 @@ public class DataIvent : ScriptableObject
 
     public string VarA;
     public string TextA;
+    public DataIvent dataIventA;
     public DataLoot dataLootA;
     public int countA;
 
     public string VarB;
     public string TextB;
+    public DataIvent dataIventB;
     public DataLoot dataLootB;
     public int countB;
 }

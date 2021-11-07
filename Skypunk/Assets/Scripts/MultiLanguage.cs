@@ -141,7 +141,7 @@ public class MultiLanguage : MonoBehaviour
         DataLootToTranslate[11].Name = LocalizationManager.Localize("LtKnife");
         DataLootToTranslate[12].Name = LocalizationManager.Localize("LtMicroscope");
         DataLootToTranslate[13].Name = LocalizationManager.Localize("LtMug");
-        DataLootToTranslate[14].Name = LocalizationManager.Localize("LtPowder");
+        DataLootToTranslate[14].Name = LocalizationManager.Localize("LtPills");
         DataLootToTranslate[15].Name = LocalizationManager.Localize("LtRadiator");
         DataLootToTranslate[16].Name = LocalizationManager.Localize("LtSkull");
         DataLootToTranslate[17].Name = LocalizationManager.Localize("LtSpring");

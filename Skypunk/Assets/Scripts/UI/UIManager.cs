@@ -31,7 +31,8 @@ public class UIManager : MonoBehaviour
             OpenPanelLoot();
         } else if (Input.GetKeyDown(KeyCode.Escape))
         {
-            panelLoot.gameObject.SetActive(false);
+            GameObject.FindGameObjectWithTag("Panel").SetActive(false);
+            //panelLoot.gameObject.SetActive(false);
         }
     }
 

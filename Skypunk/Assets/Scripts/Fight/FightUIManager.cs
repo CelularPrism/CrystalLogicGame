@@ -67,7 +67,7 @@ public class FightUIManager : MonoBehaviour
             AddPoint(4);
         }
 
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Space))
+        if ((Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Space)) && fight.fight)
         {
             AcceptPhase();
         }
@@ -83,7 +83,7 @@ public class FightUIManager : MonoBehaviour
 
     public void AddPoint(int point)
     {
-        if (phase < 4)
+        if (phase < 4 && fight.fight)
         {
             fight.pointsPlayer[phase - 1] = point;
             if (phase == 1)
@@ -129,46 +129,50 @@ public class FightUIManager : MonoBehaviour
 
     public void AcceptPhase()
     {
-        if (phase < 4)
+        if (fight.fight)
         {
-            if (phase == 1)
+            if (phase < 4)
             {
+                if (phase == 1)
+                {
+                    for (var i = 0; i < panelAttack.childCount; i++)
+                    {
+                        panelAttack.GetChild(i).GetComponent<EventTrigger>().enabled = false;
+                        panelShield.GetChild(i).GetComponent<EventTrigger>().enabled = true;
+                    }
+                }
+                else if (phase == 3)
+                {
+                    for (var i = 0; i < panelShield.childCount; i++)
+                    {
+                        panelShield.GetChild(i).GetComponent<EventTrigger>().enabled = false;
+                    }
+                }
+
+                phase++;
+            }
+            else
+            {
+                phase = 1;
                 for (var i = 0; i < panelAttack.childCount; i++)
                 {
-                    panelAttack.GetChild(i).GetComponent<EventTrigger>().enabled = false;
-                    panelShield.GetChild(i).GetComponent<EventTrigger>().enabled = true;
-                }
-            } else if (phase == 3)
-            {
-                for (var i = 0; i < panelShield.childCount; i++)
-                {
-                    panelShield.GetChild(i).GetComponent<EventTrigger>().enabled = false;
-                }
-            }
+                    panelAttack.GetChild(i).GetComponent<EventTrigger>().enabled = true;
+                    panelAttack.GetChild(i).GetChild(0).gameObject.SetActive(false);
+                    panelAttack.GetChild(i).GetChild(1).gameObject.SetActive(true);
 
-            phase++;
+                    panelShield.GetChild(i).GetChild(0).gameObject.SetActive(false);
+                    panelShield.GetChild(i).GetChild(1).gameObject.SetActive(true);
+                }
+
+                fight.controller = controller;
+                fight.card = card;
+
+                fight.healthEnemy = card.Health;
+
+                fight.None();
+                musicManager.PlayBattleMusic();
+            }
         }
-        else
-        {
-            phase = 1;
-            for (var i = 0; i < panelAttack.childCount; i++)
-            {
-                panelAttack.GetChild(i).GetComponent<EventTrigger>().enabled = true;
-                panelAttack.GetChild(i).GetChild(0).gameObject.SetActive(false);
-                panelAttack.GetChild(i).GetChild(1).gameObject.SetActive(true);
-
-                panelShield.GetChild(i).GetChild(0).gameObject.SetActive(false);
-                panelShield.GetChild(i).GetChild(1).gameObject.SetActive(true);
-            }
-
-            fight.controller = controller;
-            fight.card = card;
-
-            fight.healthEnemy = card.Health;
-
-            fight.None();
-            musicManager.PlayBattleMusic();
-        }        
     }
 
     public void Win()

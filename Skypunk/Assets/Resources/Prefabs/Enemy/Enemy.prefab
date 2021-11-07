@@ -290,8 +290,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd75dc6a312bdc44b36bdea7e7ff447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataCard: {fileID: 11400000, guid: 0fc5525d2d2826a43b052638260edbaa, type: 2}
+  dataCard: {fileID: 11400000, guid: b0c2089d59e9e6747a3a3a14c8162864, type: 2}
   Health: 0
+  Iron: 0
   Damage: 0
   textHealth: {fileID: 4779642629563694971}
   textDamage: {fileID: 4779642628864167721}
@@ -663,7 +664,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3d8a09b26b72b044ca0ec2b222bf6427, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7f6e1ed36d175444fb555e69aca24617, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -15,8 +15,15 @@ public class Fight : MonoBehaviour
 
     public int healthEnemy;
 
+    public bool fight = true;
+
     private int ironDmg;
     private int healthDmg;
+
+    void Start()
+    {
+        fight = true;
+    }
 
     public void None()
     {
@@ -25,6 +32,8 @@ public class Fight : MonoBehaviour
 
     private IEnumerator Battle()
     {
+        fight = false;
+
         for (var i = 0; i < pointsEnemy.Count; i++)
         {
             pointsEnemy[i] = Random.RandomRange(1, 5);
@@ -59,6 +68,8 @@ public class Fight : MonoBehaviour
         pointsPlayer = new List<int>() { 0, 0, 0 };
 
         healthEnemy = card.Health;
+
+        fight = true;
 
         if (healthEnemy <= 0)
             transform.GetComponent<FightUIManager>().Win();

@@ -23,6 +23,8 @@ public class SceneController : MonoBehaviour
     [SerializeField] private UIButtons uIButtons;
     [SerializeField] private FightUIManager fightManager;
 
+    [SerializeField] private GameObject gameOver;
+
     public GameObject Ivent;
 
     void Start()
@@ -38,7 +40,7 @@ public class SceneController : MonoBehaviour
         if (health <= 0 || fuel <= 0)
         {
             health = 0;
-            uIButtons.Restart();
+            gameOver.SetActive(true);
         }
 
         if (GameObject.FindGameObjectsWithTag("Panel").Length == 0)

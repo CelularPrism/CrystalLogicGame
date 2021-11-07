@@ -8,7 +8,6 @@ public class FightEffects : MonoBehaviour
     public Transform panel;
     public void AimShield()
     {
-        Debug.Log(panel.GetChild(2));
         panel.GetChild(2).gameObject.SetActive(true);
     }
 

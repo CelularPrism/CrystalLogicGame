@@ -153,7 +153,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 10afd90dbabbdad41837f1046cb931f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 639cdfedbf3458646b1c4370997ccfc4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -276,10 +276,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd75dc6a312bdc44b36bdea7e7ff447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataCard: {fileID: 11400000, guid: 897aee5065cdcf74781e144a2ae9274f, type: 2}
+  dataCard: {fileID: 11400000, guid: 28de11b4cd09bb643b61fe111b4a9729, type: 2}
+  Health: 0
+  Iron: 0
   Damage: 0
+  textHealth: {fileID: 0}
   textDamage: {fileID: 0}
-  Ivent: {fileID: 11400000, guid: 3926616caa77c1347ad7d32c91149796, type: 2}
+  Ivent: {fileID: 11400000, guid: 2ce5493d545204349a3bb891bcd6007c, type: 2}
   panelIvent: {fileID: 0}
   search: {fileID: 0}
 --- !u!82 &6377211827190174028
