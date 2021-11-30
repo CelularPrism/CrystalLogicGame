@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c5b2106a547384ca9631fa47fad560, type: 3}
+  m_Name: NoFarmNoHoul
+  m_EditorClassIdentifier: 
+  audioText: {fileID: 8300000, guid: 99afc6e58fff1754aa97562d45ad0e89, type: 3}
+  TextHeader: NO HARM, NO FOUL
+  Text: Upon landing on this island, you notice two traders, judging by their look,
+    having a heated debate. As you approach to ask what's going on, each one tells
+    the other stole his supplies and asks to help solve the problem. One of them
+    is chubby, well-groomed and well-dressed, while the other is gaunt, wears rags
+    and generally looks like a beggar.
+  audioTextA: {fileID: 8300000, guid: 53ec663086c82e242b1c250df1dc2815, type: 3}
+  VarA: Side with the Rich One
+  TextA: The second one looks more like a thief would, so you force him to give back
+    what he stole. The rich man thanks you for your help and offers a small gift.
+  dataIventA: {fileID: 0}
+  dataLootA: {fileID: 0}
+  countA: 0
+  audioTextB: {fileID: 8300000, guid: 432df1bf100378b4cad775985ec3eaf6, type: 3}
+  VarB: Side with the Poor One
+  TextB: You decide to side with the underdog and demand the rich one give up the
+    stolen goods. The poor man thanks you sincerely for understanding and assistance,
+    then leaves.
+  dataIventB: {fileID: 0}
+  dataLootB: {fileID: 0}
+  countB: 0

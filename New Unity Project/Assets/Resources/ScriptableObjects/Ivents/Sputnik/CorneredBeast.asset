@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c5b2106a547384ca9631fa47fad560, type: 3}
+  m_Name: CorneredBeast
+  m_EditorClassIdentifier: 
+  audioText: {fileID: 8300000, guid: 29775c9b90e99d24794f210474055dc6, type: 3}
+  TextHeader: CORNERED BEAST
+  Text: A Gas Ganger ship passes you by at full speed, being chased by a Kerosener
+    tribe. The pilot contacts you and relays that he has almost ran out of fuel,
+    begging you for help.
+  audioTextA: {fileID: 8300000, guid: b0da129f0e1b5214f9d5da90f3ff5fc9, type: 3}
+  VarA: Refuse
+  TextA: You want no business in this ordeal, besides the fact that helping a pirate
+    is just a dumb move. From a safe distance, you watch the tribesmen catch up with
+    the pirate ship and brutally execute its owner.
+  dataIventA: {fileID: 0}
+  dataLootA: {fileID: 0}
+  countA: 0
+  audioTextB: {fileID: 8300000, guid: 442047b6654f8e747ae9a99f9de57565, type: 3}
+  VarB: Assist Him
+  TextB: Covering the Gas Ganger ship with your own, you transfer the fuel, then
+    follow him a safe distance away from his pursuers. As a sign of gratitude, he
+    shares with you the spoils of his attacks on that tribe (-2 damage, -2 fuel).
+  dataIventB: {fileID: 0}
+  dataLootB: {fileID: 11400000, guid: ff9bd9be14faa1d4ebd56f735ca8893e, type: 2}
+  countB: -2

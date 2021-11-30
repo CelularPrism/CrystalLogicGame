@@ -24,6 +24,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private FightUIManager fightManager;
 
     [SerializeField] private GameObject gameOver;
+    [SerializeField] private GameObject Epilogue;
 
     public GameObject Ivent;
 
@@ -56,8 +57,16 @@ public class SceneController : MonoBehaviour
     {
         if (card.GetComponent<Card>() == null) 
         {
-            uIButtons.OpenMap();
-            return;
+            if (PlayerStatic.countLvl.Count < 5)
+            {
+                uIButtons.OpenMap();
+                return;
+            }
+            else
+            {
+                Epilogue.SetActive(true);
+                return;
+            }
         }
 
         DataCard dataCard = card.GetComponent<Card>().dataCard;

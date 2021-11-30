@@ -1,0 +1,235 @@
+Key,Russian,English
+EnBtn,АНГЛИЙСКИЙ,ENGLISH
+RuBtn,РУССКИЙ,RUSSIAN
+OptMusic,МУЗЫКА,MUSIC
+OptFX,ЗВУКОВЫЕ ЭФФЕКТЫ,FX
+OptSound,ЗВУК,SOUND
+OptLanguage,ЯЗЫК,LANGUAGE
+OptExit,ВЫХОД,EXIT
+OptOptions,ОПЦИИ,OPTIONS
+OptLoadGame,ЗАГРУЗКА,LOAD GAME
+OptNewGame,НОВАЯ ИГРА,NEW GAME
+,,
+MenuExit,ВЫХОД,EXIT
+MenuOptions,ОПЦИИ,OPTIONS
+MenuRestart,РЕСТАРТ,RESTART
+,,
+Searching,ПОИСК,SEARCHING
+SearchHold,УДЕРЖИВАЙ,HOLD
+SearchHeader,ЗАБРОШЕННАЯ СТАНЦИЯ,ABANDONED STATION
+,,
+CourCourier,КУРЬЕР,COURIER
+CourSend,ОТПРАВИТЬ,SEND
+CourCargoHold,ТРЮМ,CARGO HOLD
+ShipHold,ТРЮМ,CARGO HOLD
+ShipDrop,ВЫБРОСИТЬ,DROP
+,,
+PanelAcceptHeader,БОЕВОЙ РЕЖИМ (воздух),BATTLE MODE (air)
+PanelAcceptText,ГОТОВО,DONE
+PanelInfoPhase1,- Выберите точку для удара,- Choose a point to strike
+PanelInfoPhase2,- Выберите элемент для обороны,- Сhoose a part to protect
+PanelInfoPhase3,- Выберите второй элемент для обороны,- Сhoose the second part to protect
+PanelInfoPhase4,- Подтвердите выбор,- Click DONE
+PanelInputInfo1,Кабина,Cabin
+PanelInputInfo2,Корпус,Hull
+PanelInputInfo3,Двигатель,Engine
+PanelInputInfo4,Топливные баки,Fuel tanks
+,,
+BaseHeader,БАЗА,BASE
+BaseInfo,Жизни и щиты восполнены. Ресурсы переданы на хранение,Durability and shields are replenished. Resources have been sent to deposit
+BaseBtn,ГОТОВО,ОК
+,,
+PanelWarningHeader,Желаете отправить предметы на базу?,Do you want to send items to the base?
+PanelWarningYes,ДА,YES
+PanelWarningNo,НЕТ,NO
+CourierDeckSend,ОТПРАВИТЬ,SEND
+PanelLootBase,БАЗА,BASE
+,,
+RepairPanelHeader,СНАРЯЖЕНИЕ,EQUIPMENT
+RepairPanelText,НА РЕМОНТЕ!,REPAIRING!
+RepairPanelBtn,ГОТОВО,DONE
+,,
+,,
+Prologue0.1,Закон Мерфи гласит:,Murphy's Law states:
+Prologue0.2,"""Если какая-нибудь неприятность может произойти, она случается""","""Everything that can go wrong, will go wrong."""
+Prologue0.3,И наш герой Жак ощутил это на своей шкуре.,And our protagonist Jack has had plenty of experience with that.
+Prologue1,Жаку постоянно не везло. Его даже прозвали Капитаном неудачи.,"Jack was always very unlucky, so much so that he'd earned himself a nickname, ""Captain Misfortune""."
+Prologue2,"В то утро он по своему обыкновению сел выпить чашечку обожаемого кофе,","That one morning he sat down to have a cup of his much beloved coffee,"
+Prologue3,под мотивы любимой классической музыки,While listening to his favorite classical pieces.
+Prologue4,Но именно сейчас госпожа Удача изменила Жаку в очередной раз.,But it was right now that lady Luck had betrayed Jack yet again.
+Prologue5,И вместо нормальной посадки он умудрился впилиться прямо в базу Бензинщиков!,"And in a miserable excuse for a landing maneuver, his ship smashed right into a Gas Ganger base."
+Prologue6,"Еле успел выбраться, а корабль, как говорится, пошел ко дну.",Barely managed to jump ship before it went down!
+Prologue7,"Повыскакивали пираты во главе с вожаком Клодом Монпансье, красным как свекла. “Опять трясти начнут” - обреченно подумал Жак.","The pirates jumped him, led by one Clode Monpensier, red from the rage. ""They're gonna take everything I have"" - Jack desperately thought."
+Prologue8,Но не тут-то было! Бандиты взяли его в клещи и обязали отыскать и привезти им что-то под названием Робокот или что-то вроде того.,But nope! They grabbed him and demanded he find and bring them something named Robocat or something like that.
+Prologue9,"И кораблик дали, плохонький, но хоть какой.","Even gave him a new ship, an old and used one, but better than nothing."
+Prologue10,Так и началось увлекательное приключение Жака де Коля и его ИИ Спутника Мерфи.,So begins the adventure of Jack de Colle and the ship's trusty AI companion Murphy.
+,,
+,,
+Epilogue1,"Жак собрал пресловутого Робокота, правда ничем не напоминавшего кота, обмотав изолентой неплотно прилегающие части, и связался с Клодом Монпансье.","Jack cobbled together the Robocat, though it didn't really look like a cat, using blue tape to tie the loose parts together, and contacted Clode."
+Epilogue2,"“Прием!” “Чего тебе, ничтожество?!” “Я нашел вашего Робокота!”","""Hello?"""
+Epilogue3,"“Так чё молчал-то?! Эй, вылетаем!”","""The hell you want, insect?!"""
+Epilogue4,"Пираты влетели на базу так быстро, словно поджидали буквально за углом.","""I've found that Robocat of yours...""
+""Why didn't you tell so?! We're coming!""
+"
+Epilogue5,"Не удостоив Жака и взглядом, все сгрудились вокруг жужжащего Робокота и стали что-то крутить, нажимать на кнопки, яростно бранясь.","The pirates entered the base so quickly as if they were waiting around the corner all along. Not giving Jack even a passing glance, they all bunched up around the Robocat, twisting something, clicking buttons and swearing profusely."
+Epilogue6,"Жаку быстро наскучила эта картина, и он вышел наружу.",Jack quickly got bored of watching them and gone outside.
+Epilogue7,"Вдруг из базы донеслись жуткие крики и грохот, Жак от испуга выронил сигарету из рук.","Then suddenly, horrible screams and explosions were heard from the base, scaring Jack so much he dropped his cig."
+Epilogue8,"По своему обыкновению он не стал ждать развития событий, и запрыгнул на борт корабля.","As he usually does, he decided not to wait for the events to unfold and climbed on his ship."
+Epilogue9,И тут госпожа удача вновь развернулась к нему спиной - индикатор топлива замер на нуле…,"Alas, lady Luck has turned away from him once again - fuel meter stood dead at zero..."
+,,
+,,
+LtChemicals,ХИМИКАТЫ,CHEMICALS
+LtCloth,ТКАНЬ,CLOTH
+LtGas,ГАЗ,GAS
+LtMetal,МЕТАЛ,METAL
+LtPetroleum,НЕФТЬ,PETROLEUM
+LtSupplies,ПРИПАСЫ,SUPPLIES
+LtBook,КНИГА,BOOK
+LtBoots,БОТИНКИ,BOOTS
+LtClockGear,ЧАСЫ,CLOCK
+LtGear,ШЕСТЕРЕНКА,GEARWHEEL
+LtHarmonica,ГАРМОШКА,HARMONIC
+LtKnife,НОЖ,KNIFE
+LtMicroscope,МИКРОСКОП,MICROSCOPE
+LtMug,КРУЖКА,MUG
+LtPills,ТАБЛЕТКИ,PILLS
+LtRadiator,РАДИАТОР,RADIATOR
+LtSkull,ЧЕРЕП,SKULL
+LtSpring,ПРУЖИНА,SPRING
+LtWheel,КОЛЕСО,WHEEL
+,,
+BaloonHeader,Награда!,Reward!
+BaloonBtn,Далее,Accept
+,,
+,,
+DeadMenNoLies1,МЕРТВЕЦЫ НЕ ЛГУТ,DEAD MEN TELL NO LIES
+DeadMenNoLies2,"Перед Жаком открылась жуткая сцена кровавой расправы – судя по ожогам на телах убитых, это дело рук Бензинщиков. Сложно сказать, что они не поделили с местными, но этим уродам иногда и не требуются причины для насилия.","A disturbing scene unravels before Jack's eyes - several men lie killed by Gas Gangers, judging by the burns on their bodies. Hard to tell what got those brutes riled up against the locals, but then again it's not like they really need a reason for violence."
+DeadMenNoLies3,Обыскать тела,Search the Bodies
+DeadMenNoLies4,Пройти мимо,Leave
+DeadMenNoLies5,"Трупам уже не помочь, а вот их пожитки могут и самому пригодиться. Жака передёрнуло, но он переборол себя и начал шарить по карманам убитых. В одном он обнаружил прелюбопытнейший клочок бумаги с картой, помеченной крестом. Наверняка это клад!","There's no helping to the deceased, but their own stuff can be of help to yourself. Jack flinches and hesitantly searches the pockets of the dead. In one of them, he finds a thing most curious - a piece of a map with a cross drawn on it. Treasure awaits!"
+DeadMenNoLies6,"Следы были ещё свежие, бандиты могли вернуться. Лучше убраться, пока этого не случилось.",The trails are still fresh and the bandits may yet return. Best get out of here before that happens.
+DeadMenNoLies7,Попытать удачу,Follow the Map
+DeadMenNoLies8,Не рисковать,Take No Risks
+DeadMenNoLies9,"Прибыв на место, отмеченное на карте, Жак взялся за дело. Весь перемазанный землей, он таки достал закопанный в земле ящик. Но в нем оказался лишь длинный список долгов и иссохшееся тело - надо полагать, сам нерадивый должник.","Coming to the marked place, Jack started digging. All covered with dirt, he does pull out a box from the ground, but all he finds are a long list of debts and a withered corpse - must be that of the unlucky debtor."
+DeadMenNoLies10,"Жак задумался. Стоит ли доверять такому очевидному совпадению? В лучшем случае он потеряет топливо на перелет и время, в худшем - может нарваться на убийц с очевидными последствиями.","Should he trust this suspiciously lucky coincidence, Jack pondered. Best case, he'd be wasting time and fuel on the flight, worst case - meet the killers, with obvious and unfortunate consequences."
+,,
+FreeCheese1,БЕСПЛАТНЫЙ СЫР,FREE CHEESE
+FreeCheese2,"За холмами Жаку было хорошо слышно шипение передаваемого сообщения: «Еда за...пшшш...топ...шш...иво». Приблизившись, он увидел круглолицего керосинщика, что сидел у костра. В котелке призывно булькало аппетитное варево. Незнакомец помахал ему рукой, приглашая присоединиться и обменяться ресурсами. Но что-то в его облике тревожило Жака.","Jack could hear a message being transmitted from around the hill: ""Food...psst-for..psst...fuel"". Approaching its source, he sees a chubby Kerosener sitting next to a bonfire, on which a pot of tasty-smelling soup bubbled seductively. The stranger greeted him and offered to sit down and trade, but something about him was amiss to Jack."
+FreeCheese3,Торговаться,Trade
+FreeCheese4,Украсть еду,Steal the Food
+FreeCheese5,"Достав из корабля топливо для обмена, Жак присел к костру. Не отказываться же от сытной трапезы! Круглолицый керосинщик широко улыбнулся. - Братья, собирайтесь! – громко возгласил он. – Время обеда! Из-за кустов выступила группа тощих кочевников, вооруженных копьями и мачете. Дело явно пахло керосином!","Grabbing some fuel as a bartering chip, Jack sat down at the bonfire. Why'd he refuse a nice lunch?
+""Come, my brothers!"" - the stranger suddenly shouted - ""Our meal has arrived!""
+A bunch of hungry-looking nomads, armed with spears and machetes, stepped out of the bushes. Things were certainly getting heated!"
+FreeCheese6,"Жак решил, что связываться с подозрительным типом не стоит, но ему так хотелось есть! Он попытался украсть котелок прямо с огня и, обжегшись, выронил его на землю, расплескивая содержимое. Незнакомец в ярости схватился за нож и кинулся к Жаку, но дистанция между ними дала тому достаточно форы, чтобы запрыгнуть на корабль и улететь.","Jack didn't want to do any business with the guy, but did want to eat. He grabbed onto the pot, but burned his fingers on it and dropped it, spilling the soup. Enraged, the stranger grabbed a knife and ran towards Jack, but the distance between the two gave the latter enough time to get inside the ship and fly away."
+FreeCheese7,Бежать!,Run!
+FreeCheese8,Договориться,Talk Your Way Out
+FreeCheese9,"Жак исхитрился схватить хлеб, что лежал ближе к нему, и дал деру. Копья засвистели над его головой, но Жаку некогда было отвлекаться. Он спешно скрылся на своем корабле и отправился восвояси. Только очухавшись от страха, он с сожалением вспомнил, что оставил топливо на острове (-1 топлива).","Jack grabbed the closest piece of food near him and legged it. Spears whistled over his head, but he didn't lose his focus, ran back into his ship and made it out of there. Only then did he regretfully remember, that he'd left the fuel canister behind (-1 fuel)."
+FreeCheese10,"Жак решил, что лучшее решение – блеф. Прищурившись и скрестив руки на груди, он начал отчаянно врать про его связи с бензинщиками. На миг он смог представить себя очень важной персоной.
+Круглолицый смерил Жака недоверчивым взглядом, но своих шестерок отозвал.
+Жак, собрав все мужество, с достоинством удалился, прихватив свою канистру с топливом.","With no better alternative, Jack decided to bluff. Squinting and crossing his hands, he began making up tall tales of his connections with the Gas Gangers, even believing himself to actually be such an important person for a moment.
+The Kerosener gave Jack a glance of disbelief, but called off his men anyway. Collecting all his confidence, Jack left with dignity, grabbing the fuel on his way back to the ship."
+,,
+EasyProfit1,ЛЁГКИЙ НАВАР,EASY PROFIT
+EasyProfit2,"При подлете к острову, Жак с удивлением заметил на редкость дружелюбных бензинщиков. Жак высадился, и те предложили ему обменять топливо на товары, да так выгодно, что можно будет продать их втридорога в ближайшем поселении.","Closing in on the island, Jack was surprised to meet a crew of unusually friendly Gas Gangers. In exchange for fuel, they offered him a bunch of supplies at such a good price, that he'd make easy profit reselling it basically anywhere else."
+EasyProfit3,Согласиться,Accept the Deal
+EasyProfit4,Отказаться,Refuse the Deal
+EasyProfit5,"Бензинщики редко предлагают такую щедрую сделку. Жак быстро произвел обмен, скупив столько товаров, сколько мог за канистру топлива. Однако удача сопутствовала Жаку недолго. В следующем поселении, только взглянув на закупленные товары, на него набросились кочевники, в ярости крича, что все это было у них украдено. Сами товары конфисковали, а Жака выпроводили не солоно хлебавши (-1 топлива).","Gas Gangers are all too rarely so generous. Without a second thought, Jack picked up as much stuff as he could for a single fuel canister. Although, his luck didn't last long. At a nearest settlement, after just one look at the supplies, the locals began shouting about how all of those are things recently stolen from them. The supplies got confiscated and Jack was booted out empty-handed (-1 fuel)."
+EasyProfit6,"Щедрость в наших краях – редкая добродетель, а бензинщикам так и вовсе не свойственна. Жак пожелал торговцам удачи в их нелегком деле и отправился дальше.","Generosity is a rare commodity in these places, and is especially suspicious coming from Gas Gangers. Jack wished them luck in their uneasy task and moved on."
+,,
+EasyMetal1,ХАЛЯВНЫЙ МЕТАЛЛ,EASY METAL
+EasyMetal2,"Жак высадился на пустынный маленький остров, где мог уместится только один магазинчик. В витрине на табличке красовалось крупными кривыми буквами предложение невиданных скидок. Стоит ли отказываться от такой удачи?","Jack landed on a tiny, deserted island, housing only a single decrepit shop. Its signs spoke of huge sales in large, poorly drawn letters. Should one refuse such fortune?"
+EasyMetal3,Зайти в магазин,Enter the Shop
+EasyMetal4,Пройти мимо,Pass it by
+EasyMetal5,"Как только Жак ступил внутрь, двери за его спиной захлопнулись. За дверью слышалась ругань и звуки разрушений. Прошло немало времени, прежде чем Жак смог выломать двери.
+Но перед ним предстало весьма неприятное зрелище – часть обшивки его корабля разобрали пираты (-2 урона).","The second Jack stepped inside, the doors slammed shut behind his back. Behind them, he could hear swearing and sounds of destruction. It took a while for him to break out and when he did, he was faced with an ugly sight - someone sawed off a part of his ship's hull (-2 damage)."
+EasyMetal6,Жак с подозрением отнесся к сомнительной щедрости. Лучше держаться подальше – вдруг это ловушка.,Jack took a suspicion to such a sudden generosity. Better to keep out - it might be a trap.
+,,
+Silhouettes1,СИЛУЭТЫ,SILHOUETTES
+Silhouettes2,"Жак летел через густой туман и не сразу заметил громоздкие силуэты орудий противовоздушной обороны, многозначительно направленные в его сторону.","As Jack was flying through a patch of thick fog, it took him some time to notice the bulky silhouettes of anti-air guns, unambiguously pointing at him from a nearby island."
+Silhouettes3,Облететь их,Go Around Them
+Silhouettes4,Лететь напрямик,Keep Going Forward
+Silhouettes5,"Жак аккуратно отлетел на приличное расстояние и обогнул остров. На это ушло немало топлива, но мертвецу оно бы точно не понадобилось (-1 топлива).","Carefully, Jack navigated a route a safe distance away from the island. Sure, it might have taken some fuel, but a dead man would have no use for fuel anyway (-1 fuel)."
+Silhouettes6,"Отринув страх, а вместе с ним и здравый смысл, Жак полетел прямо навстречу орудиям. Подлетев ближе, он выяснил, что опасные на вид пушки были всего лишь ржавой рухлядью, не годной даже на лом.","Abandoning fear, along with common sense, Jack set his course straight towards the weapons. Although, getting closer, he noted that the dangerous looking guns turned out to be little more than rusted junk, unfit even to be scrapped."
+,,
+FirstCome1,"КТО ПЕРВЫЙ ВСТАЛ, ТОГО И ТАПКИ",First Come First Serve
+FirstCome2,"Обломки кораблей в небе и на островах встречаются часто, а вот найти в них что-то пригодное – большая редкость. Но на этот раз Жаку свезло – после тщательного осмотра, он обнаружил запертый грузовой отсек, по виду нетронутый.","Shipwrecks are a rather common sight in the skies and on the islands, but finding something useful in them is a rare occurence. This time, however, it seems Jack got lucky - after a careful search, he'd found the locked cargo hold on this one looks untouched."
+FirstCome3,Вскрыть замок,Pick the Lock
+FirstCome4,Проигнорировать,Ignore it
+FirstCome5,"После ряда попыток, Жаку таки посчастливилось победить замок, но видимо он задел сигнализацию. Лампочка над его головой замигала красным, предупреждая о скором самоуничтожении корабля, и Жак со всех ног бросился обратно. Ему удалось уйти, однако его корабль пострадал от взрыва (-2 урона).","After a bunch of attempts, at last did Jack defeat the stubborn lock, but not without triggering the ship's safety response. The lights above his head flashed red, a warning of the self-destruct sequence being triggered, and Jack ran his fastest back to his ship. He managed to get out alive, but his ship got caught in the blast radius (-2 damage)."
+FirstCome6,"Никто так и не открыл грузовой отсек, возможно, ничего ценного там и нет. Стоит ли рисковать ради неизвестно чего?
+Жак пожал плечами и устремился к следующему острову.","If no one had opened it until now, it might not have anything valuable inside to begin with. Should he risk for God only knows what? Jack shrugged and took off toward the next island."
+,,
+NightmareFuel1,ТЕПЛЫЙ ПРИЕМ,NIGHTMARE FUEL
+NightmareFuel2,"Жак заметил дорожку разлитого по земле топлива, тянущуюся от поврежденной заправочной станции. Изнутри доносились крики о помощи.","Even from afar, Jack could see the trail of fuel coming out of a damaged refueling station. Screams and calls for help were coming from the inside."
+NightmareFuel3,Вмешаться,Intervene
+NightmareFuel4,Проигнорировать,Ignore
+NightmareFuel5,"На станции царил полный хаос: крыша рухнула, из-под обломков кричали люди, техника искрила в пугающей близости от разлитого бензина.","Inside the station was nothing short of utter chaos. The roof has collapsed, trapping people under the debris, all the while damaged tech sparkled dangerously close to spilt fuel, threatening to ignite it any moment."
+NightmareFuel6,"Броситься спасать неизвестно кого из разрушенной заправки опасно и глупо. Наверняка не успеешь, только себе навредишь. Жак аккуратно облетел это место, притворяясь, что ничего не слышал.","To run saving strangers from a damaged building is both unsafe and pointless, Jack thought. He probably wouldn't accomplish much and might get himself in trouble instead. He continued on his way, pretending he saw and heard nothing."
+NightmareFuel7,Спасать людей,Save the People
+NightmareFuel8,Спасать топливо,Save the Fuel
+NightmareFuel9,"Жак попытался разгрести завал и вытащить раненных, но, к несчастью, не справился. Он едва успел укрыться на корабле, прежде чем мощный взрыв сотряс станцию, унося с собой жизни (-2 урона).","Jack tried to remove the debris and help the wounded, but alas, he had too little time. Only barely did he manage to get back to his ship before a fiery blast obliterated the station and everyone therein (-2 damage)."
+NightmareFuel10,"Жак воспользовался тем, что никто не мог его остановить и слил топливо из неповрежденного бака. Кому горе, а кому удача улыбнулась! Он успешно погрузился на корабль, вовремя уйдя от взрыва, сотрясшего станцию (+2 топлива).","Jack made use of the fact, that no one could stop him, and took all the fuel from the undamaged tank. One man's sorrows are another's fortunes! Hastily, he retreated to the ship and took off before he would be caught in the blast (+2 fuel)."
+,,
+WoundedGasGanger1,РАНЕННЫЙ БЕНЗИНЩИК,WOUNDED GAS GANGER
+WoundedGasGanger2,"На подлете к данному острову, сканнеры обнаруживают одинокий корабль на поверхности. Высадившись, вы находите разбитый гоночный катер Бензинщиков. По всей видимости, он не вписался в поворот и врезался в остров, а товарищи либо не заметили, либо решили бросить его здесь. Сам же пилот корабля лежит неподалеку. Он тяжело ранен и вскоре истечет кровью, если ему не помочь.","On approach of this island, scans indicate a singular ship located on its surface. Upon landing, you locate a crashed racing ship belonging to Gas Gangers. As it would seem, the ship had failed to properly turn and smashed into the island full-speed, while the ones accompanying it either did not take note of it, or left it here on purpose. Its pilot lie nearby, heavily wounded. Without medical assistance, he will soon bleed out."
+WoundedGasGanger3,Попытаться помочь,Attempt to Help
+WoundedGasGanger4,Оставить его,Leave Him
+WoundedGasGanger5,"Жизнь бандита, которым он с наибольшей вероятностью является, недостойна спасения. Вы оставляете его на произвол судьбы, которой не свойственно милосердие.","The life of a bandit, which he most likely is, is not worth saving. You leave him to be judged by fate, which does not possess the capacity to grant mercy."
+WoundedGasGanger6,"Вы используете ткань как импровизированные бинты и их немало уходит на то, чтобы перевязать все его раны. Вскоре он возвращается в сознание. Узнав, что товарищи бросили его умирать, он зарекается впредь летать и отдает вам то немногое топливо, что у него осталось. Вопреки прогнозам, в этот раз Бензинщики оказались полезны.
+(+2 топлива)","You make use of the cloth you have as an improvised bandage, and it takes quite a bit to treat all of his wounds. Soon enough, he regains consciousness. Having found out that his pals left him for dead, he swears off flying and gives you what little fuel he has left. In contrast to the expectations, the Gas Gangers turned out to be of use to us this time (+2 fuel)."
+WoundedGasGanger7,"Вы бежите к нему, чтобы хоть чем-то помочь, но его раны слишком глубоки. Он умирает у вас на руках, что было бы весьма драматично, не будь это первой вашей встречей.","You run toward him to try and be of any help, but his wounds are too deep. He dies in your hands, which would be quite dramatic, were it not for the fact that this is the first time you meet."
+,,
+DeepLake1,ГЛУБОКОЕ ОЗЕРО,DEEP LAKE
+DeepLake2,"Примерно три четверти этого острова занимает крупное озеро. Сканирование указывает на чашеобразную форму острова, которая вероятно является причиной образования данного водоема.","Approximately three quarters of this island are taken up by a large lake. Scans show this island possesses a bowl-like shape, that is in much likelihood the cause behind the formation of this body of water."
+DeepLake3,Набрать воды,Collect Water
+DeepLake4,Искупаться,Bathe
+DeepLake5,"Вы откачиваете небольшое количество воды из озера, добавляя ее к своим припасам, но слишком поздно замечаете, что вода загрязнена. Все припасы, куда она попала, более непригодны к потреблению.","You pump out some water from the lake and add it to your supplies, noticing too late that it is contaminated. The supplies you've added the water to are no longer fit for human consumption."
+DeepLake6,"Погружаясь в чистую воду, вы смываете с себя пот, кровь и иные загрязнители. В процессе вы замечаете на дне озера разрушенное строение, бывшее когда-то заправочной станцией.","Entering the clear waters, you wash yourself of sweat, blood and other substances. During that process, you notice an abandoned building at the bottom of the lake, that was once a refueling station."
+DeepLake7,Плыть туда,Dive There
+DeepLake8,Проигнорировать,Ignore it
+DeepLake9,"Набрав в легкие побольше воздуха, вы погружаетесь. Из-за отсутствия подходящего снаряжения, у вас нет возможности хорошо осмотреть руины, поэтому вы хватаете ближайший неповрежденный на вид баллон с топливом и плывете к поверхности (+1 топлива).","You take a deep breath and swim toward it. Due to the lack of proper equipment, you lack the time necessary to properly explore the ruins, so you simply grab the first gas tank that looks undamaged and swim to the surface (+1 fuel)."
+DeepLake10,"Нырять на такую глубину без снаряжения опасно, а в руинах вряд ли сохранилось хоть что-нибудь полезное. Искупавшись, вы возвращаетесь на корабль и продолжаете свой путь.","Diving so deep without proper equipment is dangerous and besides, it is unlikely something could be preserved in those ruins for so long. Having finished bathing, you return to the ship and continue your journey."
+,,
+CorneredBeast1,ЗАГНАННЫЙ ЗВЕРЬ,CORNERED BEAST
+CorneredBeast2,"Мимо вас на полной скорости пролетает небольшой корабль Бензинщиков, за которым ведёт погоню племя Керосинщиков. Пилот корабля сообщает, что его топливо на исходе и умоляет помочь ему.","A Gas Ganger ship passes you by at full speed, being chased by a Kerosener tribe. The pilot contacts you and relays that he has almost ran out of fuel, begging you for help."
+CorneredBeast3,Не помогать,Refuse
+CorneredBeast4,Помочь,Assist Him
+CorneredBeast5,"Их разборки вас не интересуют, а вставать на защиту пирата глупо. Со стороны вы наблюдаете, как племя нагоняет корабль и жестоко казнит его владельца.","You want no business in this ordeal, besides the fact that helping a pirate is just a dumb move. From a safe distance, you watch the tribesmen catch up with the pirate ship and brutally execute its owner."
+CorneredBeast6,"Закрыв корабль Бензинщика своим, вы передаете топливо и вместе с ним уходите на безопасное расстояние от преследователей. В благодарность, он делится с вами награбленной у Керосинщиков добычей (-2 урона, -2 топлива).","Covering the Gas Ganger ship with your own, you transfer the fuel, then follow him a safe distance away from his pursuers. As a sign of gratitude, he shares with you the spoils of his attacks on that tribe (-2 damage, -2 fuel)."
+,,
+NoHarmNoFoul1,НЕ ПОЙМАН - НЕ ВОР!,"NO HARM, NO FOUL"
+NoHarmNoFoul2,"Сойдя на остров, вы видите двух торговцев, судя по виду, которые о чем-то ожесточенно спорят. Когда вы подходите, чтобы поинтересоваться что случилось, оба утверждают, что другой украл у них товары и просят помочь разрешить спор. Один из них толстый, ухоженный и дорого одетый, другой-же тощий, одет в обноски и в целом похож на бродягу.","Upon landing on this island, you notice two traders, judging by their look, having a heated debate. As you approach to ask what's going on, each one tells the other stole his supplies and asks to help solve the problem. One of them is chubby, well-groomed and well-dressed, while the other is gaunt, wears rags and generally looks like a beggar."
+NoHarmNoFoul3,Поддержать богатого,Side with the Rich One
+NoHarmNoFoul4,Поддержать бедняка,Side with the Poor One
+NoHarmNoFoul5,"Второй более походит на вора, а потому вы вынуждаете его отдать украденное. Богач благодарит вас за помощь небольшим подарком.","The second one looks more like a thief would, so you force him to give back what he stole. The rich man thanks you for your help and offers a small gift."
+NoHarmNoFoul6,"Вы решаете встать на защиту слабого и требуете, чтобы богач отдал украденное. Бедняк искренне благодарит вас за понимание и помощь, после чего удаляется.","You decide to side with the underdog and demand the rich one give up the stolen goods. The poor man thanks you sincerely for understanding and assistance, then leaves."
+,,
+Vultures1,СТЕРВЯТНИКИ,VULTURES
+Vultures2,"На этом острове нет никаких построек, но сенсоры корабля указывают на человеческое присутствие. Подлетя поближе, вы замечаете несколько припаркованных кораблей Бензинщиков, их владельцы самозабвенно копаются в остове корабля Солнечников.","This island lacks any infrastructure, but the ship's sensors indicate considerable human presence. Flying closer, you note several parked Gas Ganger ships, as their owners obliviously dig through the wreck of a Solar."
+Vultures3,Облететь их стороной,Pass Them By
+Vultures4,Открыть огонь,Open Fire
+Vultures5,"Пользуясь временной невнимательностью пиратов, вы огибаете остров и спешно удаляетесь.","Making use of the pirates' inattention, you fly by the island and gain distance from it."
+Vultures6,"Ваши орудия превращают неспособных защититься вне своих кораблей пиратов в фарш. Убедившись, что все они мертвы, вы приземляетесь на остров и забираете все ценное, что нашлось на их кораблях (+1 топлива).","You weapons turn the pirates, unable to defend themselves outside the ships, into minced meat. Having made sure they're all dead, you land on the island and take everything of value you find inside their ships (+1 fuel)."
+,,
+MysteriousContainer1,ЗАГАДОЧНЫЙ КОНТЕЙНЕР,MYSTERIOUS CONTAINER
+MysteriousContainer2,"Небесные просторы меж островами как правило пусты, однако около этого острова вы наблюдаете любопытную картину - крупный грузовой контейнер попал в подобие гравитационной воронки и, двигаясь по широкой спирали, довольно быстро погружается в нижние слои атмосферы.","The expanse of skies between the islands is usually empty, however near this island you bear witness to a curious event - a large cargo container is caught in a kind of a gravitational vortex and, moving in a large spiral, slowly descends into the lower layers."
+MysteriousContainer3,Оставить все как есть,Leave it Be
+MysteriousContainer4,Выловить его,Catch It
+MysteriousContainer5,"Данный феномен, несомненно, весьма зрелищен, однако приближаться к нему небезопасно и бесполезно. Вдоволь понаблюдав за движением контейнера, вы благоразумно облетаете его стороной.","This phenomena might be quite the sight to be seen, but approaching it is both dangerous and pointless. Having gotten your fair share of watching the container's movement, you, sensibly, leave it to its own devices."
+MysteriousContainer6,"Вооружившись смекалкой и паяльником, вы конструируете подобие крюка из металлолома. И действительно, он позволяет вам быстро зацепить контейнер. Однако, вес и иннерция контейнера слишком велики, чтобы его остановить. Вы остаетесь без контейнера и без крюка. Прискорбно.","With the help of a sharp wit and a soldering iron, you make an improvised hook out of scrap. And indeed, it helps you latch onto the container. However, the weight and innertia of it are too great to stop. You end up both without a container and without the hook. Regrettable."
+MysteriousContainer7,"Вас посещает гениальная идея - выйти на одинаковую скорость и траекторию с контейнером, дабы сравняться с ним, после чего аккуратно вытолкнуть на остров, где безопасно раскрыть. Однако вы предприняли это решение слишком поздно и, потратив немало времени и топлива на погоню за контейнером, вы с сожалением наблюдаете как он погружается в нижние слои атмосферы, откуда его уже не достать (-1 fuel).","You get a wonderful idea - align your ship with the container, push it out onto the island and safely open it there. Unfortunately though, you came up with that decision way too late and, having spent plenty of time and fuel chasing the container, you watch it fall down into the lower layers of the atmosphere, from where you can no longer get it (-1 fuel)."
+,,
+RaysOfKindness1,ЛУЧИ ДОБРА,RAYS OF KINDNESS
+RaysOfKindness2,"Облетая очередной непримечательный остров, вы встречаетесь лицом к лицу с кораблем Ядерщиков. Те немедленно выходят на контакт с пламенной речью о вашей греховности и требуют, чтобы вы приняли участие в их церемонии очищения.","Turning around yet another unassuming island, you are met face to face with a ship of the Nuclears. They contact you with a fiery speech about how sinful you are, then demand you immediately take part in their purification ceremony."
+RaysOfKindness3,Отказаться,Refuse
+RaysOfKindness4,Согласиться,Agree
+RaysOfKindness5,Ваш отказ оскорбляет их до глубины души. Они немедленно прекращают переговоры и открывают огонь.,Your refusal deeply offends them. They immediately cut communications and open fire.
+RaysOfKindness6,"Пошарившись в аптечке, вы находите пачку Антирадина, который незамедлительно принимаете, что позволяет вам поучавствовать в церемонии Ядерщиков, не подвергая себя вреду.","With a quick search through your cargo, you find a pack of Rad-Away, which you then take. This helps you take part in the ceremony with the Nuclears without causing yourself harm."
+RaysOfKindness7,"Скрепя сердце, вы сходите на их корабль и принимаете участие в церемонии. Они, вероятно, довольны вашим решением, однако головокружение и тошнота, что вы испытываете, возвращаясь на собственный корабль, наталкивают на мысль, что это была плохая идея (-5 урона).","With a sinking heart, you descend to their ship and take part in the ceremony. They appear to be pleased with your decision, but the headaches and nausea you feel returning to your own ship are but a subtle clue that this may have been a bad idea (-5 damage)."
+,,
+VengefulPirate1,МСТИТЕЛЬНЫЙ ПИРАТ,VENGEFUL PIRATE
+VengefulPirate2,"Беззаботно пересекая небо, вы не сразу замечаете Бензинщика, что стремительно вас нагоняет. По радио, он в красочных деталях описывает все страдания, которые намеревается вам причинить. Судя по всему, он хочет поквитаться с вами за то, что вы сделали ранее.","Crossing the sky with not a worry in your heart, it takes you some time to notice a Gas Ganger ship catching up with you. He comes on the radio with a graphic description of the many tortures he will inflict upon you. It would seem, he wants to take revenge on you for what you did earlier."
+VengefulPirate3,Сразиться,Fight Him
+VengefulPirate4,Оторваться от него,Break Away
+VengefulPirate5,"Бензинщики как паршивые псы - лают да не кусают, думаете вы, разворачивая корабль и готовясь к бою.","Gas Gangers are like lousy dogs, all bark and no bite, you think as you turn around and prepare for battle."
+VengefulPirate6,"Вы увеличиваете мощность двигателей до максимума в попытке сбросить его с хвоста. Спустя какое-то время вам удается оторваться, но на это уходит значительное количество топлива (-3 топлива).","You raise the engine power to max in an attempt to throw him off your tail. After a while, you manage to break out of the chase, but this has taken a significant amount of fuel (-3 fuel)."

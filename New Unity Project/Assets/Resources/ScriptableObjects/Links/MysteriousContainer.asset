@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c5b2106a547384ca9631fa47fad560, type: 3}
+  m_Name: MysteriousContainer
+  m_EditorClassIdentifier: 
+  audioText: {fileID: 8300000, guid: ce3fe16a80bbe4045bc65e2184ce602d, type: 3}
+  TextHeader: MYSTERIOUS CONTAINER
+  Text: The expanse of skies between the islands is usually empty, however near this
+    island you bear witness to a curious event - a large cargo container is caught
+    in a kind of a gravitational vortex and, moving in a large spiral, slowly descends
+    into the lower layers.
+  audioTextA: {fileID: 8300000, guid: 6d7738cb90b5914478215a14ba7581f0, type: 3}
+  VarA: Leave it Be
+  TextA: This phenomena might be quite the sight to be seen, but approaching it is
+    both dangerous and pointless. Having gotten your fair share of watching the container's
+    movement, you, sensibly, leave it to its own devices.
+  dataIventA: {fileID: 0}
+  dataLootA: {fileID: 0}
+  countA: 0
+  audioTextB: {fileID: 0}
+  VarB: Catch It
+  TextB: 
+  dataIventB: {fileID: 11400000, guid: 02893f6c1ba948f4583727d83a1222e5, type: 2}
+  dataLootB: {fileID: 0}
+  countB: 0

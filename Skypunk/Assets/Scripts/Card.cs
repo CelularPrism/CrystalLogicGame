@@ -46,7 +46,7 @@ public class Card : MonoBehaviour
 
     public Dictionary<string, int> GetLoot(Dictionary<string, int> list)
     {
-        if (Random.Range(0, 100) < 80)
+        if (Random.Range(0, 100) < 20)
         {
             search.GetComponent<Search>().Restart();
             search.SetActive(true);
@@ -76,7 +76,7 @@ public class Card : MonoBehaviour
 
     public int GetFuel(int fuel)
     {
-        fuel += Random.Range(3, 6);
+        fuel += Random.Range(4, 9);
         return fuel;
     }
 }

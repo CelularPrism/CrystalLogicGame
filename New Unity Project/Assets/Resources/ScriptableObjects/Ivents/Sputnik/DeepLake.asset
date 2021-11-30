@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c5b2106a547384ca9631fa47fad560, type: 3}
+  m_Name: DeepLake
+  m_EditorClassIdentifier: 
+  audioText: {fileID: 8300000, guid: 9f5799de8a5c9a747b0b1b5942062d98, type: 3}
+  TextHeader: DEEP LAKE
+  Text: Approximately three quarters of this island are taken up by a large lake.
+    Scans show this island possesses a bowl-like shape, that is in much likelihood
+    the cause behind the formation of this body of water.
+  audioTextA: {fileID: 8300000, guid: 7f4df021f0222a9458f810390dbbf34c, type: 3}
+  VarA: Collect Water
+  TextA: You pump out some water from the lake and add it to your supplies, noticing
+    too late that it is contaminated. The supplies you've added the water to are
+    no longer fit for human consumption.
+  dataIventA: {fileID: 0}
+  dataLootA: {fileID: 11400000, guid: c907faced8a44e045b2467eece058f34, type: 2}
+  countA: -1
+  audioTextB: {fileID: 8300000, guid: 3bc8beb3e8f3c5e4497b36a29bb8964f, type: 3}
+  VarB: Bathe
+  TextB: Entering the clear waters, you wash yourself of sweat, blood and other substances.
+    During that process, you notice an abandoned building at the bottom of the lake,
+    that was once a refueling station.
+  dataIventB: {fileID: 11400000, guid: 6f4a259537b96d04aad4e2e410d0fd06, type: 2}
+  dataLootB: {fileID: 0}
+  countB: 0

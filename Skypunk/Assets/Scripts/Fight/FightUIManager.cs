@@ -8,7 +8,6 @@ public class FightUIManager : MonoBehaviour
 {
     [SerializeField] private MusicManager musicManager;
 
-    [SerializeField] private Transform btn;
     [SerializeField] private Transform panelInfo;
     [SerializeField] private Transform panelShield;
     [SerializeField] private Transform panelAttack;
@@ -50,19 +49,19 @@ public class FightUIManager : MonoBehaviour
         healthTextEnemy.text = card.Health.ToString();
         damageTextEnemy.text = card.Damage.ToString();
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1)) 
+        if ((Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1)) && fight.fight) 
         {
             AddPoint(1);
         } 
-        else if (Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad2))
+        else if ((Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad2)) && fight.fight)
         {
             AddPoint(2);
         } 
-        else if (Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad3))
+        else if ((Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad3)) && fight.fight)
         {
             AddPoint(3);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Keypad4))
+        else if ((Input.GetKeyDown(KeyCode.Alpha4) || Input.GetKeyDown(KeyCode.Keypad4)) && fight.fight)
         {
             AddPoint(4);
         }

@@ -14,6 +14,7 @@ TagManager:
   - Panel
   - PanelShield
   - PanelAttack
+  - Slide
   layers:
   - Default
   - TransparentFX

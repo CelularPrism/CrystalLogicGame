@@ -43,6 +43,6 @@ MonoBehaviour:
   countA: 0
   VarB: "\u0412\u044B\u043B\u043E\u0432\u0438\u0442\u044C \u0435\u0433\u043E"
   TextB: 
-  dataIventB: {fileID: 0}
-  dataLootB: {fileID: 11400000, guid: ff9bd9be14faa1d4ebd56f735ca8893e, type: 2}
-  countB: 1
+  dataIventB: {fileID: 11400000, guid: 02893f6c1ba948f4583727d83a1222e5, type: 2}
+  dataLootB: {fileID: 0}
+  countB: 0

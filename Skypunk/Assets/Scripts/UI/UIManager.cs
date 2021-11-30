@@ -26,7 +26,7 @@ public class UIManager : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Tab) && GameObject.FindGameObjectsWithTag("Panel").Length == 0)
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             OpenPanelLoot();
         } else if (Input.GetKeyDown(KeyCode.Escape))
@@ -38,54 +38,58 @@ public class UIManager : MonoBehaviour
 
     public void OpenPanelLoot()
     {
-        dropBtn.GetChild(0).gameObject.SetActive(true);
-        dropBtn.GetChild(1).gameObject.SetActive(false);
-
-        int j = 0;
-        panelLoot.gameObject.SetActive(true);
-        Transform panel = GameObject.FindGameObjectWithTag("LootList").transform;
-        audioListener.clip = audioOpen;
-        audioListener.Play();
-
-        panelLoot.GetChild(0).gameObject.SetActive(true);
-        panelLoot.GetChild(1).gameObject.SetActive(false);
-
-        foreach (var i in sceneController.lootList)
+        if (GameObject.FindGameObjectsWithTag("Panel").Length == 0)
         {
-            if (i.Value > 0)
+            dropBtn.GetChild(0).gameObject.SetActive(true);
+            dropBtn.GetChild(1).gameObject.SetActive(false);
+
+            int j = 0;
+            panelLoot.gameObject.SetActive(true);
+            Transform panel = GameObject.FindGameObjectWithTag("LootList").transform;
+            audioListener.clip = audioOpen;
+            audioListener.Play();
+
+            panelLoot.GetChild(0).gameObject.SetActive(true);
+            panelLoot.GetChild(1).gameObject.SetActive(false);
+
+            foreach (var i in sceneController.lootList)
             {
-                DataLoot dataLoot = Resources.Load<DataLoot>("ScriptableObjects/Loot/" + i.Key);
+                if (i.Value > 0)
+                {
+                    DataLoot dataLoot = Resources.Load<DataLoot>("ScriptableObjects/Loot/" + i.Key);
 
-                panel.GetChild(j).GetChild(0).GetComponent<Text>().text = dataLoot.Name;//i.Key;
-                panel.GetChild(j).GetChild(1).GetComponent<Text>().text = i.Value.ToString();
+                    panel.GetChild(j).GetChild(0).GetComponent<Text>().text = dataLoot.Name;//i.Key;
+                    panel.GetChild(j).GetChild(1).GetComponent<Text>().text = i.Value.ToString();
 
-                Image lootImg = panel.GetChild(j).GetChild(2).GetComponent<Image>();
+                    Image lootImg = panel.GetChild(j).GetChild(2).GetComponent<Image>();
 
-                lootImg.sprite = dataLoot.img;
-                lootImg.color = new Color(lootImg.color.r, lootImg.color.g, lootImg.color.b, 1);
-                j++;
-            }
-        }
-
-        for (int i = 0; i < panel.childCount; i++)
-        {
-            if (i >= sceneController.lootList.Count)
-            {
-                panel.GetChild(i).GetComponent<Button>().enabled = false;
-
-                panel.GetChild(i).GetChild(0).GetComponent<Text>().text = "";
-                panel.GetChild(i).GetChild(1).GetComponent<Text>().text = "";
-                panel.GetChild(i).GetChild(2).GetComponent<Image>().color = new Color(255, 255, 255, 0);
-            } else
-            {
-                panel.GetChild(i).GetComponent<Button>().enabled = true;
+                    lootImg.sprite = dataLoot.img;
+                    lootImg.color = new Color(lootImg.color.r, lootImg.color.g, lootImg.color.b, 1);
+                    j++;
+                }
             }
 
-            panel.GetChild(i).GetChild(3).gameObject.SetActive(false);
-        }
+            for (int i = 0; i < panel.childCount; i++)
+            {
+                if (i >= sceneController.lootList.Count)
+                {
+                    panel.GetChild(i).GetComponent<Button>().enabled = false;
 
-        Text money = GameObject.FindGameObjectWithTag("Money").GetComponent<Text>();
-        money.text = sceneController.money.ToString();
+                    panel.GetChild(i).GetChild(0).GetComponent<Text>().text = "";
+                    panel.GetChild(i).GetChild(1).GetComponent<Text>().text = "";
+                    panel.GetChild(i).GetChild(2).GetComponent<Image>().color = new Color(255, 255, 255, 0);
+                }
+                else
+                {
+                    panel.GetChild(i).GetComponent<Button>().enabled = true;
+                }
+
+                panel.GetChild(i).GetChild(3).gameObject.SetActive(false);
+            }
+
+            Text money = GameObject.FindGameObjectWithTag("Money").GetComponent<Text>();
+            money.text = sceneController.money.ToString();
+        }
     }
 
     public void OpenPanelBase()

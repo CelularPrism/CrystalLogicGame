@@ -125,6 +125,32 @@ public class MultiLanguage : MonoBehaviour
         textToTranslate[35].text = LocalizationManager.Localize("PanelWarningYes");
         textToTranslate[36].text = LocalizationManager.Localize("PanelWarningNo");
         textToTranslate[37].text = LocalizationManager.Localize("CourierDeckSend");
+        textToTranslate[38].text = LocalizationManager.Localize("PanelLootBase");
+
+        textToTranslate[39].text = LocalizationManager.Localize("RepairPanelHeader");
+        textToTranslate[40].text = LocalizationManager.Localize("PanelWarningNo");
+        textToTranslate[41].text = LocalizationManager.Localize("RepairPanelBtn");
+        textToTranslate[42].text = LocalizationManager.Localize("PanelLootBase");
+
+        textToTranslate[43].text = LocalizationManager.Localize("Prologue1");
+        textToTranslate[44].text = LocalizationManager.Localize("Prologue2");
+        textToTranslate[45].text = LocalizationManager.Localize("Prologue3");
+        textToTranslate[46].text = LocalizationManager.Localize("Prologue4");
+        textToTranslate[47].text = LocalizationManager.Localize("Prologue5");
+        textToTranslate[48].text = LocalizationManager.Localize("Prologue6");
+        textToTranslate[49].text = LocalizationManager.Localize("Prologue7");
+        textToTranslate[50].text = LocalizationManager.Localize("Prologue8");
+        textToTranslate[51].text = LocalizationManager.Localize("Prologue9");
+
+        textToTranslate[52].text = LocalizationManager.Localize("Epilogue1");
+        textToTranslate[53].text = LocalizationManager.Localize("Epilogue2");
+        textToTranslate[54].text = LocalizationManager.Localize("Epilogue3");
+        textToTranslate[55].text = LocalizationManager.Localize("Epilogue4");
+        textToTranslate[56].text = LocalizationManager.Localize("Epilogue5");
+        textToTranslate[57].text = LocalizationManager.Localize("Epilogue6");
+        textToTranslate[58].text = LocalizationManager.Localize("Epilogue7");
+        textToTranslate[59].text = LocalizationManager.Localize("Epilogue8");
+        textToTranslate[60].text = LocalizationManager.Localize("Epilogue9");
 
         // Loot
         DataLootToTranslate[0].Name = LocalizationManager.Localize("LtChemicals");
@@ -148,88 +174,139 @@ public class MultiLanguage : MonoBehaviour
         DataLootToTranslate[18].Name = LocalizationManager.Localize("LtWheel");
 
         // Events
-        DataIventToTranslate[0].TextHeader = LocalizationManager.Localize("DeathLuck1");
-        DataIventToTranslate[0].Text = LocalizationManager.Localize("DeathLuck2");
-        DataIventToTranslate[0].VarA = LocalizationManager.Localize("DeathLuck3");
-        DataIventToTranslate[0].VarB = LocalizationManager.Localize("DeathLuck4");
-        DataIventToTranslate[0].TextA = LocalizationManager.Localize("DeathLuck5");
-        DataIventToTranslate[0].TextB = LocalizationManager.Localize("DeathLuck6");
+        DataIventToTranslate[0].TextHeader = LocalizationManager.Localize("EasyProfit1");
+        DataIventToTranslate[0].Text = LocalizationManager.Localize("EasyProfit2");
+        DataIventToTranslate[0].VarA = LocalizationManager.Localize("EasyProfit3");
+        DataIventToTranslate[0].VarB = LocalizationManager.Localize("EasyProfit4");
+        DataIventToTranslate[0].TextA = LocalizationManager.Localize("EasyProfit5");
+        DataIventToTranslate[0].TextB = LocalizationManager.Localize("EasyProfit6");
 
-        DataIventToTranslate[1].TextHeader = LocalizationManager.Localize("Dinner1");
-        DataIventToTranslate[1].Text = LocalizationManager.Localize("Dinner2");
-        DataIventToTranslate[1].VarA = LocalizationManager.Localize("Dinner3");
-        DataIventToTranslate[1].VarB = LocalizationManager.Localize("Dinner4");
-        DataIventToTranslate[1].TextA = LocalizationManager.Localize("Dinner5");
-        DataIventToTranslate[1].TextB = LocalizationManager.Localize("Dinner6");
+        DataIventToTranslate[1].TextHeader = LocalizationManager.Localize("EasyMetal1");
+        DataIventToTranslate[1].Text = LocalizationManager.Localize("EasyMetal2");
+        DataIventToTranslate[1].VarA = LocalizationManager.Localize("EasyMetal3");
+        DataIventToTranslate[1].VarB = LocalizationManager.Localize("EasyMetal4");
+        DataIventToTranslate[1].TextA = LocalizationManager.Localize("EasyMetal5");
+        DataIventToTranslate[1].TextB = LocalizationManager.Localize("EasyMetal6");
 
-        DataIventToTranslate[2].TextHeader = LocalizationManager.Localize("EasyDeal1");
-        DataIventToTranslate[2].Text = LocalizationManager.Localize("EasyDeal2");
-        DataIventToTranslate[2].VarA = LocalizationManager.Localize("EasyDeal3");
-        DataIventToTranslate[2].VarB = LocalizationManager.Localize("EasyDeal4");
-        DataIventToTranslate[2].TextA = LocalizationManager.Localize("EasyDeal5");
-        DataIventToTranslate[2].TextB = LocalizationManager.Localize("EasyDeal6");
+        DataIventToTranslate[2].TextHeader = LocalizationManager.Localize("Silhouettes1");
+        DataIventToTranslate[2].Text = LocalizationManager.Localize("Silhouettes2");
+        DataIventToTranslate[2].VarA = LocalizationManager.Localize("Silhouettes3");
+        DataIventToTranslate[2].VarB = LocalizationManager.Localize("Silhouettes4");
+        DataIventToTranslate[2].TextA = LocalizationManager.Localize("Silhouettes5");
+        DataIventToTranslate[2].TextB = LocalizationManager.Localize("Silhouettes6");
 
-        DataIventToTranslate[3].TextHeader = LocalizationManager.Localize("LastBreath1");
-        DataIventToTranslate[3].Text = LocalizationManager.Localize("LastBreath2");
-        DataIventToTranslate[3].VarA = LocalizationManager.Localize("LastBreath3");
-        DataIventToTranslate[3].VarB = LocalizationManager.Localize("LastBreath4");
-        DataIventToTranslate[3].TextA = LocalizationManager.Localize("LastBreath5");
-        DataIventToTranslate[3].TextB = LocalizationManager.Localize("LastBreath6");
+        DataIventToTranslate[3].TextHeader = LocalizationManager.Localize("FirstCome1");
+        DataIventToTranslate[3].Text = LocalizationManager.Localize("FirstCome2");
+        DataIventToTranslate[3].VarA = LocalizationManager.Localize("FirstCome3");
+        DataIventToTranslate[3].VarB = LocalizationManager.Localize("FirstCome4");
+        DataIventToTranslate[3].TextA = LocalizationManager.Localize("FirstCome5");
+        DataIventToTranslate[3].TextB = LocalizationManager.Localize("FirstCome6");
 
-        DataIventToTranslate[4].TextHeader = LocalizationManager.Localize("NaturesPower1");
-        DataIventToTranslate[4].Text = LocalizationManager.Localize("NaturesPower2");
-        DataIventToTranslate[4].VarA = LocalizationManager.Localize("NaturesPower3");
-        DataIventToTranslate[4].VarB = LocalizationManager.Localize("NaturesPower4");
-        DataIventToTranslate[4].TextA = LocalizationManager.Localize("NaturesPower5");
-        DataIventToTranslate[4].TextB = LocalizationManager.Localize("NaturesPower6");
+        DataIventToTranslate[4].TextHeader = LocalizationManager.Localize("CorneredBeast1");
+        DataIventToTranslate[4].Text = LocalizationManager.Localize("CorneredBeast2");
+        DataIventToTranslate[4].VarA = LocalizationManager.Localize("CorneredBeast3");
+        DataIventToTranslate[4].VarB = LocalizationManager.Localize("CorneredBeast4");
+        DataIventToTranslate[4].TextA = LocalizationManager.Localize("CorneredBeast5");
+        DataIventToTranslate[4].TextB = LocalizationManager.Localize("CorneredBeast6");
 
-        DataIventToTranslate[5].TextHeader = LocalizationManager.Localize("MyPrecious1");
-        DataIventToTranslate[5].Text = LocalizationManager.Localize("MyPrecious2");
-        DataIventToTranslate[5].VarA = LocalizationManager.Localize("MyPrecious3");
-        DataIventToTranslate[5].VarB = LocalizationManager.Localize("MyPrecious4");
-        DataIventToTranslate[5].TextA = LocalizationManager.Localize("MyPrecious5");
-        DataIventToTranslate[5].TextB = LocalizationManager.Localize("MyPrecious6");
+        DataIventToTranslate[5].TextHeader = LocalizationManager.Localize("NoHarmNoFoul1");
+        DataIventToTranslate[5].Text = LocalizationManager.Localize("NoHarmNoFoul2");
+        DataIventToTranslate[5].VarA = LocalizationManager.Localize("NoHarmNoFoul3");
+        DataIventToTranslate[5].VarB = LocalizationManager.Localize("NoHarmNoFoul4");
+        DataIventToTranslate[5].TextA = LocalizationManager.Localize("NoHarmNoFoul5");
+        DataIventToTranslate[5].TextB = LocalizationManager.Localize("NoHarmNoFoul6");
 
-        DataIventToTranslate[6].TextHeader = LocalizationManager.Localize("Pyromaniac1");
-        DataIventToTranslate[6].Text = LocalizationManager.Localize("Pyromaniac2");
-        DataIventToTranslate[6].VarA = LocalizationManager.Localize("Pyromaniac3");
-        DataIventToTranslate[6].VarB = LocalizationManager.Localize("Pyromaniac4");
-        DataIventToTranslate[6].TextA = LocalizationManager.Localize("Pyromaniac5");
-        DataIventToTranslate[6].TextB = LocalizationManager.Localize("Pyromaniac6");
+        DataIventToTranslate[6].TextHeader = LocalizationManager.Localize("Vultures1");
+        DataIventToTranslate[6].Text = LocalizationManager.Localize("Vultures2");
+        DataIventToTranslate[6].VarA = LocalizationManager.Localize("Vultures3");
+        DataIventToTranslate[6].VarB = LocalizationManager.Localize("Vultures4");
+        DataIventToTranslate[6].TextA = LocalizationManager.Localize("Vultures5");
+        DataIventToTranslate[6].TextB = LocalizationManager.Localize("Vultures6");
 
-        DataIventToTranslate[7].TextHeader = LocalizationManager.Localize("Silhouettes1");
-        DataIventToTranslate[7].Text = LocalizationManager.Localize("Silhouettes2");
-        DataIventToTranslate[7].VarA = LocalizationManager.Localize("Silhouettes3");
-        DataIventToTranslate[7].VarB = LocalizationManager.Localize("Silhouettes4");
-        DataIventToTranslate[7].TextA = LocalizationManager.Localize("Silhouettes5");
-        DataIventToTranslate[7].TextB = LocalizationManager.Localize("Silhouettes6");
+        DataIventToTranslate[7].TextHeader = LocalizationManager.Localize("VengefulPirate1");
+        DataIventToTranslate[7].Text = LocalizationManager.Localize("VengefulPirate2");
+        DataIventToTranslate[7].VarA = LocalizationManager.Localize("VengefulPirate3");
+        DataIventToTranslate[7].VarB = LocalizationManager.Localize("VengefulPirate4");
+        DataIventToTranslate[7].TextA = LocalizationManager.Localize("VengefulPirate5");
+        DataIventToTranslate[7].TextB = LocalizationManager.Localize("VengefulPirate6");
 
-        DataIventToTranslate[8].TextHeader = LocalizationManager.Localize("PropheticTraveler1");
-        DataIventToTranslate[8].Text = LocalizationManager.Localize("PropheticTraveler2");
-        DataIventToTranslate[8].VarA = LocalizationManager.Localize("PropheticTraveler3");
-        DataIventToTranslate[8].VarB = LocalizationManager.Localize("PropheticTraveler4");
-        DataIventToTranslate[8].TextA = LocalizationManager.Localize("PropheticTraveler5");
-        DataIventToTranslate[8].TextB = LocalizationManager.Localize("PropheticTraveler6");
+        DataIventToTranslate[8].TextHeader = LocalizationManager.Localize("DeadMenNoLies1");
+        DataIventToTranslate[8].Text = LocalizationManager.Localize("DeadMenNoLies2");
+        DataIventToTranslate[8].VarA = LocalizationManager.Localize("DeadMenNoLies3");
+        DataIventToTranslate[8].VarB = LocalizationManager.Localize("DeadMenNoLies4");
+        DataIventToTranslate[8].TextA = LocalizationManager.Localize("DeadMenNoLies5");
+        DataIventToTranslate[8].TextB = LocalizationManager.Localize("DeadMenNoLies6");
 
-        DataIventToTranslate[9].TextHeader = LocalizationManager.Localize("NotAThief1");
-        DataIventToTranslate[9].Text = LocalizationManager.Localize("NotAThief2");
-        DataIventToTranslate[9].VarA = LocalizationManager.Localize("NotAThief3");
-        DataIventToTranslate[9].VarB = LocalizationManager.Localize("NotAThief4");
-        DataIventToTranslate[9].TextA = LocalizationManager.Localize("NotAThief5");
-        DataIventToTranslate[9].TextB = LocalizationManager.Localize("NotAThief6");
+        DataIventToTranslate[9].Text = LocalizationManager.Localize("DeadMenNoLies5");
+        DataIventToTranslate[9].VarA = LocalizationManager.Localize("DeadMenNoLies7");
+        DataIventToTranslate[9].VarB = LocalizationManager.Localize("DeadMenNoLies8");
+        DataIventToTranslate[9].TextA = LocalizationManager.Localize("DeadMenNoLies9");
+        DataIventToTranslate[9].TextB = LocalizationManager.Localize("DeadMenNoLies10");
 
-        DataIventToTranslate[10].TextHeader = LocalizationManager.Localize("ThornyPath1");
-        DataIventToTranslate[10].Text = LocalizationManager.Localize("ThornyPath2");
-        DataIventToTranslate[10].VarA = LocalizationManager.Localize("ThornyPath3");
-        DataIventToTranslate[10].VarB = LocalizationManager.Localize("ThornyPath4");
-        DataIventToTranslate[10].TextA = LocalizationManager.Localize("ThornyPath5");
-        DataIventToTranslate[10].TextB = LocalizationManager.Localize("ThornyPath6");
+        DataIventToTranslate[10].TextHeader = LocalizationManager.Localize("FreeCheese1");
+        DataIventToTranslate[10].Text = LocalizationManager.Localize("FreeCheese2");
+        DataIventToTranslate[10].VarA = LocalizationManager.Localize("FreeCheese3");
+        DataIventToTranslate[10].VarB = LocalizationManager.Localize("FreeCheese4");
+        DataIventToTranslate[10].TextA = LocalizationManager.Localize("FreeCheese5");
+        DataIventToTranslate[10].TextB = LocalizationManager.Localize("FreeCheese6");
 
-        DataIventToTranslate[11].TextHeader = LocalizationManager.Localize("CarelessWanderers1");
-        DataIventToTranslate[11].Text = LocalizationManager.Localize("CarelessWanderers2");
-        DataIventToTranslate[11].VarA = LocalizationManager.Localize("CarelessWanderers3");
-        DataIventToTranslate[11].VarB = LocalizationManager.Localize("CarelessWanderers4");
-        DataIventToTranslate[11].TextA = LocalizationManager.Localize("CarelessWanderers5");
-        DataIventToTranslate[11].TextB = LocalizationManager.Localize("CarelessWanderers6");
+        DataIventToTranslate[11].Text = LocalizationManager.Localize("FreeCheese5");
+        DataIventToTranslate[11].VarA = LocalizationManager.Localize("FreeCheese7");
+        DataIventToTranslate[11].VarB = LocalizationManager.Localize("FreeCheese8");
+        DataIventToTranslate[11].TextA = LocalizationManager.Localize("FreeCheese9");
+        DataIventToTranslate[11].TextB = LocalizationManager.Localize("FreeCheese10");
+
+        DataIventToTranslate[12].TextHeader = LocalizationManager.Localize("NightmareFuel1");
+        DataIventToTranslate[12].Text = LocalizationManager.Localize("NightmareFuel2");
+        DataIventToTranslate[12].VarA = LocalizationManager.Localize("NightmareFuel3");
+        DataIventToTranslate[12].VarB = LocalizationManager.Localize("NightmareFuel4");
+        DataIventToTranslate[12].TextA = LocalizationManager.Localize("NightmareFuel5");
+        DataIventToTranslate[12].TextB = LocalizationManager.Localize("NightmareFuel6");
+
+        DataIventToTranslate[13].Text = LocalizationManager.Localize("NightmareFuel5");
+        DataIventToTranslate[13].VarA = LocalizationManager.Localize("NightmareFuel7");
+        DataIventToTranslate[13].VarB = LocalizationManager.Localize("NightmareFuel8");
+        DataIventToTranslate[13].TextA = LocalizationManager.Localize("NightmareFuel9");
+        DataIventToTranslate[13].TextB = LocalizationManager.Localize("NightmareFuel10");
+
+        DataIventToTranslate[14].TextHeader = LocalizationManager.Localize("DeepLake1");
+        DataIventToTranslate[14].Text = LocalizationManager.Localize("DeepLake2");
+        DataIventToTranslate[14].VarA = LocalizationManager.Localize("DeepLake3");
+        DataIventToTranslate[14].VarB = LocalizationManager.Localize("DeepLake4");
+        DataIventToTranslate[14].TextA = LocalizationManager.Localize("DeepLake5");
+        DataIventToTranslate[14].TextB = LocalizationManager.Localize("DeepLake6");
+
+        DataIventToTranslate[15].Text = LocalizationManager.Localize("DeepLake6");
+        DataIventToTranslate[15].VarA = LocalizationManager.Localize("DeepLake7");
+        DataIventToTranslate[15].VarB = LocalizationManager.Localize("DeepLake8");
+        DataIventToTranslate[15].TextA = LocalizationManager.Localize("DeepLake9");
+        DataIventToTranslate[15].TextB = LocalizationManager.Localize("DeepLake10");
+
+        DataIventToTranslate[16].TextHeader = LocalizationManager.Localize("WoundedGasGanger1");
+        DataIventToTranslate[16].Text = LocalizationManager.Localize("WoundedGasGanger2");
+        DataIventToTranslate[16].VarA = LocalizationManager.Localize("WoundedGasGanger3");
+        DataIventToTranslate[16].VarB = LocalizationManager.Localize("WoundedGasGanger4");
+        DataIventToTranslate[16].TextB = LocalizationManager.Localize("WoundedGasGanger5");
+
+        DataIventToTranslate[17].TextA = LocalizationManager.Localize("WoundedGasGanger6");
+        DataIventToTranslate[17].TextB = LocalizationManager.Localize("WoundedGasGanger7");
+
+        DataIventToTranslate[18].TextHeader = LocalizationManager.Localize("MysteriousContainer1");
+        DataIventToTranslate[18].Text = LocalizationManager.Localize("MysteriousContainer2");
+        DataIventToTranslate[18].VarA = LocalizationManager.Localize("MysteriousContainer3");
+        DataIventToTranslate[18].VarB = LocalizationManager.Localize("MysteriousContainer4");
+        DataIventToTranslate[18].TextA = LocalizationManager.Localize("MysteriousContainer5");
+
+        DataIventToTranslate[19].TextA = LocalizationManager.Localize("MysteriousContainer6");
+        DataIventToTranslate[19].TextB = LocalizationManager.Localize("MysteriousContainer7");
+
+        DataIventToTranslate[20].TextHeader = LocalizationManager.Localize("RaysOfKindness1");
+        DataIventToTranslate[20].Text = LocalizationManager.Localize("RaysOfKindness2");
+        DataIventToTranslate[20].VarA = LocalizationManager.Localize("RaysOfKindness3");
+        DataIventToTranslate[20].VarB = LocalizationManager.Localize("RaysOfKindness4");
+        DataIventToTranslate[20].TextA = LocalizationManager.Localize("RaysOfKindness5");
+
+        DataIventToTranslate[21].TextA = LocalizationManager.Localize("RaysOfKindness6");
+        DataIventToTranslate[21].TextB = LocalizationManager.Localize("RaysOfKindness7");
     }
 }
