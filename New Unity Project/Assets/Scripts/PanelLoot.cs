@@ -19,6 +19,7 @@ public class PanelLoot : MonoBehaviour
     private List<Item> listLoot = new List<Item>();
 
     [SerializeField] private SceneController controller;
+    [SerializeField] private EquipmentManager equipmentManager;
     [SerializeField] private Transform panelLoot;
     [SerializeField] private Transform courierList;
 
@@ -52,14 +53,16 @@ public class PanelLoot : MonoBehaviour
                     Count = Convert.ToInt32(parent.GetChild(1).GetComponent<Text>().text);
                     parent.GetChild(3).gameObject.SetActive(true);
                     listLoot.Add(new Item() { index = parent.GetSiblingIndex(), nameItem = Name, countItem = Count });
+                    break;
                 }
             }
 
-            UseItem(listLoot[listLoot.Count - 1]);
+            equipmentManager.Equip(Resources.Load<DataLoot>("ScriptableObjects/Loot/" + Name));
+            //UseItem(listLoot[listLoot.Count - 1]);
             Delete(listLoot[listLoot.Count - 1]);
         }
 
-        if (countClick > 2)
+        if (countClick >= 2)
             countClick = 0;
 
         if (!parent.GetChild(3).gameObject.activeSelf && listLoot.Count < maxCount && controller.lootList.Count > 0)

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Repair 3
   m_EditorClassIdentifier: 
   equipment: 1
+  lootClass: 2
   img: {fileID: 21300000, guid: 51c4d5ad3102d3d4683c147194e46161, type: 3}
   audio: {fileID: 0}
   Name: "\u0420\u0415\u041C\u041A\u041E\u041C\u041F\u041B\u0415\u041A\u0422"

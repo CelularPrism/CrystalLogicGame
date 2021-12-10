@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Turbine
   m_EditorClassIdentifier: 
   equipment: 1
+  lootClass: 2
   img: {fileID: 21300000, guid: c5e7d9eff1e003243884d5ee240a215a, type: 3}
   audio: {fileID: 0}
   Name: "\u0422\u0423\u0420\u0411\u0418\u041D\u0410"

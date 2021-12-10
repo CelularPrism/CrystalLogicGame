@@ -10,12 +10,38 @@ public class BuildBase : MonoBehaviour
     [SerializeField] private SceneController controller;
     [SerializeField] private Color disabledColor;
 
+    private int nowPos = 0;
+
+    void Start()
+    {
+        foreach (var build in BaseItems.building)
+        {
+            Transform buildTrans = controller.transform.GetChild(0).GetChild(1).Find(build.Key);
+            
+            for (int i = 0; i < transform.GetChild(0).childCount; i++)
+            {
+                Transform buildBtn = transform.GetChild(0).GetChild(i).GetChild(3).GetChild(1);
+                BuildMethod buildMethod = transform.GetChild(0).GetChild(i).GetChild(3).GetComponent<BuildMethod>();
+
+                if (buildMethod.nameBuild == build.Key)
+                {
+                    buildBtn.GetComponent<Image>().color = disabledColor;
+                    buildBtn.GetComponent<Button>().enabled = false;
+                    break;
+                }
+            }
+
+            buildTrans.GetComponent<Animator>().enabled = false;
+            buildTrans.gameObject.SetActive(true);
+        }
+    }
+
     void Update()
     {
-        for (int i = 0; i < transform.childCount - 1; i++)
+        for (int i = 0; i < transform.GetChild(0).childCount; i++)
         {
-            Transform panelResources = transform.GetChild(i).GetChild(3).GetChild(0);
-            BuildMethod buildMethod = transform.GetChild(i).GetChild(3).GetComponent<BuildMethod>();
+            Transform panelResources = transform.GetChild(0).GetChild(i).GetChild(3).GetChild(0);
+            BuildMethod buildMethod = transform.GetChild(0).GetChild(i).GetChild(3).GetComponent<BuildMethod>();
             int j = 0;
             Text countRes;
 
@@ -26,8 +52,11 @@ public class BuildBase : MonoBehaviour
                 j++;
             }
 
-            countRes = panelResources.GetChild(j).GetChild(1).GetComponent<Text>();
-            countRes.text = buildMethod.price.ToString();
+            if (panelResources.childCount > 0)
+            {
+                countRes = panelResources.GetChild(j).GetChild(1).GetComponent<Text>();
+                countRes.text = buildMethod.price.ToString();
+            }
         }
     }
 
@@ -64,5 +93,39 @@ public class BuildBase : MonoBehaviour
             Transform build = controller.transform.GetChild(0).GetChild(1).Find(buildMethod.nameBuild);
             build.gameObject.SetActive(true);
         }
+    }
+
+    public void NextBuilds(Transform panel)
+    {
+        for (int i = 0; i < panel.childCount; i++)
+        {
+            if (i >= nowPos && i < nowPos + 4)
+                panel.GetChild(i).gameObject.SetActive(true);
+            else
+                panel.GetChild(i).gameObject.SetActive(false);
+        }
+
+        if (nowPos + 4 == panel.childCount)
+            nowPos = 0;
+        else if (nowPos + 4 > panel.childCount)
+            nowPos = panel.childCount - 4;
+        else
+            nowPos += 4;
+    }
+
+    public void PrevBuilds(Transform panel)
+    {
+        for (int i = panel.childCount - 1; i >= 0; i--)
+        {
+            if (i >= nowPos && i < nowPos + 4)
+                panel.GetChild(i).gameObject.SetActive(true);
+            else
+                panel.GetChild(i).gameObject.SetActive(false);
+        }
+
+        if (nowPos - 4 < 0)
+            nowPos = panel.childCount - 4;
+        else
+            nowPos -= 4;
     }
 }

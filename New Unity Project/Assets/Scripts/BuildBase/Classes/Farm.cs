@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Farm : MonoBehaviour, BuildMethod
 {
-    public Dictionary<string, int> listRes { get; set; } = new Dictionary<string, int> { { "Wood", 1 } };
+    public Dictionary<string, int> listRes { get; set; } = new Dictionary<string, int> { { "Wood", 10 } };
     public int price { get; set; } = 100;
     public string nameBuild { get; } = "Farm";
 

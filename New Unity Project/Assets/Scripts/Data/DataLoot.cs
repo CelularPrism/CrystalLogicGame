@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class DataLoot : ScriptableObject
 {
     public bool equipment;
+    public enum classLoot { weapon, shield, equipment };
+    public classLoot lootClass;
 
     public Sprite img;
     public AudioClip audio;

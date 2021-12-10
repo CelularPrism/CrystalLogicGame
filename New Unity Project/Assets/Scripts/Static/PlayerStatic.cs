@@ -6,6 +6,10 @@ public static class PlayerStatic
 {
     public static string lang = "";
     public static Dictionary<string, int> lootList = new Dictionary<string, int>();
+    public static Dictionary<string, string> equipmentList = new Dictionary<string, string>() {   { "weapon", "" },
+                                                                                            { "shield", "" },
+                                                                                            { "equip1", "" },
+                                                                                            { "equip2", "" } };
     public static List<int> countLvl = new List<int>();
 
     public static int fuel = 15;

@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SawMill : MonoBehaviour, BuildMethod
+public class ChemicalFactory : MonoBehaviour, BuildMethod
 {
-    public Dictionary<string, int> listRes { get; set; } = new Dictionary<string, int> { { "Cloth", 15 },
-                                                                                         { "Supplies", 10 } };
+    public Dictionary<string, int> listRes { get; set; } = new Dictionary<string, int> { { "Metal", 5 },
+                                                                                         { "Chemicals", 10 } };
     public int price { get; set; } = 100;
-    public string nameBuild { get; } = "SawMill";
+    public string nameBuild { get; } = "ChemicalFactory";
     public bool Build(Dictionary<string, int> listPlr, int gold)
     {
         if (gold < price)
