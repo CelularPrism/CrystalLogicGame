@@ -13,16 +13,23 @@ public class Sliders : MonoBehaviour
 
         if (gameObject.transform.GetSiblingIndex() == 0 && PlayerStatic.countLvl.Count == 4)
         {
-            gameObject.transform.parent.parent.gameObject.SetActive(false);
-            gameOver.transform.gameObject.SetActive(true);
+            CloseAllSliders(gameObject);
         } else if (gameObject.transform.GetSiblingIndex() == 0)
         {
-            gameObject.transform.parent.parent.gameObject.SetActive(false);
-            audioMusic.Play();
+            CloseAllSliders(gameObject);
         } else
         {
             gameObject.SetActive(false);
             gameObject.transform.parent.GetChild(gameObject.transform.GetSiblingIndex() - 1).gameObject.SetActive(true);
         }
+    }
+
+    public void CloseAllSliders(GameObject gameObject)
+    {
+        gameObject.transform.parent.parent.gameObject.SetActive(false);
+        audioMusic.Play();
+
+        if (PlayerStatic.countLvl.Count == 4)
+            gameOver.transform.gameObject.SetActive(true);
     }
 }

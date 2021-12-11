@@ -72,10 +72,15 @@ public class SceneController : MonoBehaviour
 
     public void UseCard(GameObject card)
     {
-        if (card.GetComponent<Card>() == null) 
+        if (card.GetComponent<Card>() == null && PlayerStatic.countLvl.Count < 4)
         {
-           uIButtons.OpenMap();
-           return;
+            uIButtons.OpenMap();
+            return;
+        }
+        else if (PlayerStatic.countLvl.Count == 4)
+        {
+            Epilogue.SetActive(true);
+            return;
         }
 
         DataCard dataCard = card.GetComponent<Card>().dataCard;
