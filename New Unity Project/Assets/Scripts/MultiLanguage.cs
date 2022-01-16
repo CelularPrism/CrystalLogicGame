@@ -152,7 +152,7 @@ public class MultiLanguage : MonoBehaviour
         textToTranslate[37].text = LocalizationManager.Localize("CourierDeckSend");
         textToTranslate[38].text = LocalizationManager.Localize("PanelLootBase");
 
-        textToTranslate[39].text = LocalizationManager.Localize("RepairPanelHeader");
+        textToTranslate[39].text = LocalizationManager.Localize("RepairPanelHeader"); //Не помню что это
         textToTranslate[40].text = LocalizationManager.Localize("RepairPanelText");
         textToTranslate[41].text = LocalizationManager.Localize("RepairPanelBtn");
         textToTranslate[42].text = LocalizationManager.Localize("PanelLootBase");

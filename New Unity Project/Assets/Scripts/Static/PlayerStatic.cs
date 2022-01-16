@@ -12,7 +12,7 @@ public static class PlayerStatic
                                                                                             { "equip2", "" } };
     public static List<int> countLvl = new List<int>();
 
-    public static int fuel = 15;
+    public static float fuel = 15;
     public static int money = 100;
     public static int damage = 3;
     public static float health = 15f;

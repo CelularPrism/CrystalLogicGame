@@ -85,7 +85,7 @@ public class Card : MonoBehaviour
         search.transform.GetChild(1).GetComponent<SearchBaloon>().Looting();
     }
 
-    public int GetFuel(int fuel)
+    public float GetFuel(float fuel)
     {
         fuel += Random.Range(4, 9);
         return fuel;

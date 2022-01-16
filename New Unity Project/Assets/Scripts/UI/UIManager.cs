@@ -154,6 +154,53 @@ public class UIManager : MonoBehaviour
             money.text = sceneController.money.ToString();
         }
     }
+
+    public void UpdateSpecifications(Transform panelSpec)
+    {
+        for (int i = 0; i < panelSpec.childCount; i++)
+        {
+            Transform transSlider = panelSpec.GetChild(i).GetChild(1);
+            Slider slider = transSlider.GetComponent<Slider>();
+            Text text = transSlider.GetChild(3).GetComponent<Text>();
+
+            if (i == 0)
+            {
+                slider.maxValue = sceneController.maxHealth;
+                slider.value = sceneController.health;
+                text.text = sceneController.health.ToString();
+            }
+            else if (i == 1)
+            {
+                slider.maxValue = sceneController.maxIron;
+                slider.value = sceneController.iron;
+                text.text = sceneController.iron.ToString();
+            }
+            else if (i == 2)
+            {
+                slider.value = sceneController.fuel;
+                text.text = (sceneController.fuel / 2).ToString();
+            }
+        }
+    }
+
+    public void UpdateEquipment(Transform panelEquip)
+    {
+        int index = 0;
+        foreach (var equip in PlayerStatic.equipmentList)
+        {
+            Image imgEquip = panelEquip.GetChild(index).GetChild(0).GetComponent<Image>();
+            if (equip.Value == "")
+            {
+                imgEquip.color = new Color(255, 255, 255, 0);
+            } else
+            {
+                DataLoot dataLoot = Resources.Load<DataLoot>("ScriptableObjects/Loot/" + equip.Value);
+                imgEquip.sprite = dataLoot.img;
+                imgEquip.color = new Color(255, 255, 255, 255);
+            }
+            index++;
+        }
+    }
 }
 
 // тест 2

@@ -8,6 +8,8 @@ using static PlayerStatic;
 public class SceneController : MonoBehaviour
 {
     public int maxFuel = 20;
+    public int maxHealth = 15;
+    public int maxIron = 15;
     public int money = 100;
     public int costFuel = 2;
 
@@ -18,7 +20,7 @@ public class SceneController : MonoBehaviour
 
     public float health;
     public float iron;
-    public int fuel;
+    public float fuel;
     public int damage;
 
     [SerializeField] private Text healthText;

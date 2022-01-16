@@ -36,4 +36,9 @@ public class Courier : MonoBehaviour
         gameObject.transform.parent.gameObject.SetActive(false);
         gameObject.SetActive(false);
     }
+
+    public void OpenPanel(GameObject gameObject)
+    {
+        gameObject.SetActive(true);
+    }
 }

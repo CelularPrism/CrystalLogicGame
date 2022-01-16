@@ -52,13 +52,13 @@ public class LvlGeneration : MonoBehaviour
 
     public void Base()
     {
-        foreach (var i in PlayerStatic.lootList)
+        /*foreach (var i in PlayerStatic.lootList)
         {
             if (!BaseItems.items.ContainsKey(i.Key))
                 BaseItems.items[i.Key] = i.Value;
             else
                 BaseItems.items[i.Key] += i.Value;
-        }
+        }*/
 
         PlayerStatic.lootList = new Dictionary<string, int>();
         PlayerStatic.money = controller.money;
