@@ -21,14 +21,14 @@ MonoBehaviour:
   VarA: Pass Them By
   TextA: Making use of the pirates' inattention, you fly by the island and gain distance
     from it.
-  dataIventA: {fileID: 0}
   dataLootA: {fileID: 0}
+  lootA: {fileID: 0}
   countA: 0
   audioTextB: {fileID: 8300000, guid: 6d550589bcbf8f64f908dc0553e36205, type: 3}
   VarB: Open Fire
   TextB: You weapons turn the pirates, unable to defend themselves outside the ships,
     into minced meat. Having made sure they're all dead, you land on the island and
     take everything of value you find inside their ships (+1 fuel).
-  dataIventB: {fileID: 0}
   dataLootB: {fileID: 0}
+  lootB: {fileID: 21300000, guid: 272d666df1b038c4f8a2ac59f032f6c8, type: 3}
   countB: 0

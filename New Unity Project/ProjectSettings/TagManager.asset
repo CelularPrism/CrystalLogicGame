@@ -15,6 +15,8 @@ TagManager:
   - LootList
   - MagList
   - PanelList
+  - SceneController
+  - FightField
   layers:
   - Default
   - TransparentFX
@@ -51,4 +53,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Products
+    uniqueID: 3465933609
     locked: 0

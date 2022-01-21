@@ -5,6 +5,7 @@ using UnityEngine;
 public static class PlayerStatic
 {
     public static string lang = "";
+    public static List<IventInterface> listIvents = new List<IventInterface>();
     public static Dictionary<string, int> lootList = new Dictionary<string, int>();
     public static Dictionary<string, string> equipmentList = new Dictionary<string, string>() {   { "weapon", "" },
                                                                                             { "shield", "" },

@@ -17,11 +17,6 @@ public class Builder : MonoBehaviour
     [SerializeField] private Transform panelIvent;
     [SerializeField] private GameObject search;
 
-    [SerializeField] private Transform panelMagazine;
-    [SerializeField] private Text amountText;
-    [SerializeField] private Text moneyPlayerText;
-    [SerializeField] private Text moneyMagText;
-
     bool first = true;
 
     void Start()
@@ -98,7 +93,8 @@ public class Builder : MonoBehaviour
         if (typeChild == "Search")
         {
             DataIvent[] listIvent = Resources.LoadAll<DataIvent>("ScriptableObjects/Ivents");
-            enemy.GetComponent<Card>().Ivent = listIvent[UnityEngine.Random.Range(0, listIvent.Length - 1)];
+            int random = UnityEngine.Random.Range(0, listIvent.Length - 1);
+            enemy.GetComponent<Card>().Ivent = listIvent[random];
             enemy.GetComponent<Card>().panelIvent = panelIvent;
             enemy.GetComponent<Card>().search = search;
         }

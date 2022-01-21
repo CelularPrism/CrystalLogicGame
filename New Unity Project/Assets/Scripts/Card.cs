@@ -47,7 +47,7 @@ public class Card : MonoBehaviour
 
     public Dictionary<string, int> GetLoot(Dictionary<string, int> list)
     {
-        if (Random.Range(0, 100) < 50)
+        if (Random.Range(0, 100) < 1)
         {
             search.GetComponent<Search>().Restart();
             search.SetActive(true);
@@ -65,10 +65,10 @@ public class Card : MonoBehaviour
             audioSource = audioMusic.GetComponent<AudioSource>();
             audioSource.volume = 0.3f;
 
-            header.text = Ivent.TextHeader;
+            /*header.text = Ivent.TextHeader;
             text.text = Ivent.Text;
             VarA.text = Ivent.VarA;
-            VarB.text = Ivent.VarB;
+            VarB.text = Ivent.VarB;*/
 
             panelIvent.parent.gameObject.SetActive(true);
             panelIvent.gameObject.SetActive(true);

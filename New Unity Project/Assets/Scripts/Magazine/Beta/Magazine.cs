@@ -8,100 +8,363 @@ public class Magazine : MonoBehaviour
     [SerializeField] private SceneController sceneController;
     [SerializeField] private Transform panelLoot;
     [SerializeField] private Transform panelMag;
+    [SerializeField] private Transform salePanel;
+    [SerializeField] private GameObject textError;
 
-    private List<MagazineItemsOrder> itemsOrder;
-    private List<DataLoot> sellDataLoot;
+    [SerializeField] private Text textMoney;
+    [SerializeField] private Text textMoneyMag;
+    [SerializeField] private Text textMoneyLoot;
 
-    private Dictionary<DataLoot, int> dataProduct;
-    private int money;
+    private List<MagazineItemsOrder> itemsOrder = new List<MagazineItemsOrder>();
+
+    private Dictionary<DataLoot, int> dataProduct  = new Dictionary<DataLoot, int>();
+    private int moneyMag = 0;
 
     private void Start()
     {
-        money = Random.Range(10, 20) * 100;
+        sceneController = GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>();
+
+        moneyMag = Random.Range(10, 20) * 100;
+        textMoneyMag.text = moneyMag.ToString();
+        textMoneyLoot.text = sceneController.money.ToString();
+
+        GenerateMagazine();
+        GenerateSaleProduct();
     }
 
-    public void Delete(MagazineItemsOrder itemOrder)
+    private void Update()
+    {
+        bool isActive = false;
+        for (int index = 0; index < panelLoot.childCount; index++)
+        {
+            if (panelLoot.GetChild(index).GetChild(0).position.z > 0)
+            {
+                isActive = true;
+                DisabledScript(index, false);
+                transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(true);
+                break;
+            }
+
+            if (panelMag.GetChild(index).GetChild(0).position.z > 0)
+            {
+                isActive = true;
+                DisabledScript(index, true);
+                transform.GetChild(0).gameObject.SetActive(false);
+                transform.GetChild(1).gameObject.SetActive(true);
+                break;
+            }
+        }
+
+        if (isActive == false && itemsOrder.Count == 0)
+        {
+            transform.GetChild(0).gameObject.SetActive(true);
+            transform.GetChild(1).gameObject.SetActive(false);
+        }
+
+        if (isActive == false)
+        {
+            EnabledScript();
+        }
+    }
+
+    public void Delete(MagazineItemsOrder itemOrder, bool isProduct)
     {
         itemsOrder.Remove(itemOrder);
+
+        if (isProduct)
+            dataProduct[itemOrder.GetData()] = itemOrder.GetCount();
+        else
+            sceneController.lootList[itemOrder.GetData().name] = itemOrder.GetCount();
+
+        UpdateCart();
+        UpdatePanelMag();
+        UpdatePanelLoot();
     }
 
-    public void InsertOrder(MagazineItemsOrder itemOrder)
+    public void InsertOrder(MagazineItemsOrder itemOrder, bool isProduct)
     {
         itemsOrder.Add(itemOrder);
+        if (isProduct)
+            dataProduct.Remove(itemOrder.GetData());
+        else
+            sceneController.lootList.Remove(itemOrder.GetData().name);
+
+        UpdateCart();
+        UpdatePanelMag();
+        UpdatePanelLoot();
     }
 
-    public void Buy()
+    public void Cancel()
+    {
+        foreach (MagazineItemsOrder item in itemsOrder)
+        {
+            DataLoot dataLoot = item.GetData();
+            int count = item.GetCount();
+
+            if (item.IsProductMag())
+                dataProduct[dataLoot] = count;
+            else
+                sceneController.lootList[dataLoot.name] = count;
+        }
+
+        itemsOrder = new List<MagazineItemsOrder>();
+
+        UpdateCart();
+        UpdatePanelLoot();
+        UpdatePanelMag();
+        UpdateTextSum();
+    }
+
+    public void BuySell()
     {
         int sum = UpdateSum();
+        textError.SetActive(false);
 
         if (sceneController.money + sum >= 0)
         {
-            foreach (DataLoot dataLoot in sellDataLoot)
+            textError.SetActive(false);
+            foreach (MagazineItemsOrder item in itemsOrder)
             {
-                if (dataLoot.price > 0)
+                DataLoot dataLoot = item.GetData();
+                int count = item.GetCount();
+                if (!item.IsProductMag())
                 {
-                    if (sceneController.lootList[dataLoot.name] == 1)
-                        sceneController.lootList.Remove(dataLoot.name);
-                    else
-                        sceneController.lootList[dataLoot.name] -= 1;
-
                     if (dataProduct.ContainsKey(dataLoot))
-                        dataProduct[dataLoot] += 1;
+                        dataProduct[dataLoot] += count;
                     else
-                        dataProduct[dataLoot] = 1;
+                        dataProduct[dataLoot] = count;
                 } else
                 {
-                    if (dataProduct[dataLoot] == 1)
-                        dataProduct.Remove(dataLoot);
-                    else
-                        dataProduct[dataLoot] -= 1;
-
                     if (sceneController.lootList.ContainsKey(dataLoot.name))
-                        sceneController.lootList[dataLoot.name] += 1;
+                        sceneController.lootList[dataLoot.name] += count;
                     else
-                        sceneController.lootList[dataLoot.name] = 1;
+                        sceneController.lootList[dataLoot.name] = count;
                 }
+                item.Clear();
             }
-            UpdatePaneLoot();
+            itemsOrder = new List<MagazineItemsOrder>();
+
+            moneyMag -= sum;
+            sceneController.money += sum;
+
+            textMoneyMag.text = moneyMag.ToString();
+            textMoneyLoot.text = sceneController.money.ToString();
+
+            UpdateCart();
+            UpdatePanelLoot();
             UpdatePanelMag();
+            UpdateTextSum();
+        } else
+        {
+            textError.SetActive(true);
         }
+    }
+
+    public void BuySaleProduct(MagazineItems magazineItems)
+    {
+        if (sceneController.money > magazineItems.GetPrice())
+        {
+            salePanel.GetChild(0).gameObject.SetActive(false);
+            salePanel.GetChild(1).gameObject.SetActive(false);
+            salePanel.GetChild(2).gameObject.SetActive(false);
+            sceneController.lootList[magazineItems.GetData().name] = magazineItems.GetCount();
+
+            moneyMag += magazineItems.GetPrice();
+            sceneController.money -= magazineItems.GetPrice();
+
+            textMoneyMag.text = moneyMag.ToString();
+            textMoneyLoot.text = sceneController.money.ToString();
+            
+            textError.SetActive(false);
+            UpdatePanelLoot();
+        }
+        else
+        {
+            textError.SetActive(true);
+        }
+    }
+
+    private void GenerateMagazine()
+    {
+        int countItem = Random.Range(1, 6);
+        DataLoot[] dataLootList = Resources.LoadAll<DataLoot>("ScriptableObjects/Loot");
+
+        List<DataLoot> dataList = new List<DataLoot>();
+
+        foreach (DataLoot data in dataLootList)
+            if (data.equipment)
+                dataList.Add(data as DataLoot);
+
+        for (int index = 0; index < countItem; index++)
+        {
+            int num = Random.Range(0, dataList.Count - 1);
+
+            DataLoot dataLoot = dataList[num];
+
+            if (dataLoot.price < 0)
+                dataLoot.price = -dataLoot.price;
+            dataProduct[dataLoot] = 1;
+
+            dataList.Remove(dataLoot);
+        }
+        UpdatePanelMag();
+        UpdatePanelLoot();
+    }
+
+    private void GenerateSaleProduct()
+    {
+        DataLoot[] dataLoots = Resources.LoadAll<DataLoot>("ScriptableObjects/Loot");
+        List<DataLoot> listData = new List<DataLoot>();
+
+        foreach (DataLoot data in dataLoots)
+            if (data.equipment)
+                listData.Add(data);
+
+        int num = Random.Range(0, listData.Count - 1);
+        DataLoot dataLoot = listData[num];
+
+        salePanel.GetChild(0).GetComponent<Text>().text = "1";
+        salePanel.GetChild(1).GetComponent<SpriteRenderer>().sprite = dataLoot.img;
+        salePanel.GetChild(2).GetComponent<Text>().text = dataLoot.price.ToString();
+
+        salePanel.GetChild(0).gameObject.SetActive(true);
+        salePanel.GetChild(1).gameObject.SetActive(true);
+        salePanel.GetChild(2).gameObject.SetActive(true);
+
+        float percent = Random.Range(0.2f, 0.99f);
+        int price = Mathf.RoundToInt(dataLoot.price * percent);
+
+        Transform parent = salePanel.parent.parent;
+
+        parent.GetChild(2).GetChild(1).GetComponent<Text>().text = price.ToString();
+        salePanel.GetComponent<MagazineItems>().SetData(dataLoot, 1, price, true);
+    }
+
+    private void GenerateLoot()
+    {
+        int countItem = Random.Range(1, 9);
+        DataLoot[] dataLootList = Resources.LoadAll<DataLoot>("ScriptableObjects/Loot");
+
+        List<DataLoot> dataList = new List<DataLoot>();
+        sceneController.lootList = new Dictionary<string, int>();
+
+        foreach (DataLoot data in dataLootList)
+            if (!data.equipment)
+                dataList.Add(data);
+
+        for (int index = 0; index < countItem; index++)
+        {
+            int num = Random.Range(0, dataList.Count - 1);
+
+            DataLoot dataLoot = dataList[num];
+
+            if (dataLoot.price < 0)
+                dataLoot.price = -dataLoot.price;
+
+            sceneController.lootList[dataLoot.name] = Random.Range(1, 10);
+
+            dataList.Remove(dataLoot);
+        }
+        UpdatePanelLoot();
+    }
+
+    private void UpdateCart()
+    {
+        foreach (MagazineItemsOrder item in itemsOrder)
+        {
+            Transform panel = item.transform.GetChild(0);
+            DataLoot dataLoot = item.GetData();
+
+            panel.GetChild(0).GetComponent<Text>().text = dataLoot.price.ToString();
+
+            panel.GetChild(1).GetComponent<SpriteRenderer>().sprite = dataLoot.img;
+            panel.GetChild(2).GetComponent<Text>().text = item.GetCount().ToString();
+
+            panel.GetChild(0).gameObject.SetActive(true);
+            panel.GetChild(1).gameObject.SetActive(true);
+            panel.GetChild(2).gameObject.SetActive(true);
+        }
+
+        foreach (Transform trans in transform.GetChild(1))
+        {
+            bool isEmpty = true;
+            foreach (MagazineItemsOrder item in itemsOrder)
+                if (item.transform == trans)
+                {
+                    isEmpty = false;
+                    break;
+                }
+
+            if (isEmpty) 
+            {
+                trans.GetChild(0).GetChild(0).gameObject.SetActive(false);
+                trans.GetChild(0).GetChild(1).gameObject.SetActive(false);
+                trans.GetChild(0).GetChild(2).gameObject.SetActive(false);
+            }
+        }
+        UpdateTextSum();
     }
 
     private int UpdateSum()
     {
         int sum = 0;
-        sellDataLoot = new List<DataLoot>();
 
         foreach (MagazineItemsOrder item in itemsOrder)
         {
             DataLoot dataLoot = item.GetData();
-            sum += dataLoot.price;
 
-            sellDataLoot.Add(dataLoot);
+            if (item.IsProductMag())
+                sum -= dataLoot.price * item.GetCount();
+            else
+                sum += dataLoot.price * item.GetCount();
         }
+
         return sum;
     }
 
-    private void UpdatePaneLoot()
+    private void UpdateTextSum()
+    {
+        int sum = UpdateSum();
+        textMoney.text = sum.ToString();
+    }
+
+    private void UpdatePanelLoot()
     {
         int index = 0;
+
         foreach (var loot in sceneController.lootList)
         {
-            DataLoot dataLoot = Resources.Load<DataLoot>("ScriptableObjects/Loot" + loot.Key);
-            Transform transLoot = panelLoot.GetChild(index).GetChild(0);
-            transLoot.GetChild(0).GetComponent<Text>().text = dataLoot.price.ToString();
-            transLoot.GetChild(1).GetComponent<Image>().sprite = dataLoot.img;
-            transLoot.GetChild(2).GetComponent<Text>().text = loot.Value.ToString();
+            if (index < panelLoot.childCount)
+            {
+                DataLoot dataLoot = Resources.Load<DataLoot>("ScriptableObjects/Loot/" + loot.Key);
+                Transform transLoot = panelLoot.GetChild(index).GetChild(0);
+                transLoot.GetChild(0).GetComponent<Text>().text = dataLoot.price.ToString();
+                transLoot.GetChild(1).GetComponent<SpriteRenderer>().sprite = dataLoot.img;
+                transLoot.GetChild(2).GetComponent<Text>().text = loot.Value.ToString();
 
-            
-            transLoot.GetComponent<MagazineItems>().enabled = true;
-            index++;
+                transLoot.GetChild(0).gameObject.SetActive(true);
+                transLoot.GetChild(1).gameObject.SetActive(true);
+                transLoot.GetChild(2).gameObject.SetActive(true);
+
+                MagazineItems magazineItems = transLoot.GetComponent<MagazineItems>();
+                magazineItems.enabled = true;
+                magazineItems.SetData(dataLoot, loot.Value, dataLoot.price, false);
+                index++;
+            }
         }
 
-        while (index <= panelLoot.childCount)
+        while (index < panelLoot.childCount)
         {
             Transform transLoot = panelLoot.GetChild(index).GetChild(0);
+
+            transLoot.position = Vector3.zero;
+            transLoot.GetComponent<MagazineItems>().DeleteDataLoot();
             transLoot.GetComponent<MagazineItems>().enabled = false;
+
+            transLoot.GetChild(0).gameObject.SetActive(false);
+            transLoot.GetChild(1).gameObject.SetActive(false);
+            transLoot.GetChild(2).gameObject.SetActive(false);
             index++;
         }
     }
@@ -111,23 +374,77 @@ public class Magazine : MonoBehaviour
         int index = 0;
         foreach (var product in dataProduct)
         {
-            Transform transLoot = panelMag.GetChild(index).GetChild(0);
-            transLoot.GetChild(0).GetComponent<Text>().text = product.Key.price.ToString();
-            transLoot.GetChild(1).GetComponent<Image>().sprite = product.Key.img;
-            transLoot.GetChild(2).GetComponent<Text>().text = product.Value.ToString();
+            if (index < panelMag.childCount)
+            {
+                Transform transLoot = panelMag.GetChild(index).GetChild(0);
+                transLoot.GetChild(0).GetComponent<Text>().text = product.Key.price.ToString();
+                transLoot.GetChild(1).GetComponent<SpriteRenderer>().sprite = product.Key.img;
+                transLoot.GetChild(2).GetComponent<Text>().text = product.Value.ToString();
 
-            MagazineItems magazineItems = transLoot.GetComponent<MagazineItems>();
-            transLoot.GetComponent<MagazineItems>().enabled = true;
-            magazineItems.dataLoot = product.Key;
-            magazineItems.count = product.Value;
-            index++;
+                transLoot.GetChild(0).gameObject.SetActive(true);
+                transLoot.GetChild(1).gameObject.SetActive(true);
+                transLoot.GetChild(2).gameObject.SetActive(true);
+
+                MagazineItems magazineItems = transLoot.GetComponent<MagazineItems>();
+                magazineItems.enabled = true;
+                magazineItems.SetData(product.Key, product.Value, product.Key.price, true);
+                index++;
+            }
         }
 
-        while (index <= panelMag.childCount)
+        while (index < panelMag.childCount)
         {
             Transform transLoot = panelMag.GetChild(index).GetChild(0);
+
+            transLoot.position = Vector3.zero;
+            transLoot.GetComponent<MagazineItems>().DeleteDataLoot();
             transLoot.GetComponent<MagazineItems>().enabled = false;
+
+            transLoot.GetChild(0).gameObject.SetActive(false);
+            transLoot.GetChild(1).gameObject.SetActive(false);
+            transLoot.GetChild(2).gameObject.SetActive(false);
             index++;
+        }
+    }
+
+    private void EnabledScript()
+    {
+        for (int index = 0; index < panelLoot.childCount; index++)
+        {
+            panelMag.GetChild(index).GetChild(0).GetComponent<MagazineItems>().enabled = true;
+            panelLoot.GetChild(index).GetChild(0).GetComponent<MagazineItems>().enabled = true;
+        }
+    }
+
+    private void DisabledScript(int index, bool isMagazine)
+    {
+        if (isMagazine)
+        {
+            for (int i = 0; i < panelMag.childCount; i++)
+            {
+                if (i != index)
+                {
+                    panelLoot.GetChild(i).GetChild(0).GetComponent<MagazineItems>().enabled = false;
+                    panelMag.GetChild(i).GetChild(0).GetComponent<MagazineItems>().enabled = false;
+                } else
+                {
+                    panelLoot.GetChild(i).GetChild(0).GetComponent<MagazineItems>().enabled = false;
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < panelLoot.childCount; i++)
+            {
+                if (i != index)
+                {
+                    panelLoot.GetChild(i).GetChild(0).GetComponent<MagazineItems>().enabled = false;
+                    panelMag.GetChild(i).GetChild(0).GetComponent<MagazineItems>().enabled = false;
+                } else
+                {
+                    panelMag.GetChild(i).GetChild(0).GetComponent<MagazineItems>().enabled = false;
+                }
+            }
         }
     }
 }

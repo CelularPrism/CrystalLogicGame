@@ -26,8 +26,8 @@ MonoBehaviour:
     \u0432 \u0446\u0435\u0440\u0435\u043C\u043E\u043D\u0438\u0438 \u042F\u0434\u0435\u0440\u0449\u0438\u043A\u043E\u0432,
     \u043D\u0435 \u043F\u043E\u0434\u0432\u0435\u0440\u0433\u0430\u044F \u0441\u0435\u0431\u044F
     \u0432\u0440\u0435\u0434\u0443."
-  dataIventA: {fileID: 0}
-  dataLootA: {fileID: 0}
+  dataLootA: {fileID: 11400000, guid: 2e1c00a88f2f62541bc4bdb09979208d, type: 2}
+  lootA: {fileID: 0}
   countA: 0
   audioTextB: {fileID: 8300000, guid: 4a4e540250432644c8395d67e5d36ea7, type: 3}
   VarB: 
@@ -45,6 +45,6 @@ MonoBehaviour:
     \u043D\u0430 \u043C\u044B\u0441\u043B\u044C, \u0447\u0442\u043E \u044D\u0442\u043E
     \u0431\u044B\u043B\u0430 \u043F\u043B\u043E\u0445\u0430\u044F \u0438\u0434\u0435\u044F
     (-5 \u0443\u0440\u043E\u043D\u0430)."
-  dataIventB: {fileID: 0}
-  dataLootB: {fileID: 11400000, guid: 2e1c00a88f2f62541bc4bdb09979208d, type: 2}
+  dataLootB: {fileID: 0}
+  lootB: {fileID: 21300000, guid: fc004cd39a44b3347abf885b35103791, type: 3}
   countB: -1

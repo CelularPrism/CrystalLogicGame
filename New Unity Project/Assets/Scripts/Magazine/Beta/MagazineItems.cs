@@ -6,48 +6,103 @@ public class MagazineItems : MonoBehaviour
 {
     [SerializeField] private Camera cam;
     [SerializeField] private Magazine magazine;
-    [SerializeField] private GameObject PanelSellItems;
-    public DataLoot dataLoot;
-    public int count;
+    [SerializeField] private Transform PanelHint;
+    private DataLoot dataLoot;
+    private int count;
+    private int price;
+    private bool isProductMag;
 
     private Vector3 oldPos;
-    private MagazineItemsOrder magazineItemsOrder;
-
+    private MagazineItemsOrder magazineItemsOrder = null;
 
     private void Start()
     {
-        oldPos = transform.position;
+        oldPos = Vector3.zero;
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
     void Update()
     {
         RectTransform transform = this.transform.GetComponent<RectTransform>();
         Vector3 center = cam.WorldToScreenPoint(transform.position);
-        Vector3 size = transform.sizeDelta;
+        Vector3 size;
+
+        if (transform.position.z == 0)
+            size = transform.sizeDelta;
+        else
+            size = transform.sizeDelta * 2;
 
         if ((Vector3.Distance(center, Input.mousePosition) < size.x) && (Input.GetMouseButton(0)))
         {
             Vector3 pos = cam.ScreenToWorldPoint(Input.mousePosition);
             transform.position = new Vector3(pos.x, pos.y, 1);
-            PanelSellItems.SetActive(true);
-            if (Vector3.Distance(center, PanelSellItems.transform.position) < 5f)
+
+            transform.GetChild(0).gameObject.SetActive(false);
+            transform.GetChild(1).GetComponent<SpriteRenderer>().sortingOrder = 1;
+            transform.GetChild(2).gameObject.SetActive(false);
+
+            float distance = Vector3.Distance(this.transform.position, PanelHint.TransformPoint(this.transform.position));
+            distance = distance % 50;
+
+            if (distance < 65f)
             {
                 float minDistance = 10000f;
-                foreach (Transform item in PanelSellItems.transform)
+                foreach (Transform item in PanelHint.GetChild(1))
                 {
-                    Debug.Log(item.name);
-                    /*if (Vector3.Distance(center, item.position) < minDistance)
+                    if (Vector3.Distance(transform.position, item.TransformPoint(transform.position)) < minDistance)
                     {
                         magazineItemsOrder = item.GetComponent<MagazineItemsOrder>();
-                        minDistance = Vector3.Distance(center, item.position);
-                    }*/
+                        minDistance = Vector3.Distance(transform.position, item.TransformPoint(transform.position));
+                    }
                 }
+            } else
+            {
+                magazineItemsOrder = null;
             }
+        }
+        else if (magazineItemsOrder != null)
+        {
+            magazineItemsOrder.Insert(dataLoot, count, price, isProductMag);
+            magazineItemsOrder = null;
         }
         else
         {
-            transform.position = oldPos;
-            PanelSellItems.SetActive(false);
+            this.transform.localPosition = oldPos;
+            if (dataLoot != null)
+            {
+                transform.GetChild(0).gameObject.SetActive(true);
+                transform.GetChild(1).GetComponent<SpriteRenderer>().sortingOrder = 0;
+                transform.GetChild(2).gameObject.SetActive(true);
+            }
         }
+    }
+
+    public void SetData(DataLoot dataLoot, int count, int price, bool isProductMag)
+    {
+        this.isProductMag = isProductMag;
+        this.dataLoot = dataLoot;
+        this.price = price;
+        this.count = count;
+        magazineItemsOrder = null;
+    }
+
+    public void DeleteDataLoot()
+    {
+        dataLoot = null;
+    }
+
+    public int GetCount()
+    {
+        return count;
+    }
+
+    public int GetPrice()
+    {
+        return price;
+    }
+
+    public DataLoot GetData()
+    {
+        return dataLoot;
     }
 }

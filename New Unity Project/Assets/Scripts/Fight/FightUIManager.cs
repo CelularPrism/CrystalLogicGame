@@ -48,18 +48,31 @@ public class FightUIManager : MonoBehaviour
         ironTextPlayer.text = controller.iron.ToString();
         dmgTextPlayer.text = controller.damage.ToString();
 
+        if (card.dataCard.card != DataCard.classCard.Enemy)
+        {
+            DataCard[] dataCards = Resources.LoadAll<DataCard>("ScriptableObjects/Cards/Enemy");
+            int num = Random.Range(0, dataCards.Length - 1);
+            DataCard dataCard = dataCards[num];
+            int damage = Random.Range(dataCard.minDamage, dataCard.maxDamage);
+            int health = Random.Range(dataCard.minHealth, dataCard.maxHealth);
+
+            card.dataCard = dataCard;
+            card.Health = health;
+            card.Damage = damage;
+        }
+
         imageEnemy.sprite = card.dataCard.img;
         healthTextEnemy.text = card.Health.ToString();
         damageTextEnemy.text = card.Damage.ToString();
 
-        if ((Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1)) && fight.fight) 
+        if ((Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1)) && fight.fight)
         {
             AddPoint(1);
-        } 
+        }
         else if ((Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Keypad2)) && fight.fight)
         {
             AddPoint(2);
-        } 
+        }
         else if ((Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Keypad3)) && fight.fight)
         {
             AddPoint(3);

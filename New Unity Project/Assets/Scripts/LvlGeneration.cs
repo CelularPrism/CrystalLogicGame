@@ -34,15 +34,15 @@ public class LvlGeneration : MonoBehaviour
         if (SceneManager.GetActiveScene().name != "Base")
         {
             PlayerStatic.countLvl.Add(SceneManager.GetActiveScene().buildIndex);
+            PlayerStatic.lootList = controller.lootList;
+            PlayerStatic.money = controller.money;
+            PlayerStatic.damage = controller.damage;
 
             if (!PlayerStatic.visitBase)
             {
-                PlayerStatic.lootList = controller.lootList;
                 PlayerStatic.fuel = controller.fuel;
                 PlayerStatic.health = controller.health;
                 PlayerStatic.iron = controller.iron;
-                PlayerStatic.money = controller.money;
-                PlayerStatic.damage = controller.damage;
             }
 
             PlayerStatic.visitBase = false;
@@ -60,8 +60,7 @@ public class LvlGeneration : MonoBehaviour
                 BaseItems.items[i.Key] += i.Value;
         }*/
 
-        PlayerStatic.lootList = new Dictionary<string, int>();
-        PlayerStatic.money = controller.money;
+        //PlayerStatic.lootList = new Dictionary<string, int>();
         PlayerStatic.fuel = 15;
         PlayerStatic.health = 15f;
         PlayerStatic.iron = 5f;

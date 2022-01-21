@@ -36,7 +36,8 @@ public class SceneController : MonoBehaviour
 
     public GameObject Ivent;
 
-    [SerializeField] private MagazineUIManager magazine;
+    //[SerializeField] private MagazineUIManager magazine;
+    [SerializeField] private GameObject panelMagazine;
 
     void Start()
     {
@@ -81,6 +82,7 @@ public class SceneController : MonoBehaviour
         }
         else if (PlayerStatic.countLvl.Count == 4)
         {
+            uIButtons.OpenMap();
             Epilogue.SetActive(true);
             return;
         }
@@ -122,7 +124,7 @@ public class SceneController : MonoBehaviour
                 break;
 
             case DataCard.classCard.Magazine:
-                magazine.OpenMagazine(this);
+                panelMagazine.SetActive(true);
                 break;
         }
 

@@ -36,7 +36,7 @@ public class Ivent : MonoBehaviour
         audioSource.Stop();
     }
 
-    public void VarA(GameObject gameObject)
+    /*public void VarA(GameObject gameObject)
     {
         SceneController controller = Scene.GetComponent<SceneController>();
         GameObject audioSound = GameObject.FindGameObjectWithTag("MainCamera").transform.GetChild(0).gameObject;
@@ -179,7 +179,8 @@ public class Ivent : MonoBehaviour
         }
 
         #region oldMethod
-        /*panelIvent.GetChild(2).GetComponent<Text>().text = Ivents.TextA;
+        */
+    /*panelIvent.GetChild(2).GetComponent<Text>().text = Ivents.TextA;
         if (Ivents.dataLootA != null)
         {
             panelIvent.GetChild(5).GetChild(0).GetComponent<Image>().sprite = Ivents.dataLootA.img;
@@ -209,6 +210,7 @@ public class Ivent : MonoBehaviour
         panelIvent.GetChild(4).gameObject.SetActive(false);
 
         panelIvent.GetChild(6).gameObject.SetActive(true);*/
+    /*
         #endregion
     }
 
@@ -382,7 +384,7 @@ public class Ivent : MonoBehaviour
 
             audioSource.clip = Ivents.audioTextB;
             audioSource.Play();
-        }
+        }*/
 
         #region oldMethod
         /* //DataIvent thisEvent = Scene.GetComponentInChildren<Search>().GetComponent<DataIvent>();
@@ -415,5 +417,5 @@ public class Ivent : MonoBehaviour
 
          panelIvent.GetChild(6).gameObject.SetActive(true);*/
         #endregion
-    }
+    //}
 }

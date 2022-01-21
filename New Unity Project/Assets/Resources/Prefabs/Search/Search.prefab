@@ -282,7 +282,8 @@ MonoBehaviour:
   Damage: 0
   textHealth: {fileID: 0}
   textDamage: {fileID: 0}
-  Ivent: {fileID: 11400000, guid: 2ce5493d545204349a3bb891bcd6007c, type: 2}
+  panelMagazine: {fileID: 0}
+  Ivent: {fileID: 11400000, guid: e3d7b74a3485b3947a3359e999f3fd0a, type: 2}
   panelIvent: {fileID: 0}
   search: {fileID: 0}
 --- !u!82 &6377211827190174028

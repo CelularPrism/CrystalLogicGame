@@ -34,8 +34,8 @@ MonoBehaviour:
     \u0441\u043E\u0442\u0440\u044F\u0441 \u0441\u0442\u0430\u043D\u0446\u0438\u044E,
     \u0443\u043D\u043E\u0441\u044F \u0441 \u0441\u043E\u0431\u043E\u0439 \u0436\u0438\u0437\u043D\u0438
     (-2 \u0443\u0440\u043E\u043D\u0430)."
-  dataIventA: {fileID: 0}
   dataLootA: {fileID: 0}
+  lootA: {fileID: 21300000, guid: fc004cd39a44b3347abf885b35103791, type: 3}
   countA: -2
   audioTextB: {fileID: 8300000, guid: 37a062a3f2e0f864da1121a56e282ba2, type: 3}
   VarB: "\u0421\u043F\u0430\u0441\u0430\u0442\u044C \u0442\u043E\u043F\u043B\u0438\u0432\u043E"
@@ -50,6 +50,6 @@ MonoBehaviour:
     \u043D\u0430 \u043A\u043E\u0440\u0430\u0431\u043B\u044C, \u0432\u043E\u0432\u0440\u0435\u043C\u044F
     \u0443\u0439\u0434\u044F \u043E\u0442 \u0432\u0437\u0440\u044B\u0432\u0430, \u0441\u043E\u0442\u0440\u044F\u0441\u0448\u0435\u0433\u043E
     \u0441\u0442\u0430\u043D\u0446\u0438\u044E (+2 \u0442\u043E\u043F\u043B\u0438\u0432\u0430)."
-  dataIventB: {fileID: 0}
   dataLootB: {fileID: 0}
+  lootB: {fileID: 21300000, guid: 272d666df1b038c4f8a2ac59f032f6c8, type: 3}
   countB: 2
