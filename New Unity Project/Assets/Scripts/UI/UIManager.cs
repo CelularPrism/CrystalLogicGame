@@ -51,6 +51,7 @@ public class UIManager : MonoBehaviour
         {
             dropBtn.GetChild(0).gameObject.SetActive(true);
             dropBtn.GetChild(1).gameObject.SetActive(false);
+            panelLoot.GetComponent<PanelLoot>().isDelivToBase = true;
 
             int j = 0;
             panelLoot.gameObject.SetActive(true);
@@ -60,6 +61,8 @@ public class UIManager : MonoBehaviour
 
             panelLoot.GetChild(0).gameObject.SetActive(true);
             panelLoot.GetChild(1).gameObject.SetActive(false);
+            panelLoot.GetChild(3).GetChild(0).gameObject.SetActive(true);
+            panelLoot.GetChild(3).GetChild(1).gameObject.SetActive(false);
             moneyTxt.text = sceneController.money.ToString();
 
             foreach (var i in sceneController.lootList)
@@ -114,6 +117,9 @@ public class UIManager : MonoBehaviour
 
             panelLoot.GetChild(0).gameObject.SetActive(false);
             panelLoot.GetChild(1).gameObject.SetActive(true);
+            panelLoot.GetChild(3).GetChild(0).gameObject.SetActive(false);
+            panelLoot.GetChild(3).GetChild(1).gameObject.SetActive(true);
+            panelLoot.GetComponent<PanelLoot>().isDelivToBase = false;
 
             foreach (var i in BaseItems.items)
             {

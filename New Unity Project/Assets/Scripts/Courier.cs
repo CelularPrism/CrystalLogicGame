@@ -20,7 +20,7 @@ public class Courier : MonoBehaviour
         panelWarning.gameObject.SetActive(false);
         panelCourier.parent.gameObject.SetActive(true);
         panelCourier.gameObject.SetActive(true);
-        loot.isDelete = false;
+        //loot.isDelete = false;
     }
 
     public void DeckBtn()

@@ -41,27 +41,38 @@ public class MagazineItems : MonoBehaviour
             transform.GetChild(1).GetComponent<SpriteRenderer>().sortingOrder = 1;
             transform.GetChild(2).gameObject.SetActive(false);
 
-            float distance = Vector3.Distance(this.transform.position, PanelHint.TransformPoint(this.transform.position));
-            distance = distance % 50;
+            float distance = Vector3.Distance(this.transform.position, PanelHint.position);
+            //distance = distance % 50;
+            //Debug.Log(distance);
 
-            if (distance < 65f)
+            if (distance < 85f)
             {
                 float minDistance = 10000f;
                 foreach (Transform item in PanelHint.GetChild(1))
                 {
-                    if (Vector3.Distance(transform.position, item.TransformPoint(transform.position)) < minDistance)
+                    Vector3 itemPos = cam.WorldToScreenPoint(item.position);
+                    pos = cam.WorldToScreenPoint(this.transform.position);
+
+                    if (Vector3.Distance(pos, itemPos) < minDistance)
                     {
+                        if (item.GetComponent<MagazineItemsOrder>() != magazineItemsOrder && magazineItemsOrder != null)
+                            magazineItemsOrder.LightOff();
+
                         magazineItemsOrder = item.GetComponent<MagazineItemsOrder>();
-                        minDistance = Vector3.Distance(transform.position, item.TransformPoint(transform.position));
+                        magazineItemsOrder.LightOn();
+                        minDistance = Vector3.Distance(pos, itemPos);
                     }
                 }
             } else
             {
+                if (magazineItemsOrder != null)
+                    magazineItemsOrder.LightOff();
                 magazineItemsOrder = null;
             }
         }
         else if (magazineItemsOrder != null)
         {
+            magazineItemsOrder.LightOff();
             magazineItemsOrder.Insert(dataLoot, count, price, isProductMag);
             magazineItemsOrder = null;
         }

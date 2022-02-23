@@ -766,6 +766,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magazine: {fileID: 410988032}
+  lightOnColor: {r: 0.42745098, g: 0.972549, b: 0.41568628, a: 0.21960784}
+  lightOffColor: {r: 0.42745098, g: 0.972549, b: 0.41568628, a: 0}
 --- !u!114 &22949270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5991,7 +5993,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 217628805}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 555637459}
+        m_TargetAssemblyTypeName: MagazineSlider, Assembly-CSharp
+        m_MethodName: SlideLeft
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &217628805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12106,7 +12120,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 395133541}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 555637459}
+        m_TargetAssemblyTypeName: MagazineSlider, Assembly-CSharp
+        m_MethodName: SlideRight
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &395133541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12800,6 +12826,7 @@ MonoBehaviour:
   panelLoot: {fileID: 555637456}
   panelMag: {fileID: 1832300627}
   salePanel: {fileID: 783620958}
+  saleBtn: {fileID: 651312779}
   textError: {fileID: 1938255899}
   textMoney: {fileID: 1024613448}
   textMoneyMag: {fileID: 1372170068}
@@ -18770,6 +18797,7 @@ GameObject:
   - component: {fileID: 555637456}
   - component: {fileID: 555637458}
   - component: {fileID: 555637457}
+  - component: {fileID: 555637459}
   m_Layer: 5
   m_Name: ItemsPanel
   m_TagString: Untagged
@@ -18843,6 +18871,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555637455}
   m_CullTransparentMesh: 1
+--- !u!114 &555637459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555637455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e73868428653264aaec83e81814c878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countStep: 9
 --- !u!1 &556214866
 GameObject:
   m_ObjectHideFlags: 0
@@ -21801,6 +21842,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2072668979}
+  - {fileID: 1420671967}
   m_Father: {fileID: 2136145024}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30707,6 +30749,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magazine: {fileID: 410988032}
+  lightOnColor: {r: 0.42745098, g: 0.972549, b: 0.41568628, a: 0.21960784}
+  lightOffColor: {r: 0.42745098, g: 0.972549, b: 0.41568628, a: 0}
 --- !u!114 &872341138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36997,7 +37041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.42745098, g: 0.972549, b: 0.41568628, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -53501,7 +53545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.42560607, g: 0.9716981, b: 0.41709682, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -55543,7 +55587,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1398199197}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1832300630}
+        m_TargetAssemblyTypeName: MagazineSlider, Assembly-CSharp
+        m_MethodName: SlideLeft
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1398199197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56204,6 +56260,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417578553}
+  m_CullTransparentMesh: 1
+--- !u!1 &1420671966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1420671967}
+  - component: {fileID: 1420671969}
+  - component: {fileID: 1420671968}
+  m_Layer: 5
+  m_Name: BuyText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1420671967
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420671966}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 651312779}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1420671968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420671966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 9000b6048492ab64dadd42f103661682, type: 3}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u041F\u041E\u041A\u0423\u041F\u041A\u0410"
+--- !u!222 &1420671969
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420671966}
   m_CullTransparentMesh: 1
 --- !u!1 &1420961883
 GameObject:
@@ -65603,7 +65738,9 @@ MonoBehaviour:
   equipmentManager: {fileID: 1729634338}
   panelLoot: {fileID: 2140612589}
   courierList: {fileID: 1989141257}
-  isDelete: 1
+  deliveryBtn: {fileID: 0}
+  deleteBtn: {fileID: 0}
+  isDelivToBase: 0
 --- !u!1 &1714797147
 GameObject:
   m_ObjectHideFlags: 0
@@ -65822,7 +65959,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1715847084}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1832300630}
+        m_TargetAssemblyTypeName: MagazineSlider, Assembly-CSharp
+        m_MethodName: SlideRight
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1715847084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70865,6 +71014,7 @@ GameObject:
   - component: {fileID: 1832300627}
   - component: {fileID: 1832300629}
   - component: {fileID: 1832300628}
+  - component: {fileID: 1832300630}
   m_Layer: 5
   m_Name: ProductsPanel
   m_TagString: Untagged
@@ -70938,6 +71088,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832300626}
   m_CullTransparentMesh: 1
+--- !u!114 &1832300630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832300626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e73868428653264aaec83e81814c878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countStep: 9
 --- !u!1 &1832861408
 GameObject:
   m_ObjectHideFlags: 0
@@ -71571,7 +71734,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.42745098, g: 0.972549, b: 0.41568628, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -73642,6 +73805,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magazine: {fileID: 410988032}
+  lightOnColor: {r: 0.42745098, g: 0.972549, b: 0.41568628, a: 0.21960784}
+  lightOffColor: {r: 0.42745098, g: 0.972549, b: 0.41568628, a: 0}
 --- !u!114 &1897653207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80874,12 +81039,12 @@ GameObject:
   - component: {fileID: 2072668981}
   - component: {fileID: 2072668980}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SaleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2072668979
 RectTransform:
   m_ObjectHideFlags: 0
@@ -80932,7 +81097,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041F\u041E\u041A\u0423\u041F\u041A\u0410"
+  m_Text: "\u041F\u0420\u041E\u0414\u0410\u0416\u0410"
 --- !u!222 &2072668981
 CanvasRenderer:
   m_ObjectHideFlags: 0

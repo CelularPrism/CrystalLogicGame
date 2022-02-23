@@ -17,7 +17,7 @@ public class BuildBase : MonoBehaviour
         foreach (var build in BaseItems.building)
         {
             Transform buildTrans = controller.transform.GetChild(0).GetChild(1).Find(build.Key);
-            
+
             for (int i = 0; i < transform.GetChild(0).childCount; i++)
             {
                 Transform buildBtn = transform.GetChild(0).GetChild(i).GetChild(3).GetChild(1);

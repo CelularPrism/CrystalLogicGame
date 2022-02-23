@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MagazineItemsOrder : MonoBehaviour
 {
     [SerializeField] private Magazine magazine;
+    [SerializeField] private Color lightOnColor;
+    [SerializeField] private Color lightOffColor;
     private DataLoot loot;
     private int count;
     private int price;
@@ -35,15 +38,26 @@ public class MagazineItemsOrder : MonoBehaviour
             this.price = price;
             this.isProductMag = isProductMag;
         }
-
+        //Debug.Log(isProductMag);
         if (isProductMag)
         {
             magazine.InsertOrder(this, true);
         }
         else
         {
+            this.price /= 2;
             magazine.InsertOrder(this, false);
         }
+    }
+
+    public void LightOn()
+    {
+        transform.GetChild(0).GetComponent<Image>().color = lightOnColor;
+    }
+
+    public void LightOff()
+    {
+        transform.GetChild(0).GetComponent<Image>().color = lightOffColor;
     }
 
     public bool IsProductMag()

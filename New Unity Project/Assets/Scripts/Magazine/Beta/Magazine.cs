@@ -9,6 +9,7 @@ public class Magazine : MonoBehaviour
     [SerializeField] private Transform panelLoot;
     [SerializeField] private Transform panelMag;
     [SerializeField] private Transform salePanel;
+    [SerializeField] private Transform saleBtn;
     [SerializeField] private GameObject textError;
 
     [SerializeField] private Text textMoney;
@@ -28,6 +29,7 @@ public class Magazine : MonoBehaviour
         textMoneyMag.text = moneyMag.ToString();
         textMoneyLoot.text = sceneController.money.ToString();
 
+        //GenerateLoot();
         GenerateMagazine();
         GenerateSaleProduct();
     }
@@ -84,6 +86,7 @@ public class Magazine : MonoBehaviour
 
     public void InsertOrder(MagazineItemsOrder itemOrder, bool isProduct)
     {
+        //Debug.Log(isProduct);
         itemsOrder.Add(itemOrder);
         if (isProduct)
             dataProduct.Remove(itemOrder.GetData());
@@ -187,13 +190,13 @@ public class Magazine : MonoBehaviour
 
     private void GenerateMagazine()
     {
-        int countItem = Random.Range(1, 6);
+        int countItem = Random.Range(10, 16);
         DataLoot[] dataLootList = Resources.LoadAll<DataLoot>("ScriptableObjects/Loot");
 
         List<DataLoot> dataList = new List<DataLoot>();
 
         foreach (DataLoot data in dataLootList)
-            if (data.equipment)
+            //if (data.equipment)
                 dataList.Add(data as DataLoot);
 
         for (int index = 0; index < countItem; index++)
@@ -232,7 +235,7 @@ public class Magazine : MonoBehaviour
         salePanel.GetChild(1).gameObject.SetActive(true);
         salePanel.GetChild(2).gameObject.SetActive(true);
 
-        float percent = Random.Range(0.2f, 0.99f);
+        float percent = Random.Range(0.2f, 0.5f);
         int price = Mathf.RoundToInt(dataLoot.price * percent);
 
         Transform parent = salePanel.parent.parent;
@@ -271,12 +274,17 @@ public class Magazine : MonoBehaviour
 
     private void UpdateCart()
     {
+        /*MagazineSlider magazineSlider = itemsOrder[0].transform.parent.GetComponent<MagazineSlider>();
+        Dictionary<string, int> dict = magazineSlider.ListToDict(itemsOrder);
+        magazineSlider.UpdatePanel(dict, 1);*/
+
+
         foreach (MagazineItemsOrder item in itemsOrder)
         {
             Transform panel = item.transform.GetChild(0);
             DataLoot dataLoot = item.GetData();
 
-            panel.GetChild(0).GetComponent<Text>().text = dataLoot.price.ToString();
+            panel.GetChild(0).GetComponent<Text>().text = item.GetPrice().ToString();
 
             panel.GetChild(1).GetComponent<SpriteRenderer>().sprite = dataLoot.img;
             panel.GetChild(2).GetComponent<Text>().text = item.GetCount().ToString();
@@ -296,7 +304,7 @@ public class Magazine : MonoBehaviour
                     break;
                 }
 
-            if (isEmpty) 
+            if (isEmpty)
             {
                 trans.GetChild(0).GetChild(0).gameObject.SetActive(false);
                 trans.GetChild(0).GetChild(1).gameObject.SetActive(false);
@@ -317,7 +325,7 @@ public class Magazine : MonoBehaviour
             if (item.IsProductMag())
                 sum -= dataLoot.price * item.GetCount();
             else
-                sum += dataLoot.price * item.GetCount();
+                sum += (dataLoot.price / 2) * item.GetCount();
         }
 
         return sum;
@@ -326,20 +334,33 @@ public class Magazine : MonoBehaviour
     private void UpdateTextSum()
     {
         int sum = UpdateSum();
+
+        if (sum > 0)
+        {
+            saleBtn.GetChild(0).gameObject.SetActive(true);
+            saleBtn.GetChild(1).gameObject.SetActive(false);
+        } else
+        {
+            saleBtn.GetChild(0).gameObject.SetActive(false);
+            saleBtn.GetChild(1).gameObject.SetActive(true);
+        }
+
         textMoney.text = sum.ToString();
     }
 
     private void UpdatePanelLoot()
     {
-        int index = 0;
+        //int index = 0;
 
-        foreach (var loot in sceneController.lootList)
+        panelLoot.GetComponent<MagazineSlider>().UpdatePanel(sceneController.lootList, 2, false);
+
+        /*foreach (var loot in sceneController.lootList)
         {
             if (index < panelLoot.childCount)
             {
                 DataLoot dataLoot = Resources.Load<DataLoot>("ScriptableObjects/Loot/" + loot.Key);
                 Transform transLoot = panelLoot.GetChild(index).GetChild(0);
-                transLoot.GetChild(0).GetComponent<Text>().text = dataLoot.price.ToString();
+                transLoot.GetChild(0).GetComponent<Text>().text = (dataLoot.price / 2).ToString();
                 transLoot.GetChild(1).GetComponent<SpriteRenderer>().sprite = dataLoot.img;
                 transLoot.GetChild(2).GetComponent<Text>().text = loot.Value.ToString();
 
@@ -349,7 +370,7 @@ public class Magazine : MonoBehaviour
 
                 MagazineItems magazineItems = transLoot.GetComponent<MagazineItems>();
                 magazineItems.enabled = true;
-                magazineItems.SetData(dataLoot, loot.Value, dataLoot.price, false);
+                magazineItems.SetData(dataLoot, loot.Value, dataLoot.price / 2, false);
                 index++;
             }
         }
@@ -366,12 +387,18 @@ public class Magazine : MonoBehaviour
             transLoot.GetChild(1).gameObject.SetActive(false);
             transLoot.GetChild(2).gameObject.SetActive(false);
             index++;
-        }
+        }*/
     }
 
     private void UpdatePanelMag()
     {
-        int index = 0;
+        Dictionary<string, int> dict = new Dictionary<string, int>();
+        foreach (var product in dataProduct)
+            dict[product.Key.name] = product.Value;
+
+        panelMag.GetComponent<MagazineSlider>().UpdatePanel(dict, 1, true);
+
+        /*int index = 0;
         foreach (var product in dataProduct)
         {
             if (index < panelMag.childCount)
@@ -404,7 +431,7 @@ public class Magazine : MonoBehaviour
             transLoot.GetChild(1).gameObject.SetActive(false);
             transLoot.GetChild(2).gameObject.SetActive(false);
             index++;
-        }
+        }*/
     }
 
     private void EnabledScript()

@@ -47,7 +47,7 @@ public class Card : MonoBehaviour
 
     public Dictionary<string, int> GetLoot(Dictionary<string, int> list)
     {
-        if (Random.Range(0, 100) < 1)
+        if (Random.Range(0, 100) < 50)
         {
             search.GetComponent<Search>().Restart();
             search.SetActive(true);

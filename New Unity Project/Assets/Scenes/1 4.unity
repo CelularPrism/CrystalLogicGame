@@ -602,6 +602,7 @@ GameObject:
   - component: {fileID: 28478418}
   - component: {fileID: 28478420}
   - component: {fileID: 28478419}
+  - component: {fileID: 28478421}
   m_Layer: 5
   m_Name: ProductsPanel
   m_TagString: Untagged
@@ -675,6 +676,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 28478417}
   m_CullTransparentMesh: 1
+--- !u!114 &28478421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28478417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e73868428653264aaec83e81814c878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countStep: 9
 --- !u!1 &32010371
 GameObject:
   m_ObjectHideFlags: 0
@@ -1838,6 +1852,7 @@ GameObject:
   - component: {fileID: 64819175}
   - component: {fileID: 64819177}
   - component: {fileID: 64819176}
+  - component: {fileID: 64819178}
   m_Layer: 5
   m_Name: ItemsPanel
   m_TagString: Untagged
@@ -1911,6 +1926,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 64819174}
   m_CullTransparentMesh: 1
+--- !u!114 &64819178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64819174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e73868428653264aaec83e81814c878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countStep: 9
 --- !u!1 &70481142
 GameObject:
   m_ObjectHideFlags: 0
@@ -2757,7 +2785,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 94044983}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 64819178}
+        m_TargetAssemblyTypeName: MagazineSlider, Assembly-CSharp
+        m_MethodName: SlideLeft
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &94044983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3624,6 +3664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 109456269}
+  - component: {fileID: 109456270}
   m_Layer: 5
   m_Name: Ivent
   m_TagString: Panel
@@ -3657,6 +3698,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1280, y: 768}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &109456270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109456268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c007968f12a87d741bdcd09eab9405b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &110681178
 GameObject:
   m_ObjectHideFlags: 0
@@ -9814,7 +9867,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 330992782}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 28478421}
+        m_TargetAssemblyTypeName: MagazineSlider, Assembly-CSharp
+        m_MethodName: SlideRight
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &330992782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13138,6 +13203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magazine: {fileID: 1816347700}
+  lightOnColor: {r: 0.42745098, g: 0.972549, b: 0.41568628, a: 0.21960784}
+  lightOffColor: {r: 0.42745098, g: 0.972549, b: 0.41568628, a: 0}
 --- !u!114 &433713945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16104,6 +16171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magazine: {fileID: 1816347700}
+  lightOnColor: {r: 0.42745098, g: 0.972549, b: 0.41568628, a: 0.21960784}
+  lightOffColor: {r: 0.42745098, g: 0.972549, b: 0.41568628, a: 0}
 --- !u!114 &519547933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17365,6 +17434,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559643751}
+  m_CullTransparentMesh: 1
+--- !u!1 &564956874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 564956875}
+  - component: {fileID: 564956877}
+  - component: {fileID: 564956876}
+  m_Layer: 5
+  m_Name: BuyText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &564956875
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564956874}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1222872680}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &564956876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564956874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 9000b6048492ab64dadd42f103661682, type: 3}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u041F\u041E\u041A\u0423\u041F\u041A\u0410"
+--- !u!222 &564956877
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564956874}
   m_CullTransparentMesh: 1
 --- !u!1 &575723848
 GameObject:
@@ -36023,10 +36171,6 @@ MonoBehaviour:
   loot: {fileID: 1712008880}
   panelIvent: {fileID: 109456269}
   search: {fileID: 1608016337}
-  panelMagazine: {fileID: 1874396330}
-  amountText: {fileID: 618851170}
-  moneyPlayerText: {fileID: 986956628}
-  moneyMagText: {fileID: 847992728}
 --- !u!1 &959188282
 GameObject:
   m_ObjectHideFlags: 0
@@ -45254,12 +45398,12 @@ GameObject:
   - component: {fileID: 1175824652}
   - component: {fileID: 1175824651}
   m_Layer: 5
-  m_Name: Text
+  m_Name: SaleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1175824650
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45312,7 +45456,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u041F\u041E\u041A\u0423\u041F\u041A\u0410"
+  m_Text: "\u041F\u0420\u041E\u0414\u0410\u0416\u0410"
 --- !u!222 &1175824652
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47010,6 +47154,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1175824650}
+  - {fileID: 564956875}
   m_Father: {fileID: 246511417}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -51719,7 +51864,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1357832156}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 64819178}
+        m_TargetAssemblyTypeName: MagazineSlider, Assembly-CSharp
+        m_MethodName: SlideRight
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1357832156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55924,6 +56081,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magazine: {fileID: 1816347700}
+  lightOnColor: {r: 0.42745098, g: 0.972549, b: 0.41568628, a: 0.21960784}
+  lightOffColor: {r: 0.42745098, g: 0.972549, b: 0.41568628, a: 0}
 --- !u!114 &1499916730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56045,13 +56204,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 367751938}
-        m_TargetAssemblyTypeName: Ivent, Assembly-CSharp
+      - m_Target: {fileID: 109456270}
+        m_TargetAssemblyTypeName: IventManager, Assembly-CSharp
         m_MethodName: VarA
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 367751934}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -59695,13 +59854,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 367751938}
-        m_TargetAssemblyTypeName: Ivent, Assembly-CSharp
+      - m_Target: {fileID: 109456270}
+        m_TargetAssemblyTypeName: IventManager, Assembly-CSharp
         m_MethodName: VarB
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 367751934}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -63928,7 +64087,9 @@ MonoBehaviour:
   equipmentManager: {fileID: 1927561431}
   panelLoot: {fileID: 2140612589}
   courierList: {fileID: 1989141257}
-  isDelete: 1
+  deliveryBtn: {fileID: 0}
+  deleteBtn: {fileID: 0}
+  isDelivToBase: 0
 --- !u!1 &1714797147
 GameObject:
   m_ObjectHideFlags: 0
@@ -68493,6 +68654,7 @@ MonoBehaviour:
   panelLoot: {fileID: 64819175}
   panelMag: {fileID: 28478418}
   salePanel: {fileID: 617320810}
+  saleBtn: {fileID: 1222872680}
   textError: {fileID: 2057550388}
   textMoney: {fileID: 1399937434}
   textMoneyMag: {fileID: 1556360231}
@@ -76184,13 +76346,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 367751938}
-        m_TargetAssemblyTypeName: Ivent, Assembly-CSharp
-        m_MethodName: Close
+      - m_Target: {fileID: 1146630320}
+        m_TargetAssemblyTypeName: UIButtons, Assembly-CSharp
+        m_MethodName: ClosePanel
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 109456268}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 109456269}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -76203,6 +76365,30 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 8300000, guid: 892ba90d61a24fd4cbebfa34a3f1dc96, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1146630320}
+        m_TargetAssemblyTypeName: UIButtons, Assembly-CSharp
+        m_MethodName: ClosePanel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1987192651}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 109456270}
+        m_TargetAssemblyTypeName: IventManager, Assembly-CSharp
+        m_MethodName: ReturnMusicSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -79637,7 +79823,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2083537764}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 28478421}
+        m_TargetAssemblyTypeName: MagazineSlider, Assembly-CSharp
+        m_MethodName: SlideLeft
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &2083537764
 MonoBehaviour:
   m_ObjectHideFlags: 0
