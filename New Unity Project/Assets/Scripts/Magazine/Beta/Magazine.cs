@@ -190,13 +190,13 @@ public class Magazine : MonoBehaviour
 
     private void GenerateMagazine()
     {
-        int countItem = Random.Range(10, 16);
+        int countItem = Random.Range(1, 6);
         DataLoot[] dataLootList = Resources.LoadAll<DataLoot>("ScriptableObjects/Loot");
 
         List<DataLoot> dataList = new List<DataLoot>();
 
         foreach (DataLoot data in dataLootList)
-            //if (data.equipment)
+            if (data.equipment)
                 dataList.Add(data as DataLoot);
 
         for (int index = 0; index < countItem; index++)

@@ -78,7 +78,7 @@ public class MagazineSlider : MonoBehaviour
     {
         index -= countStep;
 
-        if (index <= 0)
+        if (index < 0)
             index = (dictItems.Count / countStep) * countStep;
 
         UpdatePanel(dictItems, multiplier, isProductMag);
