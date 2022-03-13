@@ -10,6 +10,7 @@ public class MagazineItems : MonoBehaviour
     private DataLoot dataLoot;
     private int count;
     private int price;
+    private int index;
     private bool isProductMag;
 
     private Vector3 oldPos;
@@ -18,6 +19,8 @@ public class MagazineItems : MonoBehaviour
     private void Start()
     {
         oldPos = Vector3.zero;
+        //index = transform.parent.GetSiblingIndex();
+        //Debug.Log(transform.parent.name + " " + index);
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
@@ -97,6 +100,11 @@ public class MagazineItems : MonoBehaviour
         magazineItemsOrder = null;
     }
 
+    public void SetIndex(int index)
+    {
+        this.index = index;
+    }
+
     public void DeleteDataLoot()
     {
         dataLoot = null;
@@ -110,6 +118,11 @@ public class MagazineItems : MonoBehaviour
     public int GetPrice()
     {
         return price;
+    }
+
+    public int GetIndex()
+    {
+        return index;
     }
 
     public DataLoot GetData()

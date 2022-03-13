@@ -20,6 +20,8 @@ public class Magazine : MonoBehaviour
 
     private Dictionary<DataLoot, int> dataProduct  = new Dictionary<DataLoot, int>();
     private int moneyMag = 0;
+    private int indexPanelMag;
+    private int indexPanelLoot;
 
     private void Start()
     {
@@ -28,6 +30,9 @@ public class Magazine : MonoBehaviour
         moneyMag = Random.Range(10, 20) * 100;
         textMoneyMag.text = moneyMag.ToString();
         textMoneyLoot.text = sceneController.money.ToString();
+
+        indexPanelLoot = panelLoot.parent.GetSiblingIndex();
+        indexPanelMag = panelMag.parent.GetSiblingIndex();
 
         //GenerateLoot();
         GenerateMagazine();
@@ -45,6 +50,9 @@ public class Magazine : MonoBehaviour
                 DisabledScript(index, false);
                 transform.GetChild(0).gameObject.SetActive(false);
                 transform.GetChild(1).gameObject.SetActive(true);
+
+                /*panelLoot.parent.SetSiblingIndex(panelLoot.parent.parent.childCount - 1);
+                panelLoot.GetChild(index).SetSiblingIndex(panelLoot.childCount - 1);*/
                 break;
             }
 
@@ -54,6 +62,9 @@ public class Magazine : MonoBehaviour
                 DisabledScript(index, true);
                 transform.GetChild(0).gameObject.SetActive(false);
                 transform.GetChild(1).gameObject.SetActive(true);
+
+                /*panelMag.parent.SetSiblingIndex(panelMag.parent.parent.childCount - 1);
+                panelMag.GetChild(index).SetSiblingIndex(panelLoot.childCount - 1);*/
                 break;
             }
         }
@@ -66,6 +77,8 @@ public class Magazine : MonoBehaviour
 
         if (isActive == false)
         {
+            panelMag.parent.SetSiblingIndex(indexPanelMag);
+            panelLoot.parent.SetSiblingIndex(indexPanelLoot);
             EnabledScript();
         }
     }
@@ -284,9 +297,11 @@ public class Magazine : MonoBehaviour
             Transform panel = item.transform.GetChild(0);
             DataLoot dataLoot = item.GetData();
 
+            panel.GetComponent<DescriptionScript>().dataLoot = dataLoot;
             panel.GetChild(0).GetComponent<Text>().text = item.GetPrice().ToString();
 
-            panel.GetChild(1).GetComponent<SpriteRenderer>().sprite = dataLoot.img;
+            //panel.GetChild(1).GetComponent<SpriteRenderer>().sprite = dataLoot.img;
+            panel.GetChild(1).GetComponent<Image>().sprite = dataLoot.img;
             panel.GetChild(2).GetComponent<Text>().text = item.GetCount().ToString();
 
             panel.GetChild(0).gameObject.SetActive(true);
@@ -306,6 +321,7 @@ public class Magazine : MonoBehaviour
 
             if (isEmpty)
             {
+                trans.GetChild(0).GetComponent<DescriptionScript>().dataLoot = null;
                 trans.GetChild(0).GetChild(0).gameObject.SetActive(false);
                 trans.GetChild(0).GetChild(1).gameObject.SetActive(false);
                 trans.GetChild(0).GetChild(2).gameObject.SetActive(false);
@@ -438,8 +454,17 @@ public class Magazine : MonoBehaviour
     {
         for (int index = 0; index < panelLoot.childCount; index++)
         {
-            panelMag.GetChild(index).GetChild(0).GetComponent<MagazineItems>().enabled = true;
-            panelLoot.GetChild(index).GetChild(0).GetComponent<MagazineItems>().enabled = true;
+            MagazineItems magazineItems = panelMag.GetChild(index).GetChild(0).GetComponent<MagazineItems>();
+            panelMag.GetChild(index).SetSiblingIndex(magazineItems.GetIndex());
+            
+            if (magazineItems.GetData() != null)
+                magazineItems.enabled = true;
+
+            magazineItems = panelLoot.GetChild(index).GetChild(0).GetComponent<MagazineItems>();
+            panelLoot.GetChild(index).SetSiblingIndex(magazineItems.GetIndex());
+            
+            if (magazineItems.GetData() != null)
+                magazineItems.enabled = true;
         }
     }
 
@@ -458,6 +483,8 @@ public class Magazine : MonoBehaviour
                     panelLoot.GetChild(i).GetChild(0).GetComponent<MagazineItems>().enabled = false;
                 }
             }
+            panelMag.parent.SetSiblingIndex(panelMag.parent.parent.childCount - 1);
+            panelMag.GetChild(index).SetSiblingIndex(panelMag.childCount - 1);
         }
         else
         {
@@ -472,6 +499,8 @@ public class Magazine : MonoBehaviour
                     panelMag.GetChild(i).GetChild(0).GetComponent<MagazineItems>().enabled = false;
                 }
             }
+            panelLoot.parent.SetSiblingIndex(panelLoot.parent.parent.childCount - 1);
+            panelLoot.GetChild(index).SetSiblingIndex(panelLoot.childCount - 1);
         }
     }
 }

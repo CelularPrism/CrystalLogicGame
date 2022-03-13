@@ -31,13 +31,17 @@ public class MagazineSlider : MonoBehaviour
                 product.GetChild(1).gameObject.SetActive(true);
                 product.GetChild(2).gameObject.SetActive(true);
 
+                product.parent.GetComponent<DescriptionScript>().dataLoot = dataLoot;
+                product.parent.GetComponent<DescriptionScript>().dataLoot = dataLoot;
                 product.GetChild(0).GetComponent<Text>().text = (dataLoot.price / multiplier).ToString();
-                product.GetChild(1).GetComponent<SpriteRenderer>().sprite = dataLoot.img;
+                //product.GetChild(1).GetComponent<SpriteRenderer>().sprite = dataLoot.img;
+                product.GetChild(1).GetComponent<Image>().sprite = dataLoot.img;
                 product.GetChild(2).GetComponent<Text>().text = item.Value.ToString();
 
                 MagazineItems magazineItems = product.GetComponent<MagazineItems>();
                 magazineItems.enabled = true;
                 magazineItems.SetData(dataLoot, item.Value, dataLoot.price / multiplier, isProductMag);
+                magazineItems.SetIndex(indexProduct);
 
                 indexProduct++;
             }
@@ -48,11 +52,14 @@ public class MagazineSlider : MonoBehaviour
         {
             Transform product = transform.GetChild(indexProduct).GetChild(0);
             product.position = Vector3.zero;
+            //Debug.Log(product.name + " " + indexProduct);
 
             MagazineItems magazineItems = product.GetComponent<MagazineItems>();
             magazineItems.DeleteDataLoot();
+            magazineItems.SetIndex(indexProduct);
             magazineItems.enabled = false;
 
+            product.parent.GetComponent<DescriptionScript>().dataLoot = null;
             product.GetChild(0).GetComponent<Text>().text = "";
             product.GetChild(2).GetComponent<Text>().text = "";
 

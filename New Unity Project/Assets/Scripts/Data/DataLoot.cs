@@ -13,6 +13,7 @@ public class DataLoot : ScriptableObject
     public Sprite img;
     public AudioClip audio;
     public string Name;
+    public string Description;
     public int price;
 
     public int boostHealth = 0;

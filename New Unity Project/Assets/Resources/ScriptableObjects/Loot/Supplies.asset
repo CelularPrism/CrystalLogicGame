@@ -12,7 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc990bcc73bc22e43963f90579a3ddfb, type: 3}
   m_Name: Supplies
   m_EditorClassIdentifier: 
+  equipment: 0
+  lootClass: 0
   img: {fileID: 21300000, guid: 2e80b51ec9e15f847afd0a008f544763, type: 3}
-  Name: SUPPLIES
-  price: 8
   audio: {fileID: 0}
+  Name: SUPPLIES
+  Description: "\u0420\u0435\u0441\u0443\u0440\u0441 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u043C\u044B\u0439
+    \u0434\u043B\u044F \u043F\u0440\u043E\u0438\u0437\u0432\u043E\u0434\u0441\u0442\u0432\u0430"
+  price: 8
+  boostHealth: 0
+  boostIron: 0
+  boostDamage: 0
+  boostOil: 1

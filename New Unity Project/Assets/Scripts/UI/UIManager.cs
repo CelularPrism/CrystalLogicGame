@@ -53,7 +53,6 @@ public class UIManager : MonoBehaviour
             dropBtn.GetChild(1).gameObject.SetActive(false);
             panelLoot.GetComponent<PanelLoot>().isDelivToBase = true;
 
-            int j = 0;
             panelLoot.gameObject.SetActive(true);
             Transform panel = GameObject.FindGameObjectWithTag("LootList").transform;
             audioListener.clip = audioOpen;
@@ -64,6 +63,7 @@ public class UIManager : MonoBehaviour
             panelLoot.GetChild(3).GetChild(0).gameObject.SetActive(true);
             panelLoot.GetChild(3).GetChild(1).gameObject.SetActive(false);
             moneyTxt.text = sceneController.money.ToString();
+            int j = 0;
 
             foreach (var i in sceneController.lootList)
             {
@@ -71,6 +71,7 @@ public class UIManager : MonoBehaviour
                 {
                     DataLoot dataLoot = Resources.Load<DataLoot>("ScriptableObjects/Loot/" + i.Key);
 
+                    panel.GetChild(j).GetComponent<DescriptionScript>().dataLoot = dataLoot;
                     panel.GetChild(j).GetChild(0).GetComponent<Text>().text = dataLoot.Name;
                     panel.GetChild(j).GetChild(1).GetComponent<Text>().text = i.Value.ToString();
 
@@ -87,6 +88,7 @@ public class UIManager : MonoBehaviour
                 if (i >= sceneController.lootList.Count)
                 {
                     panel.GetChild(i).GetComponent<Button>().enabled = false;
+                    panel.GetChild(i).GetComponent<DescriptionScript>().dataLoot = null;
 
                     panel.GetChild(i).GetChild(0).GetComponent<Text>().text = "";
                     panel.GetChild(i).GetChild(1).GetComponent<Text>().text = "";
@@ -127,6 +129,7 @@ public class UIManager : MonoBehaviour
                 {
                     DataLoot dataLoot = Resources.Load<DataLoot>("ScriptableObjects/Loot/" + i.Key);
 
+                    panel.GetChild(j).GetComponent<DescriptionScript>().dataLoot = dataLoot;
                     panel.GetChild(j).GetChild(0).GetComponent<Text>().text = dataLoot.Name; //i.Key;
                     panel.GetChild(j).GetChild(1).GetComponent<Text>().text = i.Value.ToString();
 
@@ -143,6 +146,7 @@ public class UIManager : MonoBehaviour
                 if (i >= BaseItems.items.Count)
                 {
                     panel.GetChild(i).GetComponent<Button>().enabled = false;
+                    panel.GetChild(i).GetComponent<DescriptionScript>().dataLoot = null;
 
                     panel.GetChild(i).GetChild(0).GetComponent<Text>().text = "";
                     panel.GetChild(i).GetChild(1).GetComponent<Text>().text = "";
