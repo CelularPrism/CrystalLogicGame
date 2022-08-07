@@ -1,0 +1,435 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.19f1 (68f137dc9bbe) revision 6877495'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19044.1826; Version 2009; 64bit' Language: 'en' Physical Memory: 16331 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\2020.3.19f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Костя/Desktop/Обычные папки/Unity/CrystalLogicGame/New Unity Project
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+61790
+Successfully changed project path to: C:/Users/Костя/Desktop/Обычные папки/Unity/CrystalLogicGame/New Unity Project
+C:/Users/Костя/Desktop/Обычные папки/Unity/CrystalLogicGame/New Unity Project
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 194.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.19f1 (68f137dc9bbe)
+[Subsystems] Discovering subsystems at path C:/Program Files/2020.3.19f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Костя/Desktop/Обычные папки/Unity/CrystalLogicGame/New Unity Project/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.1]
+    Renderer: ATI Radeon HD 4600 Series (ID=0x9498)
+    Vendor:   
+    VRAM:     493 MB
+    Driver:   8.970.100.9001
+Initialize mono
+Mono path[0] = 'C:/Program Files/2020.3.19f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/2020.3.19f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/2020.3.19f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56844
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/2020.3.19f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.168984 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 76.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  5.481 seconds
+Domain Reload Profiling:
+	ReloadAssembly (5481ms)
+		BeginReloadAssembly (2770ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (983ms)
+			LoadAssemblies (2768ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (478ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (377ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (77ms)
+				BeforeProcessingInitializeOnLoad (167ms)
+				ProcessInitializeOnLoadAttributes (89ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.461461 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 77.30 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  5.580 seconds
+Domain Reload Profiling:
+	ReloadAssembly (5587ms)
+		BeginReloadAssembly (180ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (5328ms)
+			LoadAssemblies (3219ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (1043ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (871ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (77ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (680ms)
+				ProcessInitializeOnLoadMethodAttributes (14ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2335 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.2 MB.
+System memory in use after: 118.3 MB.
+
+Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 2793.
+Total: 3.784500 ms (FindLiveObjects: 0.287300 ms CreateObjectMapping: 0.071800 ms MarkObjects: 3.333700 ms  DeleteObjects: 0.090300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Skypunk Resources/1920_slot_weapon.png
+  artifactKey: Guid(837afc3fca6877d4db6e3e90654e31cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/1920_slot_weapon.png using Guid(837afc3fca6877d4db6e3e90654e31cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70966962959f79ecfcce0daa8a40a862') in 0.117751 seconds 
+  Import took 0.121921 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/Skypunk Resources/Предмер_.png
+  artifactKey: Guid(7b2798f7bed921448a857eb1ba86f685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/Предмер_.png using Guid(7b2798f7bed921448a857eb1ba86f685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c94aeedcd21ddaab6e286babf4bf519c') in 0.021022 seconds 
+  Import took 0.024867 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 473.579508 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_gun_Buck_.png
+  artifactKey: Guid(79cb81d0ac8efec488369a8e45d58afa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_gun_Buck_.png using Guid(79cb81d0ac8efec488369a8e45d58afa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7dfe3230dfe076fced369c5320a8e463') in 0.030910 seconds 
+  Import took 0.035005 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_item_Turbine_1.png
+  artifactKey: Guid(b2bdf6ce7b930d3449773d1c39b9cb17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_item_Turbine_1.png using Guid(b2bdf6ce7b930d3449773d1c39b9cb17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e4f65aa8a654516e19862d9849f127e') in 0.018592 seconds 
+  Import took 0.022410 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_shield_Paladin_1.png
+  artifactKey: Guid(20a6bace30a31524a9cf04d8ed8e2630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_shield_Paladin_1.png using Guid(20a6bace30a31524a9cf04d8ed8e2630) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd972d893eb91cc460c394710c66af27') in 0.018326 seconds 
+  Import took 0.022539 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_gun_Сannonball_.png
+  artifactKey: Guid(8ce64a3cbf1d61d49b21ac9272133ce1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_gun_Сannonball_.png using Guid(8ce64a3cbf1d61d49b21ac9272133ce1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46790f289d88634f3a1eac14bdeedf05') in 0.019673 seconds 
+  Import took 0.023763 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_gun_mg_photon_3_.png
+  artifactKey: Guid(8d418966896b9bb4294028acca9ab720) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_gun_mg_photon_3_.png using Guid(8d418966896b9bb4294028acca9ab720) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bae45c35b7c6ac6c74a52014707ce608') in 0.022082 seconds 
+  Import took 0.026008 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_item_Winch_1.png
+  artifactKey: Guid(3a52de83163cbde4b9925e1ff3b62ba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_item_Winch_1.png using Guid(3a52de83163cbde4b9925e1ff3b62ba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da8d0cd5225590653601a5177fe53f13') in 0.021611 seconds 
+  Import took 0.025593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_shield_Photon_1.png
+  artifactKey: Guid(bc21f3c0ffddbf544a7827a81f60df07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_shield_Photon_1.png using Guid(bc21f3c0ffddbf544a7827a81f60df07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bc93910480a00037ebc8a26ef9a649e') in 0.023890 seconds 
+  Import took 0.027893 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_item_Inverter_1.png
+  artifactKey: Guid(2e1349bed63ec93489a369e0d7bb78d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_item_Inverter_1.png using Guid(2e1349bed63ec93489a369e0d7bb78d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14c39da1fe928642adb9034a29c5a538') in 0.024751 seconds 
+  Import took 0.028691 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_gun_mg_hornet_.png
+  artifactKey: Guid(2a1b0769b4855fe4499728ee744fc7f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_gun_mg_hornet_.png using Guid(2a1b0769b4855fe4499728ee744fc7f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7052a15665b6b62f7736a4d0f5a5254e') in 0.026283 seconds 
+  Import took 0.030386 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000358 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_gun_Flint_1.png
+  artifactKey: Guid(2a0c22b91b4b94b4f968529c85a5e797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_gun_Flint_1.png using Guid(2a0c22b91b4b94b4f968529c85a5e797) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f833a036620e3a704d6a84a0d0997e4') in 0.019516 seconds 
+  Import took 0.023697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000259 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_gun_mg_wasp_2_.png
+  artifactKey: Guid(0627e10569d10254ba8f39113f35e60e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_gun_mg_wasp_2_.png using Guid(0627e10569d10254ba8f39113f35e60e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc4f4af6d3abff351c22cc5370d065ea') in 0.018813 seconds 
+  Import took 0.023025 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_shield_Vector_1.png
+  artifactKey: Guid(e0f558673ff45be489b57ebc71ea35c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/94x95/1920_shield_Vector_1.png using Guid(e0f558673ff45be489b57ebc71ea35c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3c67d42f33046ee076fa13e436851ab') in 0.024734 seconds 
+  Import took 0.028700 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.604853 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_gun_Buck_.png
+  artifactKey: Guid(e2c2c281cf43ea04fa0038422394c3a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_gun_Buck_.png using Guid(e2c2c281cf43ea04fa0038422394c3a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69dd2390a2093c3258c32ee820f8fd45') in 0.024436 seconds 
+  Import took 0.028278 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_item_Winch_1.png
+  artifactKey: Guid(9eff7cca144abc3469063e2109a14a89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_item_Winch_1.png using Guid(9eff7cca144abc3469063e2109a14a89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0a6d1817fcdd8dbe789c3d8e90b7bfa') in 0.018985 seconds 
+  Import took 0.022741 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000224 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_gun_Flint_1.png
+  artifactKey: Guid(bd434ac397dc52c44a94bf1a63035f97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_gun_Flint_1.png using Guid(bd434ac397dc52c44a94bf1a63035f97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08af6cc3840c784a008df3c3d4e62f31') in 0.020019 seconds 
+  Import took 0.024152 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_gun_mg_wasp_2_.png
+  artifactKey: Guid(27330efd69b90014881a64bc6c38d10f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_gun_mg_wasp_2_.png using Guid(27330efd69b90014881a64bc6c38d10f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30de572a811f6b67fe4d865125c6a63b') in 0.026623 seconds 
+  Import took 0.030601 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_shield_Paladin_1.png
+  artifactKey: Guid(7a663fd64d3cff447b137c18fbbc6b4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_shield_Paladin_1.png using Guid(7a663fd64d3cff447b137c18fbbc6b4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '97e2a2950b31705a14c632b6568f7a6c') in 0.020259 seconds 
+  Import took 0.023826 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_shield_Photon_1.png
+  artifactKey: Guid(dcf9584261b8eb247a613779f59bcc75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_shield_Photon_1.png using Guid(dcf9584261b8eb247a613779f59bcc75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6ef89c9a8b73c71b1ebdbde760fa506') in 0.019058 seconds 
+  Import took 0.022750 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_item_Inverter_1.png
+  artifactKey: Guid(0d56bf507f08bb949964f6c017635091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_item_Inverter_1.png using Guid(0d56bf507f08bb949964f6c017635091) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6750393fab4f85cf40b3681424353a9') in 0.020723 seconds 
+  Import took 0.024298 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000241 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_gun_Сannonball_.png
+  artifactKey: Guid(5ffa37bf415cf9d4cb9a5a9d0848df3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_gun_Сannonball_.png using Guid(5ffa37bf415cf9d4cb9a5a9d0848df3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '259913908d91264121d4ff120ded1194') in 0.019349 seconds 
+  Import took 0.023327 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_item_Turbine_1.png
+  artifactKey: Guid(4337f9aab0252f14b855165696ab303a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_item_Turbine_1.png using Guid(4337f9aab0252f14b855165696ab303a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cbc2d774fba5db1c4725e97c96e16e4') in 0.021614 seconds 
+  Import took 0.025700 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_gun_mg_hornet_.png
+  artifactKey: Guid(f1b7b98ed1107dc47a0c746885530d6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_gun_mg_hornet_.png using Guid(f1b7b98ed1107dc47a0c746885530d6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aea19715fcf8c162bed26ead70b2e7f9') in 0.019471 seconds 
+  Import took 0.023347 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000276 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_gun_mg_photon_3_.png
+  artifactKey: Guid(6e13e84863ff3ce47b8b3814e699b5de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_gun_mg_photon_3_.png using Guid(6e13e84863ff3ce47b8b3814e699b5de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a70d8741fe4d5d2216c80b0d496f933') in 0.020302 seconds 
+  Import took 0.024474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_shield_Vector_1.png
+  artifactKey: Guid(59ab82d1c750cbb4fa4d75a123914c1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/loot_2/Equipment/OldSprites/1920_shield_Vector_1.png using Guid(59ab82d1c750cbb4fa4d75a123914c1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94674acd9e993b040d09be55dbf31994') in 0.020284 seconds 
+  Import took 0.024458 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 25.554487 seconds.
+  path: Assets/Scenes/1 1.unity
+  artifactKey: Guid(964d7b53d37b0af41a0a61ebe95dbb74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/1 1.unity using Guid(964d7b53d37b0af41a0a61ebe95dbb74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57dc03ea82c6addec956989a3c730904') in 0.009320 seconds 
+  Import took 0.013301 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.904532 seconds.
+  path: Assets/Scenes/1.unity
+  artifactKey: Guid(be3cbf33bd1ab1d4b95c696ae2d29eb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/1.unity using Guid(be3cbf33bd1ab1d4b95c696ae2d29eb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca3c142b1daaf331a952a2d26c10e448') in 0.007766 seconds 
+  Import took 0.011717 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 335.726314 seconds.
+  path: Assets/Skypunk Resources/TRADING_STATION_dop (1)/Slice 1.png
+  artifactKey: Guid(7eb97a620d42d474da85f3631a54fa99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/TRADING_STATION_dop (1)/Slice 1.png using Guid(7eb97a620d42d474da85f3631a54fa99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '391df6564edc250774efd29939e92f9e') in 0.028835 seconds 
+  Import took 0.033614 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.031945 seconds.
+  path: Assets/Skypunk Resources/TRADING_STATION_dop (1)/Slice 1.png
+  artifactKey: Guid(7eb97a620d42d474da85f3631a54fa99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Skypunk Resources/TRADING_STATION_dop (1)/Slice 1.png using Guid(7eb97a620d42d474da85f3631a54fa99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec53a8b8964994596f4d3c0670f8888b') in 0.050419 seconds 
+  Import took 0.054316 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 24.435793 seconds.
+  path: Assets/Scenes/Main menu.unity
+  artifactKey: Guid(63bd7c7db724ce24ebb57e621967ef45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main menu.unity using Guid(63bd7c7db724ce24ebb57e621967ef45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d18ae310058be69457a526d09493a54') in 0.007227 seconds 
+  Import took 0.011445 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004073 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.00 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.350 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1351ms)
+		BeginReloadAssembly (119ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (40ms)
+		EndReloadAssembly (1160ms)
+			LoadAssemblies (95ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (341ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (55ms)
+			SetupLoadedEditorAssemblies (542ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (98ms)
+				ProcessInitializeOnLoadAttributes (423ms)
+				ProcessInitializeOnLoadMethodAttributes (6ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.18 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2306 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 119.0 MB.
+System memory in use after: 119.2 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2804.
+Total: 3.707400 ms (FindLiveObjects: 0.286500 ms CreateObjectMapping: 0.076400 ms MarkObjects: 3.322100 ms  DeleteObjects: 0.021400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
