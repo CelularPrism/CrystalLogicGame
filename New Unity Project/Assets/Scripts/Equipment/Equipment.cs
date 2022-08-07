@@ -34,7 +34,7 @@ public class Equipment : MonoBehaviour
 
         foreach (var i in PlayerStatic.equipmentList)
         {
-            if (i.Value == loot.name)
+            if (i.Value.name == loot.name)
             {
                 key = i.Key;
                 break;
@@ -43,7 +43,7 @@ public class Equipment : MonoBehaviour
 
         if (key.Length > 0)
         {
-            PlayerStatic.equipmentList[key] = "";
+            PlayerStatic.equipmentList[key] = null;
         }
 
         loot = null;

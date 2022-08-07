@@ -38,7 +38,7 @@ public class UIManager : MonoBehaviour
 
             if (GameObject.FindGameObjectsWithTag("PanelList").Length > 0)
             {
-                Transform panelWarning = GameObject.FindGameObjectWithTag("PanelList").transform.GetChild(3);
+                Transform panelWarning = GameObject.FindGameObjectWithTag("PanelList").transform.GetChild(0).GetChild(3);
 
                 panelWarning.gameObject.SetActive(true);
             }    
@@ -199,7 +199,7 @@ public class UIManager : MonoBehaviour
         foreach (var equip in PlayerStatic.equipmentList)
         {
             Image imgEquip = panelEquip.GetChild(index).GetChild(0).GetComponent<Image>();
-            if (equip.Value == "")
+            if (equip.Value == null)
             {
                 imgEquip.color = new Color(255, 255, 255, 0);
             } else

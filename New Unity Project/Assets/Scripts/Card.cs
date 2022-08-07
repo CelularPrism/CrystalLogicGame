@@ -70,6 +70,7 @@ public class Card : MonoBehaviour
             VarA.text = Ivent.VarA;
             VarB.text = Ivent.VarB;*/
 
+            panelIvent.parent.parent.gameObject.SetActive(true);
             panelIvent.parent.gameObject.SetActive(true);
             panelIvent.gameObject.SetActive(true);
         }

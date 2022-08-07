@@ -7,10 +7,10 @@ public static class PlayerStatic
     public static string lang = "";
     public static List<IventInterface> listIvents = new List<IventInterface>();
     public static Dictionary<string, int> lootList = new Dictionary<string, int>();
-    public static Dictionary<string, string> equipmentList = new Dictionary<string, string>() {   { "weapon", "" },
-                                                                                            { "shield", "" },
-                                                                                            { "equip1", "" },
-                                                                                            { "equip2", "" } };
+    public static Dictionary<string, DataLoot> equipmentList = new Dictionary<string, DataLoot>() {   { "weapon", null },
+                                                                                            { "shield", null },
+                                                                                            { "equip1", null },
+                                                                                            { "equip2", null } };
     public static List<int> countLvl = new List<int>();
 
     public static float fuel = 15;

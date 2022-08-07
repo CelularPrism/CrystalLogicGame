@@ -12,7 +12,7 @@ public class EquipmentManager : MonoBehaviour
 
         foreach (var equip in PlayerStatic.equipmentList)
         {
-            if (equip.Value != "")
+            if (equip.Value != null)
             {
                 DataLoot dataLoot = Resources.Load<DataLoot>("ScriptableObjects/Loot/" + equip.Value);
                 //Equip(dataLoot);
@@ -31,24 +31,24 @@ public class EquipmentManager : MonoBehaviour
         if (dataLoot.lootClass == DataLoot.classLoot.weapon)
         {
             equipTrans = transform.GetChild(0);
-            PlayerStatic.equipmentList["weapon"] = dataLoot.name;
+            PlayerStatic.equipmentList["weapon"] = dataLoot;
         } else if (dataLoot.lootClass == DataLoot.classLoot.shield)
         {
             equipTrans = transform.GetChild(1);
-            PlayerStatic.equipmentList["shield"] = dataLoot.name;
+            PlayerStatic.equipmentList["shield"] = dataLoot;
         } else
         {
             if (transform.GetChild(2).GetComponent<Equipment>().isEquip == false)
             {
                 equipTrans = transform.GetChild(2);
                 transform.GetChild(3).GetComponent<Equipment>().isEquip = false;
-                PlayerStatic.equipmentList["equip1"] = dataLoot.name;
+                PlayerStatic.equipmentList["equip1"] = dataLoot;
             }
             else
             {
                 equipTrans = transform.GetChild(3);
                 transform.GetChild(2).GetComponent<Equipment>().isEquip = false;
-                PlayerStatic.equipmentList["equip2"] = dataLoot.name;
+                PlayerStatic.equipmentList["equip2"] = dataLoot;
             }
 
             equipTrans.GetComponent<Equipment>().isEquip = true;

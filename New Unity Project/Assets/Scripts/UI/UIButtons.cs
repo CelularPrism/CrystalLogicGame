@@ -35,10 +35,17 @@ public class UIButtons : MonoBehaviour
 
     public void OpenOption()
     {
-        panelOption.parent.gameObject.SetActive(true);
-        panelOption.gameObject.SetActive(true);
-        if (panelMap != null)
-            panelMap.gameObject.SetActive(false);
+        if (panelOption.gameObject.activeSelf)
+        {
+            panelOption.gameObject.SetActive(false);
+        }
+        else
+        {
+            panelOption.parent.gameObject.SetActive(true);
+            panelOption.gameObject.SetActive(true);
+            if (panelMap != null)
+                panelMap.gameObject.SetActive(false);
+        }
     }
 
     public void OpenPanel(GameObject panel)

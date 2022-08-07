@@ -15,14 +15,17 @@ public class FightUIManager : MonoBehaviour
     [SerializeField] private Color nonActivePhaseColor;
 
     [SerializeField] private SceneController controller;
-    [SerializeField] private Text healthTextPlayer;
+    [SerializeField] private FightUIPlayer fightUIPlayer;
+    /*[SerializeField] private Text healthTextPlayer;
     [SerializeField] private Text ironTextPlayer;
-    [SerializeField] private Text dmgTextPlayer;
+    [SerializeField] private Text dmgTextPlayer;*/
 
-    [SerializeField] private SpriteRenderer imageEnemy;
+    [SerializeField] private FightUIEnemy fightUIEnemy;
+    [SerializeField] private FightLogic fightLogic;
+    /*[SerializeField] private SpriteRenderer imageEnemy;
 
     [SerializeField] private Text healthTextEnemy;
-    [SerializeField] private Text damageTextEnemy;
+    [SerializeField] private Text damageTextEnemy;*/
 
     [SerializeField] private SearchBaloon searchBaloon;
     [SerializeField] private AudioClip bgClip;
@@ -35,6 +38,9 @@ public class FightUIManager : MonoBehaviour
     private void Start()
     {
         fight = transform.GetComponent<Fight>();
+        //fightUIPlayer = transform.GetComponent<FightUIPlayer>();
+        //fightUIEnemy = transform.GetComponent<FightUIEnemy>();
+        fightLogic = transform.GetComponent<FightLogic>();
 
         for (int i = 0; i < panelShield.childCount; i++)
         {
@@ -44,11 +50,10 @@ public class FightUIManager : MonoBehaviour
 
     void Update()
     {
-        healthTextPlayer.text = controller.health.ToString();
-        ironTextPlayer.text = controller.iron.ToString();
-        dmgTextPlayer.text = controller.damage.ToString();
 
-        if (card.dataCard.card != DataCard.classCard.Enemy)
+        fightUIPlayer.UpdateUIPlayer(controller.health, controller.iron, controller.damage);
+        card = fightLogic.CheckCard(card);
+        /*if (card.dataCard.card != DataCard.classCard.Enemy)
         {
             DataCard[] dataCards = Resources.LoadAll<DataCard>("ScriptableObjects/Cards/Enemy");
             int num = Random.Range(0, dataCards.Length - 1);
@@ -59,11 +64,12 @@ public class FightUIManager : MonoBehaviour
             card.dataCard = dataCard;
             card.Health = health;
             card.Damage = damage;
-        }
+        }*/
 
-        imageEnemy.sprite = card.dataCard.img;
+        fightUIEnemy.UpdateUI(card.dataCard.img, card.Health, card.Damage);
+        /*imageEnemy.sprite = card.dataCard.img;
         healthTextEnemy.text = card.Health.ToString();
-        damageTextEnemy.text = card.Damage.ToString();
+        damageTextEnemy.text = card.Damage.ToString();*/
 
         if ((Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Keypad1)) && fight.fight)
         {
