@@ -40,6 +40,7 @@ BaseInfo,Жизни и щиты восполнены. Ресурсы перед�
 BaseBtn,ГОТОВО,ОК
 ,,
 PanelWarningHeader,Желаете отправить предметы на базу?,Do you want to send items to the base?
+PanelWarningHeaderMagazine,Вы точно хотите покинуть магазин?,Are you sure you want to leave the store?
 PanelWarningYes,ДА,YES
 PanelWarningNo,НЕТ,NO
 CourierDeckSend,ОТПРАВИТЬ,SEND
@@ -233,3 +234,13 @@ VengefulPirate3,Сразиться,Fight Him
 VengefulPirate4,Оторваться от него,Break Away
 VengefulPirate5,"Бензинщики как паршивые псы - лают да не кусают, думаете вы, разворачивая корабль и готовясь к бою.","Gas Gangers are like lousy dogs, all bark and no bite, you think as you turn around and prepare for battle."
 VengefulPirate6,"Вы увеличиваете мощность двигателей до максимума в попытке сбросить его с хвоста. Спустя какое-то время вам удается оторваться, но на это уходит значительное количество топлива (-3 топлива).","You raise the engine power to max in an attempt to throw him off your tail. After a while, you manage to break out of the chase, but this has taken a significant amount of fuel (-3 fuel)."
+SkipButton,ПРОПУСТИТЬ,SKIP
+OKButton,ОК,OK
+DeckHeader,ТРЮМ,DECK
+ScoutHeader,СКАУТ,SCOUT
+Health,ЖИЗНИ,HEALTH
+Shield,ЩИТЫ,SHIELD
+Oil,ТОПЛИВО,OIL
+GameOver,КОНЕЦ ИГРЫ,GAME OVER
+MoveToBase,ПЕРЕМЕСТИТЬ НА БАЗУ, MOVE TO BASE
+MoveToDeck,ПЕРЕМЕСТИТЬ В ТРЮМ, MOVE TO DECK

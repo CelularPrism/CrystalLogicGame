@@ -8,11 +8,11 @@ public class WoundedGasGangerLink : IventInterface
     public IventManager iventManager { get; set; }
     public void VarA()
     {
-        iventManager.Final(dataIvent.TextA);
+        iventManager.Final(dataIvent.localisationIvent.textA);
     }
     public void VarB()
     {
-        iventManager.Final(dataIvent.TextB);
+        iventManager.Final(dataIvent.localisationIvent.textB);
     }
 
     public void StartIvent()
@@ -24,12 +24,12 @@ public class WoundedGasGangerLink : IventInterface
             iventManager.DeleteLoot(dataIvent.dataLootA.name, 1);
             iventManager.ChangeFuel(2);
             iventManager.SetImage(dataIvent.lootA, 2.ToString());
-            iventManager.Final(dataIvent.TextA);
+            iventManager.Final(dataIvent.localisationIvent.textA);
         }
         else
         {
             iventManager.SetAudioClip(dataIvent.audioTextB);
-            iventManager.Final(dataIvent.TextB);
+            iventManager.Final(dataIvent.localisationIvent.textB);
         }
     }
 

@@ -13,7 +13,7 @@ public class WoundedGasGanger : IventInterface
     public void VarB()
     {
         iventManager.SetAudioClip(dataIvent.audioTextB);
-        iventManager.Final(dataIvent.TextB);
+        iventManager.Final(dataIvent.localisationIvent.textB);
     }
 
     public void StartIvent()

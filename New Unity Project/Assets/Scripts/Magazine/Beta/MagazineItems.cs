@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class MagazineItems : MonoBehaviour
+public class MagazineItems : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField] private Camera cam;
     [SerializeField] private Magazine magazine;
@@ -12,6 +13,9 @@ public class MagazineItems : MonoBehaviour
     private int price;
     private int index;
     private bool isProductMag;
+    private bool isMove;
+
+    private bool isEnabled;
 
     private Vector3 oldPos;
     private MagazineItemsOrder magazineItemsOrder = null;
@@ -22,6 +26,7 @@ public class MagazineItems : MonoBehaviour
         //index = transform.parent.GetSiblingIndex();
         //Debug.Log(transform.parent.name + " " + index);
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        isEnabled = false;
     }
 
     void Update()
@@ -30,13 +35,17 @@ public class MagazineItems : MonoBehaviour
         Vector3 center = cam.WorldToScreenPoint(transform.position);
         Vector3 size;
 
+        isMove = false;
+
         if (transform.position.z == 0)
             size = transform.sizeDelta;
         else
             size = transform.sizeDelta * 2;
 
-        if ((Vector3.Distance(center, Input.mousePosition) < size.x) && (Input.GetMouseButton(0)))
+        if (isEnabled && (Input.GetMouseButton(0)))
         {
+            isMove = true;
+
             Vector3 pos = cam.ScreenToWorldPoint(Input.mousePosition);
             transform.position = new Vector3(pos.x, pos.y, 1);
 
@@ -91,6 +100,21 @@ public class MagazineItems : MonoBehaviour
         }
     }
 
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        isEnabled = true;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        isEnabled = false;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        isEnabled = true;
+    }
+
     public void SetData(DataLoot dataLoot, int count, int price, bool isProductMag)
     {
         this.isProductMag = isProductMag;
@@ -128,5 +152,10 @@ public class MagazineItems : MonoBehaviour
     public DataLoot GetData()
     {
         return dataLoot;
+    }
+
+    public bool IsMove()
+    {
+        return isMove;
     }
 }

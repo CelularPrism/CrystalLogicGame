@@ -9,12 +9,12 @@ public class DeadMenTellNoLiesLink : IventInterface
     public void VarA()
     {
         iventManager.SetAudioClip(dataIvent.audioTextA);
-        iventManager.Final(dataIvent.TextA);
+        iventManager.Final(dataIvent.localisationIvent.textA);
     }
     public void VarB()
     {
         iventManager.SetAudioClip(dataIvent.audioTextB);
-        iventManager.Final(dataIvent.TextB);
+        iventManager.Final(dataIvent.localisationIvent.textB);
     }
 
     public void StartIvent()

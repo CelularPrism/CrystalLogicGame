@@ -34,15 +34,19 @@ public class Equipment : MonoBehaviour
 
         foreach (var i in PlayerStatic.equipmentList)
         {
-            if (i.Value.name == loot.name)
+            if (i.Value != null)
             {
-                key = i.Key;
-                break;
+                if (i.Value.name == loot.name)
+                {
+                    key = i.Key;
+                    break;
+                }
             }
         }
 
         if (key.Length > 0)
         {
+            Debug.Log(key);
             PlayerStatic.equipmentList[key] = null;
         }
 

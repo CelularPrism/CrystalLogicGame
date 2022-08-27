@@ -14,7 +14,7 @@ public class FreeCheese : IventInterface
     public void VarB()
     {
         iventManager.SetAudioClip(dataIvent.audioTextB);
-        iventManager.Final(dataIvent.TextB);
+        iventManager.Final(dataIvent.localisationIvent.textB);
     }
 
     public void StartIvent()

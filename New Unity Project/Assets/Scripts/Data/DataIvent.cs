@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Ivent", menuName = "Scriptable objects/Ivent")]
+[CreateAssetMenu(fileName = "New Ivent", menuName = "Scriptable objects/Ivents/Ivent")]
 public class DataIvent : ScriptableObject
 {
+    public DataLocalisationIvent localisationIvent;
     public AudioClip audioText;
     public string TextHeader;
     public string Text;

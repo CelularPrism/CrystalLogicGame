@@ -9,7 +9,7 @@ public class Vultures : IventInterface
     public void VarA()
     {
         iventManager.SetAudioClip(dataIvent.audioTextA);
-        iventManager.Final(dataIvent.TextA);
+        iventManager.Final(dataIvent.localisationIvent.textA);
     }
     public void VarB()
     {
@@ -36,7 +36,7 @@ public class Vultures : IventInterface
         iventManager.InsertLoot(dataLoot.name, 1);
         iventManager.ChangeFuel(1);
         iventManager.SetImage(dataLoot.img, 1.ToString());
-        iventManager.Final(dataIvent.TextB);
+        iventManager.Final(dataIvent.localisationIvent.textB);
     }
 
     public void StartIvent()

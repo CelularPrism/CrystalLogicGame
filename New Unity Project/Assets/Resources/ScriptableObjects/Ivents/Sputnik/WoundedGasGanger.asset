@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5b2106a547384ca9631fa47fad560, type: 3}
   m_Name: WoundedGasGanger
   m_EditorClassIdentifier: 
+  localisationIvent: {fileID: 11400000, guid: b08d162acef58e24e954013f65db9b86, type: 2}
   audioText: {fileID: 8300000, guid: b167dc38e111aff458520a08bd79db68, type: 3}
   TextHeader: "\u0420\u0410\u041D\u0415\u041D\u041D\u042B\u0419 \u0411\u0415\u041D\u0417\u0418\u041D\u0429\u0418\u041A"
   Text: "\u041D\u0430 \u043F\u043E\u0434\u043B\u0435\u0442\u0435 \u043A \u0434\u0430\u043D\u043D\u043E\u043C\u0443

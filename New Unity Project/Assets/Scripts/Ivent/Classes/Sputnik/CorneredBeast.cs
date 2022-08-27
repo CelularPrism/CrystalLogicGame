@@ -9,24 +9,26 @@ public class CorneredBeast : IventInterface
     public void VarA()
     {
         iventManager.SetAudioClip(dataIvent.audioTextA);
-        iventManager.Final(dataIvent.TextA);
+        iventManager.Final(dataIvent.localisationIvent.textA);
     }
     public void VarB()
     {
         float iron = iventManager.GetIron();
-        if (iron > 2)
-            iventManager.ChangeIron(-2);
-        else
-        {
-            iventManager.ChangeIron(-1);
-            iventManager.ChangeHealth(-1);
+        int dmgHealth = 0;
+        int dmgIron = 2;
+        while (iron < dmgIron) {
+            dmgIron--;
+            dmgHealth++;
         }
+
+        iventManager.ChangeIron(dmgIron);
+        iventManager.ChangeHealth(dmgHealth);
 
         iventManager.ChangeFuel(-2);
         iventManager.InsertLoot(dataIvent.dataLootB.name, 5);
         iventManager.SetAudioClip(dataIvent.audioTextB);
         iventManager.SetImage(dataIvent.dataLootB.img, 5.ToString());
-        iventManager.Final(dataIvent.TextB);
+        iventManager.Final(dataIvent.localisationIvent.textB);
     }
 
     public void StartIvent()

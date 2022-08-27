@@ -11,7 +11,7 @@ public class DeepLake : IventInterface
         iventManager.SetAudioClip(dataIvent.audioTextA);
         if (iventManager.CheckRes(dataIvent.dataLootA.name, 1))
             iventManager.DeleteLoot(dataIvent.dataLootA.name, 1);
-        iventManager.Final(dataIvent.TextA);
+        iventManager.Final(dataIvent.localisationIvent.textA);
     }
     public void VarB()
     {

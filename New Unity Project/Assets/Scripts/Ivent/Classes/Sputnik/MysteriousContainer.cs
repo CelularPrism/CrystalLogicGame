@@ -9,7 +9,7 @@ public class MysteriousContainer : IventInterface // Отредактировать. Сложен в р
     public void VarA()
     {
         iventManager.SetAudioClip(dataIvent.audioTextA);
-        iventManager.Final(dataIvent.TextA);
+        iventManager.Final(dataIvent.localisationIvent.textA);
     }
     public void VarB()
     {

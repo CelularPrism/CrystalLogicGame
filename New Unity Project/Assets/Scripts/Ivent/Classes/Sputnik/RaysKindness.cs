@@ -10,7 +10,7 @@ public class RaysKindness : IventInterface
     {
         iventManager.Battle();
         iventManager.SetAudioClip(dataIvent.audioTextA);
-        iventManager.Final(dataIvent.TextA);
+        iventManager.Final(dataIvent.localisationIvent.textA);
     }
     public void VarB()
     {

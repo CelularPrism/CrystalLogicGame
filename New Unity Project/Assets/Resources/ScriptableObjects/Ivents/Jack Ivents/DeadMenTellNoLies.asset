@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c5b2106a547384ca9631fa47fad560, type: 3}
   m_Name: DeadMenTellNoLies
   m_EditorClassIdentifier: 
+  localisationIvent: {fileID: 11400000, guid: 76004c4c6bc0f4f49b62b61cbf1d8639, type: 2}
   audioText: {fileID: 8300000, guid: 82eb8f524b36af54bb9c3aedc230810e, type: 3}
   TextHeader: "\u041C\u0415\u0420\u0422\u0412\u0415\u0426\u042B \u041D\u0415 \u041B\u0413\u0423\u0422"
   Text: "\u041F\u0435\u0440\u0435\u0434 \u0416\u0430\u043A\u043E\u043C \u043E\u0442\u043A\u0440\u044B\u043B\u0430\u0441\u044C
@@ -41,8 +42,8 @@ MonoBehaviour:
     \u043A\u0430\u0440\u0442\u043E\u0439, \u043F\u043E\u043C\u0435\u0447\u0435\u043D\u043D\u043E\u0439
     \u043A\u0440\u0435\u0441\u0442\u043E\u043C. \u041D\u0430\u0432\u0435\u0440\u043D\u044F\u043A\u0430
     \u044D\u0442\u043E \u043A\u043B\u0430\u0434!"
-  dataIventA: {fileID: 11400000, guid: 7570df9d65c594741a1dc3934a2f83b4, type: 2}
   dataLootA: {fileID: 0}
+  lootA: {fileID: 0}
   countA: 0
   audioTextB: {fileID: 8300000, guid: 57f51783a70a1144dac6f68032deafc9, type: 3}
   VarB: "\u041F\u0440\u043E\u0439\u0442\u0438 \u043C\u0438\u043C\u043E"
@@ -51,6 +52,6 @@ MonoBehaviour:
     \u043C\u043E\u0433\u043B\u0438 \u0432\u0435\u0440\u043D\u0443\u0442\u044C\u0441\u044F.
     \u041B\u0443\u0447\u0448\u0435 \u0443\u0431\u0440\u0430\u0442\u044C\u0441\u044F,
     \u043F\u043E\u043A\u0430 \u044D\u0442\u043E\u0433\u043E \u043D\u0435 \u0441\u043B\u0443\u0447\u0438\u043B\u043E\u0441\u044C."
-  dataIventB: {fileID: 0}
   dataLootB: {fileID: 0}
+  lootB: {fileID: 0}
   countB: 0

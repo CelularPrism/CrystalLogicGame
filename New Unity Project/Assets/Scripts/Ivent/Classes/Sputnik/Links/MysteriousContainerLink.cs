@@ -23,14 +23,14 @@ public class MysteriousContainerLink : IventInterface
             iventManager.SetAudioClip(dataIvent.audioTextA);
             iventManager.DeleteLoot(dataIvent.dataLootA.name, 1);
             iventManager.SetImage(dataIvent.dataLootA.img, (-1).ToString());
-            iventManager.Final(dataIvent.TextA);
+            iventManager.Final(dataIvent.localisationIvent.textA);
         }
         else
         {
             iventManager.SetAudioClip(dataIvent.audioTextB);
             iventManager.ChangeFuel(-1);
             iventManager.SetImage(dataIvent.lootB, (-1).ToString());
-            iventManager.Final(dataIvent.TextB);
+            iventManager.Final(dataIvent.localisationIvent.textB);
         }
     }
 

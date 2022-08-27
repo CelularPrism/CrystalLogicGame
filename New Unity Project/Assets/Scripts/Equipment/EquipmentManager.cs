@@ -6,7 +6,14 @@ using static PlayerStatic;
 
 public class EquipmentManager : MonoBehaviour
 {
-    void Update()
+    [SerializeField] private Transform[] arrayEquip;
+
+    private void Start()
+    {
+        UpdateEquipmentPanel();
+    }
+
+    void UpdateEquipmentPanel()
     {
         int index = 0;
 
@@ -14,12 +21,13 @@ public class EquipmentManager : MonoBehaviour
         {
             if (equip.Value != null)
             {
-                DataLoot dataLoot = Resources.Load<DataLoot>("ScriptableObjects/Loot/" + equip.Value);
+                Debug.Log(equip);
+                DataLoot dataLoot = Resources.Load<DataLoot>("ScriptableObjects/Loot/" + equip.Value.name);
                 //Equip(dataLoot);
 
-                transform.GetChild(index).GetComponent<Equipment>().loot = dataLoot;
-                transform.GetChild(index).GetComponent<Image>().sprite = dataLoot.img;
-                transform.GetChild(index).GetComponent<Image>().color = new Color(255, 255, 255, 255);
+                arrayEquip[index].GetComponent<Equipment>().loot = dataLoot;
+                arrayEquip[index].GetComponent<Image>().sprite = dataLoot.img;
+                arrayEquip[index].GetComponent<Image>().color = new Color(255, 255, 255, 255);
             }
             index++;
         }
@@ -27,28 +35,32 @@ public class EquipmentManager : MonoBehaviour
 
     public void Equip(DataLoot dataLoot)
     {
-        Transform equipTrans = transform;
+        Transform equipTrans = arrayEquip[0];
         if (dataLoot.lootClass == DataLoot.classLoot.weapon)
         {
-            equipTrans = transform.GetChild(0);
+            equipTrans = arrayEquip[0];
             PlayerStatic.equipmentList["weapon"] = dataLoot;
+            Debug.Log("weapon " + PlayerStatic.equipmentList["weapon"]);
         } else if (dataLoot.lootClass == DataLoot.classLoot.shield)
         {
-            equipTrans = transform.GetChild(1);
+            equipTrans = arrayEquip[1];
             PlayerStatic.equipmentList["shield"] = dataLoot;
+            Debug.Log("shield " + PlayerStatic.equipmentList["shield"]);
         } else
         {
-            if (transform.GetChild(2).GetComponent<Equipment>().isEquip == false)
+            if (arrayEquip[2].GetComponent<Equipment>().isEquip == false)
             {
-                equipTrans = transform.GetChild(2);
-                transform.GetChild(3).GetComponent<Equipment>().isEquip = false;
+                equipTrans = arrayEquip[2];
+                arrayEquip[3].GetComponent<Equipment>().isEquip = false;
                 PlayerStatic.equipmentList["equip1"] = dataLoot;
+                Debug.Log("equip1 " + PlayerStatic.equipmentList["equip1"]);
             }
             else
             {
-                equipTrans = transform.GetChild(3);
-                transform.GetChild(2).GetComponent<Equipment>().isEquip = false;
+                equipTrans = arrayEquip[3];
+                arrayEquip[2].GetComponent<Equipment>().isEquip = false;
                 PlayerStatic.equipmentList["equip2"] = dataLoot;
+                Debug.Log("equip2 " + PlayerStatic.equipmentList["equip2"]);
             }
 
             equipTrans.GetComponent<Equipment>().isEquip = true;

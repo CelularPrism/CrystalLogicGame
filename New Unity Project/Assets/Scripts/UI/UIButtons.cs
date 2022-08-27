@@ -23,6 +23,11 @@ public class UIButtons : MonoBehaviour
         PlayerStatic.iron = 5f;
         PlayerStatic.damage = 3;
 
+        PlayerStatic.equipmentList = new Dictionary<string, DataLoot> {   { "weapon", null },
+                                                                          { "shield", null },
+                                                                          { "equip1", null },
+                                                                          { "equip2", null } };
+
         SceneManager.LoadScene("1");
     }
 

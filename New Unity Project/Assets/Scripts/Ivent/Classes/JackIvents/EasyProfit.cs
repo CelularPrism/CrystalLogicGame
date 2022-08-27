@@ -11,12 +11,12 @@ public class EasyProfit : IventInterface
         iventManager.ChangeFuel(-1);
         iventManager.SetAudioClip(dataIvent.audioTextA);
         iventManager.SetImage(dataIvent.lootA, (-1).ToString());
-        iventManager.Final(dataIvent.TextA);
+        iventManager.Final(dataIvent.localisationIvent.textA);
     }
     public void VarB()
     {
         iventManager.SetAudioClip(dataIvent.audioTextB);
-        iventManager.Final(dataIvent.TextB);
+        iventManager.Final(dataIvent.localisationIvent.textB);
     }
 
     public void StartIvent()

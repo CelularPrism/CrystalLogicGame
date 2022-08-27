@@ -23,14 +23,14 @@ public class RaysKindnessLink : IventInterface
             iventManager.SetAudioClip(dataIvent.audioTextA);
             iventManager.DeleteLoot(dataIvent.dataLootA.name, 1);
             iventManager.SetImage(dataIvent.lootA, (-1).ToString());
-            iventManager.Final(dataIvent.TextA);
+            iventManager.Final(dataIvent.localisationIvent.textA);
         }
         else
         {
             iventManager.SetAudioClip(dataIvent.audioTextB);
             iventManager.ChangeHealth(-5);
             iventManager.SetImage(dataIvent.lootB, (-5).ToString());
-            iventManager.Final(dataIvent.TextB);
+            iventManager.Final(dataIvent.localisationIvent.textB);
         }
     }
 

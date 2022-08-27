@@ -18,11 +18,11 @@ public class IventManager : MonoBehaviour
     // Надо отредактировать MysteriousContainer, он сложен в реализации
     private SceneController controller;
 
-    private Text head;
-    private Text text;
+    private TextLocaliserUI head;
+    private TextLocaliserUI text;
     
-    private Text textA;
-    private Text textB;
+    private TextLocaliserUI textA;
+    private TextLocaliserUI textB;
 
     private Image imgRes;
     private Text textCount; // Change resources
@@ -37,10 +37,10 @@ public class IventManager : MonoBehaviour
     private void GenerateParameters()
     {
         controller = GameObject.FindGameObjectWithTag("SceneController").GetComponent<SceneController>();
-        head = transform.GetChild(0).GetComponent<Text>();
-        text = transform.GetChild(2).GetComponent<Text>();
-        textA = transform.GetChild(3).GetChild(0).GetComponent<Text>();
-        textB = transform.GetChild(4).GetChild(0).GetComponent<Text>();
+        head = transform.GetChild(0).GetComponent<TextLocaliserUI>();
+        text = transform.GetChild(2).GetComponent<TextLocaliserUI>();
+        textA = transform.GetChild(3).GetChild(0).GetComponent<TextLocaliserUI>();
+        textB = transform.GetChild(4).GetChild(0).GetComponent<TextLocaliserUI>();
         imgRes = transform.GetChild(5).GetChild(0).GetComponent<Image>();
         textCount = transform.GetChild(5).GetChild(2).GetComponent<Text>();
         OkBtn = transform.GetChild(6);
@@ -84,10 +84,12 @@ public class IventManager : MonoBehaviour
         ivent.SetIventManager(this);
         ivent.StartIvent();
 
-        head.text = ivent.dataIvent.TextHeader;
-        text.text = ivent.dataIvent.Text;
-        textA.text = ivent.dataIvent.VarA;
-        textB.text = ivent.dataIvent.VarB;
+        DataLocalisationIvent localisation = ivent.dataIvent.localisationIvent;
+
+        head.key = localisation.iventHeader;
+        text.key = localisation.text;
+        textA.key = localisation.varA;
+        textB.key = localisation.varB;
 
         audioSourceMusic.volume = 0.3f;
         audioSourceSound.clip = ivent.dataIvent.audioText;
@@ -101,11 +103,11 @@ public class IventManager : MonoBehaviour
         OkBtn.gameObject.SetActive(false);
     }
 
-    public void Final(string finalText)
+    public void Final(string keyLocalisation)
     {
         iventInterfaces.Remove(ivent);
         PlayerStatic.listIvents = iventInterfaces;
-        text.text = finalText;
+        text.key = keyLocalisation;
 
         textA.transform.parent.gameObject.SetActive(false);
         textB.transform.parent.gameObject.SetActive(false);
@@ -139,9 +141,11 @@ public class IventManager : MonoBehaviour
         ivent.SetIventManager(this);
         ivent.StartIvent();
 
-        text.text = ivent.dataIvent.Text;
-        textA.text = ivent.dataIvent.TextA;
-        textB.text = ivent.dataIvent.TextB;
+        DataLocalisationIvent localisation = ivent.dataIvent.localisationIvent;
+
+        text.key = localisation.text;
+        textA.key = localisation.textA;
+        textB.key = localisation.textB;
     }
 
     public void SetImage(Sprite image, string count)
@@ -218,5 +222,10 @@ public class IventManager : MonoBehaviour
     public float GetIron()
     {
         return controller.iron;
+    }
+
+    public DataIvent GetIvent()
+    {
+        return ivent.dataIvent;
     }
 }

@@ -16,6 +16,9 @@ public class Magazine : MonoBehaviour
     [SerializeField] private Text textMoneyMag;
     [SerializeField] private Text textMoneyLoot;
 
+    [SerializeField] private MagazineItemsSort magazineItemsSort;
+    [SerializeField] private MagazineItemsSort playerItemsSort;
+
     private List<MagazineItemsOrder> itemsOrder = new List<MagazineItemsOrder>();
 
     private Dictionary<DataLoot, int> dataProduct  = new Dictionary<DataLoot, int>();
@@ -44,27 +47,31 @@ public class Magazine : MonoBehaviour
         bool isActive = false;
         for (int index = 0; index < panelLoot.childCount; index++)
         {
-            if (panelLoot.GetChild(index).GetChild(0).position.z > 0)
+            MagazineItems item = panelLoot.GetChild(index).GetChild(0).GetComponent<MagazineItems>();
+
+            if (item.IsMove())
             {
                 isActive = true;
                 DisabledScript(index, false);
                 transform.GetChild(0).gameObject.SetActive(false);
                 transform.GetChild(1).gameObject.SetActive(true);
 
-                /*panelLoot.parent.SetSiblingIndex(panelLoot.parent.parent.childCount - 1);
-                panelLoot.GetChild(index).SetSiblingIndex(panelLoot.childCount - 1);*/
+                panelLoot.parent.SetSiblingIndex(panelLoot.parent.parent.childCount - 1);
+                panelLoot.GetChild(index).SetSiblingIndex(panelLoot.childCount - 1);
                 break;
             }
 
-            if (panelMag.GetChild(index).GetChild(0).position.z > 0)
+            item = panelMag.GetChild(index).GetChild(0).GetComponent<MagazineItems>();
+
+            if (item.IsMove())
             {
                 isActive = true;
                 DisabledScript(index, true);
                 transform.GetChild(0).gameObject.SetActive(false);
                 transform.GetChild(1).gameObject.SetActive(true);
 
-                /*panelMag.parent.SetSiblingIndex(panelMag.parent.parent.childCount - 1);
-                panelMag.GetChild(index).SetSiblingIndex(panelLoot.childCount - 1);*/
+                panelMag.parent.SetSiblingIndex(panelMag.parent.parent.childCount - 1);
+                panelMag.GetChild(index).SetSiblingIndex(panelLoot.childCount - 1);
                 break;
             }
         }
@@ -369,6 +376,7 @@ public class Magazine : MonoBehaviour
         //int index = 0;
 
         panelLoot.GetComponent<MagazineSlider>().UpdatePanel(sceneController.lootList, 2, false);
+        playerItemsSort.SortItems(false);
 
         /*foreach (var loot in sceneController.lootList)
         {
@@ -413,6 +421,7 @@ public class Magazine : MonoBehaviour
             dict[product.Key.name] = product.Value;
 
         panelMag.GetComponent<MagazineSlider>().UpdatePanel(dict, 1, true);
+        magazineItemsSort.SortItems(true);
 
         /*int index = 0;
         foreach (var product in dataProduct)
@@ -456,13 +465,13 @@ public class Magazine : MonoBehaviour
         {
             MagazineItems magazineItems = panelMag.GetChild(index).GetChild(0).GetComponent<MagazineItems>();
             panelMag.GetChild(index).SetSiblingIndex(magazineItems.GetIndex());
-            
+
             if (magazineItems.GetData() != null)
                 magazineItems.enabled = true;
 
             magazineItems = panelLoot.GetChild(index).GetChild(0).GetComponent<MagazineItems>();
             panelLoot.GetChild(index).SetSiblingIndex(magazineItems.GetIndex());
-            
+
             if (magazineItems.GetData() != null)
                 magazineItems.enabled = true;
         }

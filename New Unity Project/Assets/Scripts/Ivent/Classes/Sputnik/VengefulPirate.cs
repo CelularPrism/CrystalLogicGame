@@ -10,7 +10,7 @@ public class VengefulPirate : IventInterface
     {
         iventManager.Battle();
         iventManager.SetAudioClip(dataIvent.audioTextA);
-        iventManager.Final(dataIvent.TextA);
+        iventManager.Final(dataIvent.localisationIvent.textA);
         // Начало боя
     }
     public void VarB()
@@ -18,7 +18,7 @@ public class VengefulPirate : IventInterface
         iventManager.ChangeFuel(-3);
         iventManager.SetAudioClip(dataIvent.audioTextB);
         iventManager.SetImage(dataIvent.lootB, (-3).ToString());
-        iventManager.Final(dataIvent.TextB);
+        iventManager.Final(dataIvent.localisationIvent.textB);
     }
 
     public void StartIvent()
