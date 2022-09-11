@@ -8,7 +8,8 @@ using static PlayerStatic;
 
 public class IventManager : MonoBehaviour
 {
-    List<IventInterface> iventInterfaces = new List<IventInterface>();/* = new List<IventInterface> {
+    List<IventInterface> iventInterfaces = new List<IventInterface>() { new NightmareFuel() } ;
+    /* = new List<IventInterface> {
         new DeadMenTellNoLies(), new EasyMetal(), new EasyProfit(),
         new FirstComeFirstServe(), new FreeCheese(), new NightmareFuel(),
         new Silhouettes(), new CorneredBeast(), new DeepLake(),
@@ -47,23 +48,26 @@ public class IventManager : MonoBehaviour
 
         FightField = GameObject.FindGameObjectWithTag("MainCamera").transform.GetChild(3);
 
-        if (PlayerStatic.listIvents.Count() == 0)
+        if (iventInterfaces.Count == 0)
         {
+            if (PlayerStatic.listIvents.Count() == 0)
+            {
 
-            var list = from t in Assembly.GetExecutingAssembly().GetTypes()
-                       where t.GetInterfaces().Contains(typeof(IventInterface))
-                                && t.GetConstructor(System.Type.EmptyTypes) != null
-                       select System.Activator.CreateInstance(t) as IventInterface;
+                var list = from t in Assembly.GetExecutingAssembly().GetTypes()
+                           where t.GetInterfaces().Contains(typeof(IventInterface))
+                                    && t.GetConstructor(System.Type.EmptyTypes) != null
+                           select System.Activator.CreateInstance(t) as IventInterface;
 
-            foreach (IventInterface i in list.ToList())
-                if (i.GetType().Name.Substring(i.GetType().Name.Length - 4) != "Link")
-                    iventInterfaces.Add(i);
+                foreach (IventInterface i in list.ToList())
+                    if (i.GetType().Name.Substring(i.GetType().Name.Length - 4) != "Link")
+                        iventInterfaces.Add(i);
 
-            PlayerStatic.listIvents = iventInterfaces;
-        }
-        else
-        {
-            iventInterfaces = PlayerStatic.listIvents;
+                PlayerStatic.listIvents = iventInterfaces;
+            }
+            else
+            {
+                iventInterfaces = PlayerStatic.listIvents;
+            }
         }
 
         GameObject GOSound = GameObject.FindGameObjectWithTag("MainCamera").transform.GetChild(0).gameObject;
@@ -75,8 +79,10 @@ public class IventManager : MonoBehaviour
 
     private void OnEnable()
     {
-        if (iventInterfaces.Count() == 0 || controller == null)
+        if (iventInterfaces.Count == 0 || controller == null)
+        {
             GenerateParameters();
+        }
         int num = Random.Range(0, iventInterfaces.Count - 1);
 
         ivent = iventInterfaces[num];
@@ -86,10 +92,10 @@ public class IventManager : MonoBehaviour
 
         DataLocalisationIvent localisation = ivent.dataIvent.localisationIvent;
 
-        head.key = localisation.iventHeader;
-        text.key = localisation.text;
-        textA.key = localisation.varA;
-        textB.key = localisation.varB;
+        head.SetKey(localisation.iventHeader);
+        text.SetKey(localisation.text);
+        textA.SetKey(localisation.varA);
+        textB.SetKey(localisation.varB);
 
         audioSourceMusic.volume = 0.3f;
         audioSourceSound.clip = ivent.dataIvent.audioText;
@@ -107,7 +113,7 @@ public class IventManager : MonoBehaviour
     {
         iventInterfaces.Remove(ivent);
         PlayerStatic.listIvents = iventInterfaces;
-        text.key = keyLocalisation;
+        text.SetKey(keyLocalisation);
 
         textA.transform.parent.gameObject.SetActive(false);
         textB.transform.parent.gameObject.SetActive(false);
@@ -142,10 +148,10 @@ public class IventManager : MonoBehaviour
         ivent.StartIvent();
 
         DataLocalisationIvent localisation = ivent.dataIvent.localisationIvent;
-
-        text.key = localisation.text;
-        textA.key = localisation.textA;
-        textB.key = localisation.textB;
+        if (localisation.text != "")
+            text.SetKey(localisation.text);
+        textA.SetKey(localisation.textA);
+        textB.SetKey(localisation.textB);
     }
 
     public void SetImage(Sprite image, string count)

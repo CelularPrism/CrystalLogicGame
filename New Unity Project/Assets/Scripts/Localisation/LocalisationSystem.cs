@@ -36,7 +36,6 @@ public class LocalisationSystem : MonoBehaviour
         {
             Init();
         }
-
         string value = key;
         switch(language)
         {

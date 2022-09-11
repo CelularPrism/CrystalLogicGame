@@ -32,4 +32,9 @@ public class TextLocaliserUI : MonoBehaviour
             textField.text = value;
         }
     }
+
+    public void SetKey(string key)
+    {
+        this.key = key;
+    }
 }
